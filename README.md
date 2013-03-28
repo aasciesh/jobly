@@ -5,10 +5,10 @@ JOBLY wizard is here.
 
 JOBLY is (another)Job Site but with completely different sight ;) . 
 It will make Company to reach seeker to hand a job rather than
-Seeker to hasle finding one.
+Seeker to hassle finding one.
 
 We would be making best possible site but important things first, feautures will gradually be added. 
-Our goal within the span of this course is to have application with atleast following functionality .
+Our goal within the span of this course is to have application with atleast following functionalities .
 
 1) Authentication system
 2) Authorization system
