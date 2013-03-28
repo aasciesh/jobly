@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  deadline: 2013-03-28 21:12:35
+  job_type: MyString
+  job_address: MyString
+  street: MyString
+  city: MyString
+  country: MyString
+  zip: 1
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  title: MyString
+  description: MyText
+  deadline: 2013-03-28 21:12:35
+  job_type: MyString
+  job_address: MyString
+  street: MyString
+  city: MyString
+  country: MyString
+  zip: 1
+  latitude: 1.5
+  longitude: 1.5

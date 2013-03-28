@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  institute_name: MyString
+  degree_type: MyString
+  start: 2013-03-28
+  end: 2013-03-28
+  address: MyString
+  website: MyString
+
+two:
+  institute_name: MyString
+  degree_type: MyString
+  start: 2013-03-28
+  end: 2013-03-28
+  address: MyString
+  website: MyString
