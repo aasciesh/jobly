@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328191328) do
+ActiveRecord::Schema.define(:version => 20130329034159) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
     t.integer  "vacancy_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "user_profile_id"
   end
+
+  add_index "applications", ["user_profile_id"], :name => "index_applications_on_user_profile_id"
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -56,13 +59,16 @@ ActiveRecord::Schema.define(:version => 20130328191328) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "langauge_skills", :force => true do |t|
+  create_table "language_skills", :force => true do |t|
     t.string   "name"
     t.integer  "level"
     t.string   "type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "user_profile_id"
   end
+
+  add_index "language_skills", ["user_profile_id"], :name => "index_language_skills_on_user_profile_id"
 
   create_table "qualifications", :force => true do |t|
     t.string   "institute_name"
@@ -71,24 +77,42 @@ ActiveRecord::Schema.define(:version => 20130328191328) do
     t.date     "end"
     t.string   "address"
     t.string   "website"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "user_profile_id"
   end
+
+  add_index "qualifications", ["user_profile_id"], :name => "index_qualifications_on_user_profile_id"
 
   create_table "references", :force => true do |t|
     t.string   "referee_name"
     t.string   "phone"
     t.string   "email"
     t.text     "referee_info"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "user_profile_id"
   end
 
-  create_table "sub_categories", :force => true do |t|
+  add_index "references", ["user_profile_id"], :name => "index_references_on_user_profile_id"
+
+  create_table "tag_matches", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "vacancy_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tag_matches", ["tag_id"], :name => "index_tag_matches_on_tag_id"
+  add_index "tag_matches", ["vacancy_id"], :name => "index_tag_matches_on_vacancy_id"
+
+  create_table "tags", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name"
 
   create_table "user_profiles", :force => true do |t|
     t.string   "firstname"
