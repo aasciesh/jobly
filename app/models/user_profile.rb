@@ -1,5 +1,7 @@
 class UserProfile < ActiveRecord::Base
-  attr_accessible :avatar, :birth_date, :city, :country, :firstname, :full_address, :gender, :hobbies, :lastname, :self_info, :street, :zip
+  attr_accessible 	:avatar, :birth_date, :city, :country, 
+  					:firstname, :full_address, :gender, :hobbies, 
+  					:lastname, :self_info, :street, :zip
 
   
   has_attached_file :avatar
