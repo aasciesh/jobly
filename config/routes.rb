@@ -1,4 +1,8 @@
 Jobly::Application.routes.draw do
+  get "session/create"
+
+  get "session/destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
