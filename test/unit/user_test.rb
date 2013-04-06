@@ -87,12 +87,12 @@ class UserTest < ActiveSupport::TestCase
     	assert user.invalid?
     	assert !user.save
     end	
-    test "User type must be either 'u' or 'c'." do
+    test "User type must be c or u" do
     	user = User.new
 		user.password = "mypassword"
 		user.email = "a@sigdel.com"
 		user.user_type = "u"
-		assert user.invalid?
+		assert user.valid?
 		assert !user.save
 	end
 
