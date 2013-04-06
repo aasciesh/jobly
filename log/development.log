@@ -1541,3 +1541,89 @@ Connecting to database specified by database.yml
   [1m[35m (5960.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328234601')
   [1m[36m (323.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191016')[0m
   [1m[35m (240.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191155')
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (106.1ms)[0m  [1mCREATE TABLE "applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vacancy_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) [0m
+  [1m[35m (264.1ms)[0m  CREATE INDEX "index_applications_on_user_profile_id" ON "applications" ("user_profile_id")
+  [1m[36m (246.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (223.2ms)[0m  CREATE TABLE "company_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "type" varchar(255), "description" text, "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "website" varchar(255), "contact" text, "logo_file_name" varchar(255), "logo_content_type" varchar(255), "logo_file_size" integer, "logo_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (195.4ms)[0m  [1mCREATE TABLE "experiences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employer" varchar(255), "full_address" varchar(255), "business_field" varchar(255), "position" varchar(255), "responsibilities" text, "start_date" date, "end_date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (213.1ms)[0m  CREATE TABLE "language_skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "level" integer, "type" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (281.3ms)[0m  [1mCREATE INDEX "index_language_skills_on_user_profile_id" ON "language_skills" ("user_profile_id")[0m
+  [1m[35m (277.5ms)[0m  CREATE TABLE "qualifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "institute_name" varchar(255), "degree_type" varchar(255), "start" date, "end" date, "address" varchar(255), "website" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (266.2ms)[0m  [1mCREATE INDEX "index_qualifications_on_user_profile_id" ON "qualifications" ("user_profile_id")[0m
+  [1m[35m (253.3ms)[0m  CREATE TABLE "references" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "referee_name" varchar(255), "phone" varchar(255), "email" varchar(255), "referee_info" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (187.8ms)[0m  [1mCREATE INDEX "index_references_on_user_profile_id" ON "references" ("user_profile_id")[0m
+  [1m[35m (164.8ms)[0m  CREATE TABLE "tag_matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "vacancy_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (247.0ms)[0m  [1mCREATE INDEX "index_tag_matches_on_tag_id" ON "tag_matches" ("tag_id")[0m
+  [1m[35m (248.0ms)[0m  CREATE INDEX "index_tag_matches_on_vacancy_id" ON "tag_matches" ("vacancy_id")
+  [1m[36m (223.2ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (141.4ms)[0m  CREATE INDEX "index_tags_on_name" ON "tags" ("name")
+  [1m[36m (272.7ms)[0m  [1mCREATE TABLE "user_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255), "lastname" varchar(255), "birth_date" date, "gender" varchar(255), "full_address" varchar(255), "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "self_info" text, "hobbies" text, "avatar_file_name" varchar(255), "avatar_content_type" varchar(255), "avatar_file_size" integer, "avatar_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (231.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "rememeber_cookie" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "type" varchar(255)) 
+  [1m[36m (251.4ms)[0m  [1mCREATE TABLE "vacancies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "deadline" datetime, "job_type" varchar(255), "job_address" varchar(255), "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "min_salary" integer, "max_salary" integer) [0m
+  [1m[35m (171.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (115.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (238.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130405214808')[0m
+  [1m[35m (190.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328235257')
+  [1m[36m (195.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329032311')[0m
+  [1m[35m (146.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191045')
+  [1m[36m (224.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130405095331')[0m
+  [1m[35m (274.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191138')
+  [1m[36m (215.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329034159')[0m
+  [1m[35m (215.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130329031611')
+  [1m[36m (215.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191102')[0m
+  [1m[35m (307.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328235914')
+  [1m[36m (129.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191328')[0m
+  [1m[35m (41.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191234')
+  [1m[36m (140.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329001037')[0m
+  [1m[35m (41.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191120')
+  [1m[36m (140.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191251')[0m
+  [1m[35m (74.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328234601')
+  [1m[36m (182.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191016')[0m
+  [1m[35m (241.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191155')
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (192.9ms)[0m  [1mCREATE TABLE "applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "vacancy_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) [0m
+  [1m[35m (214.3ms)[0m  CREATE INDEX "index_applications_on_user_profile_id" ON "applications" ("user_profile_id")
+  [1m[36m (270.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (194.9ms)[0m  CREATE TABLE "company_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "type" varchar(255), "description" text, "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "website" varchar(255), "contact" text, "logo_file_name" varchar(255), "logo_content_type" varchar(255), "logo_file_size" integer, "logo_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (178.4ms)[0m  [1mCREATE TABLE "experiences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employer" varchar(255), "full_address" varchar(255), "business_field" varchar(255), "position" varchar(255), "responsibilities" text, "start_date" date, "end_date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (188.2ms)[0m  CREATE TABLE "language_skills" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "level" integer, "type" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (239.5ms)[0m  [1mCREATE INDEX "index_language_skills_on_user_profile_id" ON "language_skills" ("user_profile_id")[0m
+  [1m[35m (212.5ms)[0m  CREATE TABLE "qualifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "institute_name" varchar(255), "degree_type" varchar(255), "start" date, "end" date, "address" varchar(255), "website" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (231.4ms)[0m  [1mCREATE INDEX "index_qualifications_on_user_profile_id" ON "qualifications" ("user_profile_id")[0m
+  [1m[35m (194.9ms)[0m  CREATE TABLE "references" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "referee_name" varchar(255), "phone" varchar(255), "email" varchar(255), "referee_info" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_profile_id" integer) 
+  [1m[36m (214.7ms)[0m  [1mCREATE INDEX "index_references_on_user_profile_id" ON "references" ("user_profile_id")[0m
+  [1m[35m (246.9ms)[0m  CREATE TABLE "tag_matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "vacancy_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (223.2ms)[0m  [1mCREATE INDEX "index_tag_matches_on_tag_id" ON "tag_matches" ("tag_id")[0m
+  [1m[35m (231.6ms)[0m  CREATE INDEX "index_tag_matches_on_vacancy_id" ON "tag_matches" ("vacancy_id")
+  [1m[36m (238.1ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (215.1ms)[0m  CREATE INDEX "index_tags_on_name" ON "tags" ("name")
+  [1m[36m (219.7ms)[0m  [1mCREATE TABLE "user_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255), "lastname" varchar(255), "birth_date" date, "gender" varchar(255), "full_address" varchar(255), "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "self_info" text, "hobbies" text, "avatar_file_name" varchar(255), "avatar_content_type" varchar(255), "avatar_file_size" integer, "avatar_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (160.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "rememeber_cookie" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "type" varchar(255)) 
+  [1m[36m (169.8ms)[0m  [1mCREATE TABLE "vacancies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "deadline" datetime, "job_type" varchar(255), "job_address" varchar(255), "street" varchar(255), "city" varchar(255), "country" varchar(255), "zip" integer, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "min_salary" integer, "max_salary" integer) [0m
+  [1m[35m (206.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (265.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (213.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130405214808')[0m
+  [1m[35m (241.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328235257')
+  [1m[36m (232.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329032311')[0m
+  [1m[35m (199.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191045')
+  [1m[36m (248.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130405095331')[0m
+  [1m[35m (207.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191138')
+  [1m[36m (162.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329034159')[0m
+  [1m[35m (41.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130329031611')
+  [1m[36m (74.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191102')[0m
+  [1m[35m (140.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328235914')
+  [1m[36m (74.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191328')[0m
+  [1m[35m (232.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191234')
+  [1m[36m (147.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130329001037')[0m
+  [1m[35m (41.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191120')
+  [1m[36m (99.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191251')[0m
+  [1m[35m (182.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328234601')
+  [1m[36m (123.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328191016')[0m
+  [1m[35m (41.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328191155')
