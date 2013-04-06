@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'deadline_after_creation_date_validator'
 
 class VacancyTest < ActiveSupport::TestCase
   
