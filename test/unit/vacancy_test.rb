@@ -49,10 +49,10 @@ class VacancyTest < ActiveSupport::TestCase
   	assert !vacancy.save
   end
 
-  test "job types must be either fulltime part time traineeship fixed term" do
+  test "job types must be either full-time part-time shift weekend" do
   	vacancy = vacancies(:one)
   	vacancy.deadline = DateTime.now + 1.day
-  	vacancy.job_type = "fulltime"
+  	vacancy.job_type = "full-time"
   	assert vacancy.valid?
   	assert vacancy.save
   end

@@ -1809,3 +1809,354 @@ Connecting to database specified by database.yml
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (7.6ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (4.7ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:33:26', '2013-04-06 15:33:26', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:33:26', '2013-04-06 15:33:26', 298486374)
+  [1m[36mFixture Delete (4.9ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35mFixture Delete (5.4ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (2.3ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'fulltime', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)
+  [1m[36mFixture Delete (6.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35mFixture Delete (6.7ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)[0m
+  [1m[35mFixture Insert (3.5ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)
+  [1m[36mFixture Delete (7.6ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35mFixture Delete (5.9ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)
+  [1m[36mFixture Delete (5.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35mFixture Delete (1.6ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)
+  [1m[36mFixture Delete (7.1ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35mFixture Delete (3.9ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:33:27', '2013-04-06 15:33:27', 298486374)[0m
+  [1m[35m (42.3ms)[0m  commit transaction
+  [1m[36m (1.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (2.7ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.3ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.5ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.4ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (9.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.6ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (8.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mVacancy Load (1.2ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.3ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (4.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.7ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (14.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.4ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.3ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.3ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.2ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (4.8ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:36:10', '2013-04-06 15:36:10', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:36:10', '2013-04-06 15:36:10', 298486374)
+  [1m[36mFixture Delete (3.9ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35mFixture Delete (6.8ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'fulltime', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)
+  [1m[36mFixture Delete (6.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35mFixture Delete (3.9ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)
+  [1m[36mFixture Delete (4.5ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35mFixture Delete (3.9ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)
+  [1m[36mFixture Delete (4.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)
+  [1m[36mFixture Delete (2.9ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35mFixture Delete (6.5ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:36:11', '2013-04-06 15:36:11', 298486374)[0m
+  [1m[35m (88.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.8ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.4ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.3ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.2ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.4ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.7ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (2.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.3ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (4.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.3ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.2ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.5ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.2ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (5.4ms)[0m  [1mUPDATE "vacancies" SET "deadline" = '2013-04-07 15:36:12.000000', "job_type" = 'full-time', "updated_at" = '2013-04-06 15:36:12.618850' WHERE "vacancies"."id" = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.2ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.2ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (5.3ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (3.0ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (3.0ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35mFixture Delete (4.7ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (2.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35mFixture Delete (4.8ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (4.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35mFixture Delete (7.4ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35mFixture Delete (4.8ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (5.0ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35mFixture Delete (4.3ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)
+  [1m[36mFixture Delete (4.9ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-06 15:41:27', '2013-04-06 15:41:27', 298486374)[0m
+  [1m[35m (35.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (3.9ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (1.9ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.2ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.3ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (6.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (3.0ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCompanyProfile Load (0.2ms)[0m  [1mSELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (2.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompanyProfile Load (0.6ms)[0m  SELECT "company_profiles".* FROM "company_profiles" WHERE "company_profiles"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mVacancy Load (1.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.6ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (12.2ms)[0m  UPDATE "vacancies" SET "deadline" = '2013-04-11 15:41:28.000000', "updated_at" = '2013-04-06 15:41:29.007984' WHERE "vacancies"."id" = 980190962
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (1.1ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mVacancy Load (0.3ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (11.8ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.4ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mVacancy Load (12.9ms)[0m  [1mSELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (10.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (9.7ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (6.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (8.4ms)[0m  UPDATE "vacancies" SET "deadline" = '2013-04-07 15:41:29.000000', "updated_at" = '2013-04-06 15:41:29.456691' WHERE "vacancies"."id" = 980190962
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.4ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (16.7ms)[0m  UPDATE "vacancies" SET "deadline" = '2013-04-07 15:41:29.000000', "max_salary" = 2000, "updated_at" = '2013-04-06 15:41:29.547874' WHERE "vacancies"."id" = 980190962
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mVacancy Load (0.8ms)[0m  SELECT "vacancies".* FROM "vacancies" WHERE "vacancies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
