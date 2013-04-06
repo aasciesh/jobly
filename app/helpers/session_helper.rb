@@ -23,10 +23,10 @@ module SessionHelper
 		@current_user ||= User.find_by_remember_cookie(cookies[:remember_cookie])
 	end
 	
-	def guest?
-		current_user.nil?
+	def user_type
+		current_user.type || 'g'
 	end
-	
+
 	def signed_in?
 	    !current_user.nil?
 	end
