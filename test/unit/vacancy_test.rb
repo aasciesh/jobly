@@ -27,7 +27,7 @@ class VacancyTest < ActiveSupport::TestCase
   	assert !vacancy.save
   end
 
-  test "Deadline valid if it is later than creation date" do
+  test "Deadline valid if it is later then creation date" do
   	vacancy = vacancies(:one)
   	vacancy.deadline = DateTime.now + 5.days
   	assert vacancy.valid?
@@ -42,7 +42,7 @@ class VacancyTest < ActiveSupport::TestCase
   	assert !vacancy.save
   end
 
-  test "description must be more than 10 characters" do
+  test "description must be more then 10 characters" do
   	vacancy = vacancies(:one)
   	vacancy.deadline = DateTime.now + 1.day
   	vacancy.description = "hello"
@@ -57,6 +57,7 @@ class VacancyTest < ActiveSupport::TestCase
   	assert vacancy.valid?
   	assert vacancy.save
   end
+
 
   test "salary must not save if not numbers" do
   	vacancy = vacancies(:one)

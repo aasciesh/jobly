@@ -14,7 +14,7 @@ class Vacancy < ActiveRecord::Base
   validates :title, presence: true, length: {minimum: 5, maximum: 150}
   validates :description, presence: true, length: {minimum:10, maximum: 3000}
   validate :is_deadline_after_creation_date?
-  validates :job_type, presence: true, inclusion: {in: JOB_TYPES, message: '%{attribute} must be either fulltime part-time traineeship or fixed-term'}
+  validates :job_type, presence: true, inclusion: {in: JOB_TYPES, message: 'Job type must be either fulltime part-time traineeship or fixed-term'}
   validates :job_address, presence: true, length: {maximum: 200}
   validates :min_salary, numericality: true
   validates :max_salary, numericality: true
