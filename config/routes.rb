@@ -1,7 +1,8 @@
 Jobly::Application.routes.draw do
-  get "session/create"
+  
 
-  get "session/destroy"
+  match '/signin', to: 'session#create'
+  match '/signout', to:'session#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
