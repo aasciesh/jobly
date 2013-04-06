@@ -1,12 +1,13 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+
   test "should save only with valid params" do 
   		user = User.new 	
     	user.email = "a@xyz.com"
-    	user.password = "mypassword"
+    	user.password = "password"
     	user.type ="u"
-    	user.password_confirmation = "mypassword"
+    	user.password_confirmation = "password"
     	assert user.valid?, "#{user.errors.messages}"
     	assert user.save
   end
@@ -59,41 +60,35 @@ class UserTest < ActiveSupport::TestCase
 		assert !user.save
 	end 
 
-	 test "user password must be between 8 and 20 characters" do
-    	user = User.new(:email => "a@sigdel.com")
-    	
-       	user.password = "123"    	
-    	assert user.invalid?
-    	assert !user.save
+	 test "user password should not be less than 8 characters" do
+	 	user = User.new
+		user.password = "1234567"
+		user.password_confirmation = "1234567"
+		user.email = "a@sigdel.com"
+		assert user.invalid?
+		assert !user.save
 
-    	user.password = ""    	
-    	assert user.invalid?
-    	assert !user.save
+	 end
 
-    	#8 characters.
-    	user.password = "password"
-    	user.password_confirmation = "password"
-   	    assert user.valid?
-   	    assert !user.save
+	 test "user password should not be more than 20 characters" do
+	 	user = User.new
+		user.password = "123456789012345678901"
+		user.password_confirmation = "123456789012345678901"
+		user.email = "a@sigdel.com"
+		assert user.invalid?
+		assert !user.save
 
-        #20 characters.
-    	user.password = "12345678901234567890"
-    	user.password_confirmation = "12345678901234567890"
-    	assert user.valid?
-    	assert !user.save
+	 end
+	 
 
-    	#21 characters.
-    	user.password = "123456789012345678901"    	
-    	assert user.invalid?
-    	assert !user.save
-    end	
     test "User type must be c or u" do
     	user = User.new
 		user.password = "mypassword"
+		user.password_confirmation = "mypassword"
 		user.email = "a@sigdel.com"
-		user.user_type = "u"
+		user.type = "c"
 		assert user.valid?
-		assert !user.save
+		assert user.save
 	end
 
 end
