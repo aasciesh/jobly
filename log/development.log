@@ -337,3 +337,33 @@ Connecting to database specified by database.yml
   [1m[35m (23.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130329001037')
   [1m[36m (34.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130328234601')[0m
   [1m[35m (24.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130328235257')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130328191016)
+Migrating to CreateUserProfiles (20130328191045)
+Migrating to CreateCompanyProfiles (20130328191102)
+Migrating to CreateQualifications (20130328191120)
+Migrating to CreateApplications (20130328191138)
+Migrating to CreateCategories (20130328191155)
+Migrating to CreateVacancies (20130328191234)
+Migrating to CreateExperiences (20130328191251)
+Migrating to CreateReferences (20130328191328)
+Migrating to CreateLanguageSkills (20130328234601)
+Migrating to AddUserProfileIdInLanguageSkills (20130328235257)
+Migrating to AddUserProfileIdToQualifications (20130328235914)
+Migrating to AddUserProfileIdToReferences (20130329001037)
+Migrating to CreateTags (20130329031611)
+Migrating to CreateTagMatches (20130329032311)
+Migrating to AddUserProfileIdToApplication (20130329034159)
+Migrating to AddColumnToUser (20130405095331)
+Migrating to AddColumnsToVacancy (20130405214808)
+Migrating to AddColumnToVacancies (20130406151055)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (5.2ms)[0m  ALTER TABLE "vacancies" ADD "job_duration" varchar(255)
+  [1m[36m (6.5ms)[0m  [1mCREATE INDEX "index_vacancies_on_job_duration" ON "vacancies" ("job_duration")[0m
+  [1m[35m (0.6ms)[0m  CREATE INDEX "index_vacancies_on_job_type" ON "vacancies" ("job_type")
+  [1m[36m (7.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130406151055')[0m
+  [1m[35m (34.4ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

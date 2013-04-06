@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405214808) do
+ActiveRecord::Schema.define(:version => 20130406151055) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -155,10 +155,14 @@ ActiveRecord::Schema.define(:version => 20130405214808) do
     t.integer  "zip"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "min_salary"
     t.integer  "max_salary"
+    t.string   "job_duration"
   end
+
+  add_index "vacancies", ["job_duration"], :name => "index_vacancies_on_job_duration"
+  add_index "vacancies", ["job_type"], :name => "index_vacancies_on_job_type"
 
 end
