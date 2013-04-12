@@ -16,7 +16,7 @@ module SessionHelper
 	def current_profile
 		@current_profile || 
 		(CompanyProfile.find_by_id(current_user.profile_id) if current_user.type== 'c')|| 
-		(UserProfile.find_by_id(current_user.profile_id]) if current_user.type== 'u')
+		(UserProfile.find_by_id(current_user.profile_id) if current_user.type== 'u')
 	end
 
 	def current_user
