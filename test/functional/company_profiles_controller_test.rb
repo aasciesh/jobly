@@ -1,30 +1,49 @@
 require 'test_helper'
 
 class CompanyProfilesControllerTest < ActionController::TestCase
-	test "should get new form for company" do
-	get :new
+	
+	test "should get new form for company with user model" do
+		get :new
 		assert_response :success
+		# user=params[:company_profile].user
+		# assert user=User.new
 	end
 
 	test "should get company index" do 
-	get :index
-	assert_response :success
+		get :index
+		assert_response :success
 	end
 
 	test "should create company profile" do
-	assert_difference "CompanyProfile.count", +1, "This is failing" do
-		post :create, company_profile: {name: "company", 
-	                      type: "mytype", 
-	                      description: "company description",
-	                      street: "annankatu 12",
-	                      city: "helsinki",
-	                      country: "finland",
-	                      zip: "10201",
-	                      website: "website.com",
-	                      contact: "contact person" }
+		assert_difference "CompanyProfile.count", +1, "This is failing" do
+			post :create, company_profile: {name: "company", 
+		                      type: "mytype", 
+		                      description: "company description",
+		                      street: "annankatu 12",
+		                      city: "helsinki",
+		                      country: "finland",
+		                      zip: "10201",
+		                      website: "website.com",
+		                      contact: "contact person" }
+			end
+		assert_redirected_to company_profiles_path, "FAILED"
+		assert_equal "Welcome to Jobly!", flash.now[:success], "FAILED"  
 	end
-	assert_redirected_to company_profiles_path, "FAILED"
-	assert_equal "Welcome to Jobly!", flash.now[:success], "FAILED"  
+
+	test "should not create company profile with invalid params" do
+		assert_no_difference("CompanyProfile.count") do
+			post :create, company_profile: {name: " ", 
+		                      type: "mytype", 
+		                      description: "company description",
+		                      street: "annankatu 12",
+		                      city: "helsinki",
+		                      country: "finland",
+		                      zip: "10201",
+		                      website: "website.com",
+		                      contact: "contact person" }
+			end
+		assert_template :new, "FAILED"
+		assert_equal "Something went wrong!", flash.now[:error], "FAILED"  
 	end
 
 	test "should build user for company profile" do
@@ -35,13 +54,13 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 	end
 
 	test "should show company profile" do
-	get :show, id: company_profiles(:one).id
-	assert_response :success
+		get :show, id: company_profiles(:one).id
+		assert_response :success
 	end
 
 	test "should get edit form" do
-	get :edit, id: company_profiles(:one)
-	assert_response :success
+		get :edit, id: company_profiles(:one)
+		assert_response :success
 	end
 
 	test "should update company information" do

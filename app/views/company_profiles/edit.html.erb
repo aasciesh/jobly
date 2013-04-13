@@ -1,1 +1,5 @@
-edit form
+<%= form_for @company_profile, :html => { :multipart => true } do |f| %>
+	<h2>Update company profile</h2>
+	<%= render 'form', :f => f %>
+	<%= f.submit "Update "%> 
+<% end %>

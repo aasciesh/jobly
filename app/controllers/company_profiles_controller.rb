@@ -2,6 +2,7 @@ class CompanyProfilesController < ApplicationController
 
 	def new
 		@company_profile=CompanyProfile.new
+		@company_profile.build_user
 	end
 
 	def index
@@ -35,8 +36,7 @@ class CompanyProfilesController < ApplicationController
     	else
 	      	render :edit
 	      	flash.now[:error] = "company_profile couldnot be updated!"
-    	end	
-		
+    	end			
 	end
 
 end
