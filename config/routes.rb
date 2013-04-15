@@ -1,6 +1,6 @@
 Jobly::Application.routes.draw do
   
-
+  resources :user_profiles
   match '/signin', to: 'session#create'
   match '/signout', to:'session#destroy', via: :delete
 
