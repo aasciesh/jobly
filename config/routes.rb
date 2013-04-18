@@ -1,7 +1,8 @@
 Jobly::Application.routes.draw do
   
-  resources :user_profiles
-  match '/signin', to: 'session#create'
+  resources :user_profiles, :session, :company_profiles, :users
+  root :to => 'home#index'
+  match '/signin', to: 'session#new'
   match '/signout', to:'session#destroy', via: :delete
 
   # The priority is based upon order of creation:

@@ -5511,3 +5511,906 @@ Binary data inserted for `string` type on column `password_digest`
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
 >>>>>>> 6a83ecf3343697639f33499b1b0eaba30d3cbf17
+Connecting to database specified by database.yml
+  [1m[36m (2.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (8.1ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (5.6ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)
+  [1m[36mFixture Delete (4.6ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)[0m
+  [1m[35mFixture Delete (4.8ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (3.3ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)
+  [1m[36mFixture Delete (3.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)
+  [1m[36mFixture Delete (9.8ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:31:25', '2013-04-18 14:31:25', 298486374)[0m
+  [1m[35mFixture Delete (8.2ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)
+  [1m[36mFixture Delete (7.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)[0m
+  [1m[35mFixture Delete (4.8ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)
+  [1m[36mFixture Delete (1.6ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)[0m
+  [1m[35mFixture Delete (7.4ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)[0m
+  [1m[35mFixture Insert (4.2ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:31:26', '2013-04-18 14:31:26', 298486374)[0m
+  [1m[35m (67.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (5.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (47.8ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "rememeber_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 14:31:27 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$QrY06qwufmjrvnzOH97pk.aKOJ/PgKafYji4LiT4gE4b6D/IJwh4C"], ["profile_id", nil], ["profile_type", nil], ["rememeber_cookie", nil], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:31:27 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (16.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (4.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (9.8ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "rememeber_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 14:31:27 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$/QQIrh9kWNniThDjKZh1u.msQtCK0un1fQoR.yat/QeaZKQM6YynS"], ["profile_id", nil], ["profile_type", nil], ["rememeber_cookie", nil], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:31:27 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (6.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "rememeber_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 14:31:28 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$qTeEO/TId0d.dUx.2ztsF.5iyiox7y2vNVzpclwewfaoTdugadzPe"], ["profile_id", nil], ["profile_type", nil], ["rememeber_cookie", nil], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:31:28 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionController#create as HTML
+  Parameters: {"email"=>"user@example.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by UserProfilesController#create as HTML
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (9.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", nil], ["city", nil], ["country", nil], ["created_at", Thu, 18 Apr 2013 14:31:29 UTC +00:00], ["firstname", nil], ["full_address", nil], ["gender", nil], ["hobbies", nil], ["lastname", nil], ["self_info", nil], ["street", nil], ["updated_at", Thu, 18 Apr 2013 14:31:29 UTC +00:00], ["zip", nil]]
+[paperclip] Saving attachments.
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 540ms (Views: 300.6ms | ActiveRecord: 9.9ms)
+  [1m[36m (3.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by UserProfilesController#index as HTML
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by UserProfilesController#new as HTML
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 430ms (Views: 84.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.9ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:53', '2013-04-18 14:46:53', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:53', '2013-04-18 14:46:53', 298486374)
+  [1m[36mFixture Delete (10.8ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:53', '2013-04-18 14:46:53', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:53', '2013-04-18 14:46:53', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:53', '2013-04-18 14:46:53', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:53', '2013-04-18 14:46:53', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (7.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (7.3ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (3.7ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:54', '2013-04-18 14:46:54', 298486374)[0m
+  [1m[35mFixture Delete (4.4ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 298486374)
+  [1m[36mFixture Delete (11.1ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 298486374)[0m
+  [1m[35mFixture Delete (6.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:54', '2013-04-18 14:46:54', 980190962)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (4.2ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (2.7ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:55', '2013-04-18 14:46:55', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:55', '2013-04-18 14:46:55', 298486374)
+  [1m[36mFixture Delete (4.1ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (4.6ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 298486374)[0m
+  [1m[35mFixture Delete (8.3ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 298486374)
+  [1m[36mFixture Delete (5.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:55', '2013-04-18 14:46:55', 980190962)
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mFixture Delete (9.3ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (5.9ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:56', '2013-04-18 14:46:56', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:56', '2013-04-18 14:46:56', 298486374)[0m
+  [1m[35mFixture Delete (1.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 298486374)
+  [1m[36mFixture Delete (10.2ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 298486374)[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:56', '2013-04-18 14:46:56', 980190962)
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.0ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (4.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)
+  [1m[36mFixture Delete (5.6ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)[0m
+  [1m[35mFixture Delete (2.2ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)
+  [1m[36mFixture Delete (8.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+  [1m[36m (4.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mFixture Delete (8.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (5.8ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)
+  [1m[36mFixture Delete (5.0ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:57', '2013-04-18 14:46:57', 980190962)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.5ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (6.5ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:58', '2013-04-18 14:46:58', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:58', '2013-04-18 14:46:58', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 980190962)
+  [1m[36mFixture Insert (4.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 298486374)[0m
+  [1m[35mFixture Delete (6.4ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 298486374)
+  [1m[36mFixture Delete (5.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:58', '2013-04-18 14:46:58', 980190962)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (9.0ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:59', '2013-04-18 14:46:59', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:46:59', '2013-04-18 14:46:59', 298486374)[0m
+  [1m[35mFixture Delete (5.5ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 298486374)
+  [1m[36mFixture Delete (5.5ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 980190962)
+  [1m[36mFixture Insert (2.4ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 298486374)[0m
+  [1m[35mFixture Delete (3.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:46:59', '2013-04-18 14:46:59', 980190962)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (6.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (5.6ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (3.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:00', '2013-04-18 14:47:00', 298486374)
+  [1m[36mFixture Delete (8.7ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 298486374)[0m
+  [1m[35mFixture Delete (3.4ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 298486374)
+  [1m[36mFixture Delete (6.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (6.3ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:00', '2013-04-18 14:47:00', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:00', '2013-04-18 14:47:00', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (5.6ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)[0m
+  [1m[35mFixture Insert (7.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 298486374)
+  [1m[36mFixture Delete (4.8ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 298486374)[0m
+  [1m[35mFixture Delete (1.3ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.9ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (5.3ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:47:01', '2013-04-18 14:47:01', 298486374)
+  [1m[36mFixture Delete (3.2ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 298486374)[0m
+  [1m[35mFixture Delete (5.5ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 298486374)
+  [1m[36mFixture Delete (4.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:47:01', '2013-04-18 14:47:01', 980190962)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.4ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (8.3ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:44', '2013-04-18 14:49:44', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:44', '2013-04-18 14:49:44', 298486374)
+  [1m[36mFixture Delete (7.8ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:44', '2013-04-18 14:49:44', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:44', '2013-04-18 14:49:44', 298486374)[0m
+  [1m[35mFixture Delete (8.7ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)
+  [1m[36m (5.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mFixture Delete (7.5ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (4.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:45', '2013-04-18 14:49:45', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 298486374)
+  [1m[36mFixture Delete (5.6ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 298486374)[0m
+  [1m[35mFixture Delete (4.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)[0m
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:45', '2013-04-18 14:49:45', 980190962)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (8.4ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (3.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:46', '2013-04-18 14:49:46', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:49:46', '2013-04-18 14:49:46', 298486374)
+  [1m[36mFixture Delete (5.8ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (5.2ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 298486374)
+  [1m[36mFixture Delete (3.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 980190962)
+SQLite3::SQLException: table users has no column named rememeber_cookie: INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:49:46', '2013-04-18 14:49:46', 980190962)
+  [1m[36m (3.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (3.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.2ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (7.0ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:52:54', '2013-04-18 14:52:54', 980190962)[0m
+  [1m[35mFixture Insert (5.0ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:52:54', '2013-04-18 14:52:54', 298486374)
+  [1m[36mFixture Delete (3.5ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35mFixture Delete (8.7ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)
+  [1m[36mFixture Delete (5.5ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)
+  [1m[36mFixture Delete (1.7ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35mFixture Delete (7.3ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)
+  [1m[36mFixture Delete (7.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (5.1ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35mFixture Delete (2.7ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)
+  [1m[36mFixture Delete (6.0ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)
+  [1m[36mFixture Delete (7.0ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:52:55', '2013-04-18 14:52:55', 298486374)[0m
+  [1m[35m (781.4ms)[0m  commit transaction
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (21.7ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 14:52:57 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$8kGvq1Qid6w.PDEvXtWht.JbXIfqg7UHVDuENtWYMvKwVWzxcyGDO"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "QCaY7mBJa7qO_uobZdzcRQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:52:57 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (14.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (4.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (7.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 14:52:58 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$aKCTjrhLNei2aMNZUhxZte9lCSc6WUfaKfsYLSsZn1nKIpid3fdHy"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "yZVWYqQGAN3kf69p5Euxfg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:52:58 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 500 Internal Server Error in 362ms
+  [1m[36m (9.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (13.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 14:53:00 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$8kCsts2A0Uur.LugRKK0UusKmNpI4GU7P.6eTuiFinIN6GXD62ji6"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "sxY56GR7QBTkc8-1S60Zgg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:53:00 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"email"=>"user@example.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.4ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (4.7ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:55:32', '2013-04-18 14:55:32', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 14:55:32', '2013-04-18 14:55:32', 298486374)
+  [1m[36mFixture Delete (3.4ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35mFixture Delete (5.9ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)[0m
+  [1m[35mFixture Insert (2.9ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)
+  [1m[36mFixture Delete (4.5ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35mFixture Delete (5.3ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)
+  [1m[36mFixture Delete (5.8ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)
+  [1m[36mFixture Delete (5.9ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (4.5ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35mFixture Delete (7.3ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (2.8ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)
+  [1m[36mFixture Delete (4.9ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 14:55:33', '2013-04-18 14:55:33', 298486374)[0m
+  [1m[35m (874.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (14.6ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 14:55:35 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$gRmpzQx43n3NiPhC2x/6ye7xKDQbeLTYvjHg8WV765znli41Dpc8i"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "j_3tds33GmwdmO56lRYJrg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:55:35 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Completed 500 Internal Server Error in 9ms
+  [1m[36m (7.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (8.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 14:55:36 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$52Ydf17SvqqRMAlS76qdk.PyGTotE9VCTFa9pT5w6vQh39.2ifYIS"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "h1BSbTRRvPyyComVf_F2Kw"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:55:36 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 500 Internal Server Error in 446ms
+  [1m[36m (6.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 14:55:37 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$3H5kNRW/REleH142PA/kVeW5Vu1DSCm/EI4H/NI6NYIUaXYCj25Ji"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "dp9uvDpcn0-ymVj_cogtcQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 14:55:37 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"email"=>"user@example.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (4.8ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (3.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:02:17', '2013-04-18 15:02:17', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:02:17', '2013-04-18 15:02:17', 298486374)
+  [1m[36mFixture Delete (1.1ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)[0m
+  [1m[35mFixture Insert (6.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)
+  [1m[36mFixture Delete (3.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35mFixture Delete (6.5ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)[0m
+  [1m[35mFixture Insert (5.1ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35mFixture Delete (10.3ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)
+  [1m[36mFixture Delete (18.3ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (4.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35mFixture Delete (5.1ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)
+  [1m[36mFixture Delete (5.5ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35mFixture Delete (1.8ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (5.2ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 980190962)
+  [1m[36mFixture Insert (4.2ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:02:18', '2013-04-18 15:02:18', 298486374)[0m
+  [1m[35m (114.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 467ms (Views: 465.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (20.7ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:02:20 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$pWOMV55dHWHms8AKi74qV.NfH749c5nIlWpRXYd.FKxhKlm4mkpE6"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "-Ocpl-2iGm3Wjhp420YtZg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:02:20 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+  [1m[36m (3.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (6.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:02:21 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$H.vxmkzUsky5yRqydKNGeeUy9EuoH23G8vux81nhgmzbBUeRVOqAa"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "oWhxZZ7IMoNwTwsKpiNigw"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:02:21 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 500 Internal Server Error in 302ms
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (11.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:02:22 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$TRnZAGh5RH/ZJahAeLiU6e3So4ZplN4qmI9aa6k2WF62ULFr45fpS"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "bG8nyMnMnohG64NHaJG25Q"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:02:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"email"=>"user@example.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (2.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (6.1ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (7.9ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:16:33', '2013-04-18 15:16:33', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:16:33', '2013-04-18 15:16:33', 298486374)
+  [1m[36mFixture Delete (4.4ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35mFixture Delete (8.4ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)
+  [1m[36mFixture Delete (7.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35mFixture Delete (5.4ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)
+  [1m[36mFixture Delete (10.6ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35mFixture Delete (6.0ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)
+  [1m[36mFixture Delete (5.2ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35mFixture Delete (5.0ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)
+  [1m[36mFixture Delete (8.9ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35mFixture Delete (4.7ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)
+  [1m[36mFixture Delete (7.3ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (5.3ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:16:34', '2013-04-18 15:16:34', 298486374)[0m
+  [1m[35m (698.5ms)[0m  commit transaction
+  [1m[36m (2.5ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 196ms (Views: 192.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (5.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (16.5ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:16:36 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$rjN4yYlbLq1y/BFTM8BRG.tQh7liCTu1vPQqEx5YmrpeAaoQWrNyO"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "X6IreiX8uX2g3Ytn8eu-Ew"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:16:36 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:16:38 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$a2TwapsvCtgOc7oNQExNsuRrVM6gKzmw5zsa58F.Yad8pL7gt8YXa"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "t3Af4vAJFWjSWkpVB7eN7g"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:16:38 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 500 Internal Server Error in 316ms
+  [1m[36m (8.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (9.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:16:39 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$ONx3q7SJk9Hzs5CsmjIfzeWBvhbmvbPgXVB0.MioKP/5vuc85oUVS"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "pAaLRTSVi_3qkYRTYg2SIQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:16:39 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 746ms (ActiveRecord: 4.3ms)
+  [1m[35m (1.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (3.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (8.1ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (1.5ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)
+  [1m[36mFixture Delete (9.9ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)[0m
+  [1m[35mFixture Delete (1.4ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)
+  [1m[36mFixture Delete (2.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)[0m
+  [1m[35mFixture Delete (3.7ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)
+  [1m[36mFixture Delete (3.3ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:19:19', '2013-04-18 15:19:19', 298486374)[0m
+  [1m[35mFixture Delete (4.6ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)[0m
+  [1m[35mFixture Delete (8.7ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)[0m
+  [1m[35mFixture Insert (6.8ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)
+  [1m[36mFixture Delete (6.5ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)
+  [1m[36mFixture Delete (2.5ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:19:20', '2013-04-18 15:19:20', 298486374)[0m
+  [1m[35m (75.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 201ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (3.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (9.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (16.6ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:19:21 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$O8ybYGEKJ6T8lNygoVQVLO.Fet.VeVq3UWC7t8skay.ELKhm98/Ie"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "DdbVWU82_g9YlJOPYi993w"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:19:21 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (11.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:19:22 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$5NaZWK4UXXxwZmDXnb6W5e5OHwCjxmId666nbnt7.pYzmPnRADcAW"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "Z9oDc5r__unCkNfNlvKhdw"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:19:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 200 OK in 51ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (8.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:19:23 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$nn9ONa4Xi8M5peer5ZzNu.fjjXjI0zl4or9N5YiW.aKnsf7aU2/sa"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "CXMPORJkTiKzc-lF1iafiQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:19:23 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 769ms (ActiveRecord: 0.7ms)
+  [1m[35m (1.9ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (3.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (4.6ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (6.6ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:27:33', '2013-04-18 15:27:33', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:27:33', '2013-04-18 15:27:33', 298486374)
+  [1m[36mFixture Delete (7.7ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:27:33', '2013-04-18 15:27:33', 980190962)
+  [1m[36mFixture Insert (4.8ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:27:33', '2013-04-18 15:27:33', 298486374)[0m
+  [1m[35mFixture Delete (5.7ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (2.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)
+  [1m[36mFixture Delete (4.7ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)[0m
+  [1m[35mFixture Delete (6.9ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)
+  [1m[36mFixture Delete (5.8ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)[0m
+  [1m[35mFixture Delete (6.4ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)
+  [1m[36mFixture Delete (8.8ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)[0m
+  [1m[35mFixture Delete (2.9ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)
+  [1m[36mFixture Delete (4.7ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)[0m
+  [1m[35mFixture Delete (9.5ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (4.3ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)
+  [1m[36mFixture Delete (1.1ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:27:34', '2013-04-18 15:27:34', 298486374)[0m
+  [1m[35m (792.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 242ms (Views: 240.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (16.1ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:27:36 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$V1etufqepi0hkWok0hMpi.O/STdsFPatrdPzp48vemNdm8pUvl0wy"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "XZ7WQmrmMSR8qUSWMXY5Sg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:27:36 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+  [1m[36m (3.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (6.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:27:37 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$W4lNO1uRexlpe9Qj9ZupW.eCXSSObSvfbUtCgBNOUa7q5eDMCDM9."], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "2v_j3zRyVOoCAmPWmTffsA"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:27:37 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:27:37 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$xE13cq6Z/dYppMN2KqvEnuuqcP967i6DuxZiN3kkjvOhmT0BnTZVW"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "OJ4imN2JftaPD_9KEHF5pQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:27:37 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 762ms (ActiveRecord: 3.1ms)
+  [1m[35m (5.7ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (5.8ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (4.8ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (3.6ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)[0m
+  [1m[35mFixture Delete (9.0ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (7.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)[0m
+  [1m[35mFixture Delete (7.4ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (5.8ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (7.5ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)[0m
+  [1m[35mFixture Delete (7.3ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (7.5ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)[0m
+  [1m[35mFixture Delete (4.6ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (5.4ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)[0m
+  [1m[35mFixture Delete (6.4ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:30:41', '2013-04-18 15:30:41', 298486374)
+  [1m[36mFixture Delete (7.9ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:30:42', '2013-04-18 15:30:42', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:30:42', '2013-04-18 15:30:42', 298486374)[0m
+  [1m[35m (833.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 404ms (Views: 394.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (19.0ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:30:44 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$FdYVtgjhENR9LAuSdHDTp.AeEVi4/qUqlcHSwTj38RZn9UTVkvYBO"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "blKEiIAErDUsxzqpfZtROA"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:30:44 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (5.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (10.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:30:45 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$bqLGwcbycizhEKUeAMCZP.o.EZPrLmLSjfausV3Bl1rewhbgtlY.u"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "E0DWSB9FPQdwiUlvyDVzaQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:30:45 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 200 OK in 72ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (19.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:30:46 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$KdITr37cXNkBRH7s0URJOOsALOWOfdpmJF4KEAuPtBz5/hvfVvb4G"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "RAmexTRXp_7rirFMKq0YXQ"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:30:46 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 1224ms (ActiveRecord: 3.9ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (5.2ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (6.4ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:32:46', '2013-04-18 15:32:46', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-18 15:32:46', '2013-04-18 15:32:46', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35mFixture Delete (6.8ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)
+  [1m[36mFixture Delete (3.5ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35mFixture Delete (8.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "company_profiles" ("name", "type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', NULL, 'MyText', 'MyString', 'MyString', 'MyString', 1, 'MyString', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)
+  [1m[36mFixture Delete (7.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35mFixture Delete (10.2ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)[0m
+  [1m[35mFixture Insert (3.2ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)
+  [1m[36mFixture Delete (10.4ms)[0m  [1mDELETE FROM "tag_matches"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35mFixture Delete (7.0ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)[0m
+  [1m[35mFixture Insert (6.8ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)
+  [1m[36mFixture Delete (10.3ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-18 15:32:47', '2013-04-18 15:32:47', 298486374)[0m
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 386ms (Views: 384.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (11.6ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 18 Apr 2013 15:32:49 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$Htht4/15RLmOV3M8Kmtv..gHtXtiHgQutzpsF19KJRohqn/RrN6ve"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "ZqQemZynxGBT1wgN5cf5LA"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:32:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Processing by SessionController#destroy as HTML
+  Parameters: {"id"=>nil}
+Redirected to http://test.host/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+  [1m[36m (4.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:32:50 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$rP.uCSbErZNJxjeMSB4ure41Yzg8l0NmIlNf/VxRNiztDBpaKk7Oe"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "8U1mGlfPX_6WGxByAkSj6w"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:32:50 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#new as HTML
+Completed 200 OK in 52ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 18 Apr 2013 15:32:51 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$10$WaeORet5Xgafs2MvhwHS1OXsYQBdGG713zTf8a4FsIl8M5a.eu9ha"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "IHGljk-E4qx1OUs_XOmQqg"], ["type", nil], ["updated_at", Thu, 18 Apr 2013 15:32:51 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionController#create as HTML
+  Parameters: {"session"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 818ms (ActiveRecord: 0.7ms)
+  [1m[35m (1.1ms)[0m  rollback transaction

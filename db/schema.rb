@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412114713) do
+ActiveRecord::Schema.define(:version => 20130418144000) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -137,9 +137,9 @@ ActiveRecord::Schema.define(:version => 20130412114713) do
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.string   "rememeber_cookie"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.string   "remember_cookie"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "type"
     t.integer  "profile_id"
     t.string   "profile_type"

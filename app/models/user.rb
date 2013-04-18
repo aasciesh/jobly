@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation, :rememeber_cookie, :type
+  attr_accessible :email, :password, :password_confirmation, :remember_cookie, :type
 
   has_secure_password
   belongs_to :profile, :polymorphic => true
@@ -13,4 +13,6 @@ class User < ActiveRecord::Base
   # validates :type, presence: true, inclusion: {in: USER_TYPES, message: 'User type must be c or u'}
   validates :password_confirmation, presence: true 
   
+  before_save {|user| user.remember_cookie = SecureRandom.urlsafe_base64}
+
 end

@@ -3,9 +3,9 @@
 one:
   email: MyString
   password_digest: MyString
-  rememeber_cookie: MyString
+  remember_cookie: MyString
 
 two:
   email: MyString
   password_digest: MyString
-  rememeber_cookie: MyString
+  remember_cookie: MyString
