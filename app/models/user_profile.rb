@@ -14,4 +14,5 @@ class UserProfile < ActiveRecord::Base
   has_many :language_skills
   has_many :references
 
+
 end

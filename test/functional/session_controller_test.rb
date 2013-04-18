@@ -30,7 +30,7 @@ class SessionControllerTest < ActionController::TestCase
   end
 
   test "should delete session" do
-    login_as(setup)
+    login_as(@user)
     delete :destroy, id: @user.id
     assert cookies[:remember_cookie].nil?
     assert_response :redirect
