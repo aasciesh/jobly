@@ -32,7 +32,7 @@ There are plenty of Job sites, market is quite saturated to bring it into produc
 
 ###Project Report on 19.04.2013
 
-![Work in progress Gantt](./public/images/jobly_gantt.png?raw=true)
+![Work in progress Gantt](/public/images/jobly_gantt.png?raw=true)
 
 
-![Project Tasks List](./public/images/jobly_issues_status.png?raw=true)
+![Project Tasks List](/public/images/jobly_issues_status.png?raw=true)
