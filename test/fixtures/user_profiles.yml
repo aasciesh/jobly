@@ -12,7 +12,7 @@ one:
   zip: 1
   self_info: MyText
   hobbies: MyText
-  avatar: 
+
 
 two:
   firstname: MyString
@@ -26,4 +26,4 @@ two:
   zip: 1
   self_info: MyText
   hobbies: MyText
-  avatar: 
+

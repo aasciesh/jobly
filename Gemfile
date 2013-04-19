@@ -13,6 +13,11 @@ gem 'sqlite3'
 group :development do
 	gem "rails-erd"
 end
+
+group :test do
+	gem 'turn'
+  	gem 'minitest'
+end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
