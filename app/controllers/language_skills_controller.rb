@@ -1,0 +1,3 @@
+class LanguageSkillsController < ApplicationController
+	
+end
