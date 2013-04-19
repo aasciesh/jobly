@@ -3,13 +3,13 @@
 one:
   firstname: MyString
   lastname: MyString
-  birth_date: 2013-03-28
-  gender: MyString
+  birth_date: 1990-03-28
+  gender: m
   full_address: MyString
   street: MyString
   city: MyString
   country: MyString
-  zip: 1
+  zip: 00001
   self_info: MyText
   hobbies: MyText
 
