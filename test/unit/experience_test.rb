@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class ExperienceTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+	# test "Experiences should not save if Title not present"do
+	#   experience = experiences(:one)
+	#   experiences.title = ""
+	  
+
+	end
+  
 end
