@@ -1,4 +1,4 @@
-Welcome to JOBLY
+##Welcome to JOBLY
 
 Searching for a job and landing one has never been this easy. 
 JOBLY wizard is here.
@@ -19,7 +19,7 @@ Our goal within the span of this course is to have application with atleast foll
 7) Search system with ELASTICSEARCH (Search job by geo-distance, category or keywords)
 8) full CV (Edit, Update, Delete)
 
-If all above done nicely and time's still left .....
+####If all above done nicely and time's still left .....
  
 9) User Watchlist for companies
 10) User Link (Linking with other users)
@@ -32,7 +32,7 @@ There are plenty of Job sites, market is quite saturated to bring it into produc
 
 ###Project Report on 19.04.2013
 
-![Work in progress Gantt](public/images/report_19.04.2013/jobly_gantt_19_04_13.png?raw=true)
+![Work in progress Gantt](./public/images/jobly_gantt.png?raw=true)
 
 
-![Project Tasks List](public/images/report_19.04.2013/jobly_issues_status_19_04_13.png?raw=true)
+![Project Tasks List](./public/images/jobly_issues_status.png?raw=true)
