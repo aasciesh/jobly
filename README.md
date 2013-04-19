@@ -30,4 +30,9 @@ If we become Supermen then...
 
 There are plenty of Job sites, market is quite saturated to bring it into production and expect it to be a success. But, Our main purpose in first place is to learn Rails and make nice application which works. If we make fantastic enough industrial standard web application, we would probably bring it into production somewhere where there is room to grow. If...
 
+###Project Report on 19.04.2013
 
+![Work in progress Gantt](/public/images/?raw=true)
+
+
+![Project Tasks List](/public/images/?raw=true)
