@@ -1,0 +1,24 @@
+<table class="table">
+  <tr>  
+  	<th>Logo</th>    
+    <th>Name</th>
+    <th>Address</th> 
+    <th>description</th>   
+    <th>Contact Person</th>
+    <th></th>    
+  </tr>
+  <% for item in @company_profiles %>
+  <tr>  
+  	<td><%= link_to company_profile_path(item) do %>
+		<div style="width:100px">
+			<%= image_tag item.logo%> 		
+		</div> <% end %>
+  		</td>
+    <td><%= item.name %></td>
+    <td><%= item.street %>  <%= item.city %></td>    
+    <td><%= truncate item.description, :length=>100 %></td>
+    <td><% item.contact %></td>
+    <td> <%= link_to "Edit", edit_company_profile_path(item)%> </td> 
+  </tr>
+  <% end %>
+</table>

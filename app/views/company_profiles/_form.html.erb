@@ -1,0 +1,57 @@
+
+<h3>Basic information</h3>
+<%= f.fields_for :user do |user| %>
+      <%= user.label :email %>
+      <br />      
+      <%= user.text_field :email %>
+      <br />
+      <%= user.label :password %>
+      <br />
+      <%= user.password_field :password %>
+      <br />
+      <%= user.label :password_confirmation %>
+      <br />
+      <%= user.password_field :password_confirmation %>
+<%end%>
+
+<h3>Profile Information</h3>
+<% if (@company_profile.logo?) %>
+  <div style="width:200px">
+    <%= image_tag @company_profile.logo %> 
+    <%= f.file_field :logo, :as => :file %>
+  </div> 
+<% else %>
+    <%= f.file_field :logo, :as => :file %>  
+<% end %> 
+<div>
+  <%= f.label :name %> <br/>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :description %> <br/>
+  <%= f.text_area :description,:rows=>6 %>
+</div> 
+<div>
+  <%= f.label :street %> <br/>
+  <%= f.text_field :street %>
+</div>
+<div>
+  <%= f.label :city %> <br/>
+  <%= f.text_field :city %>
+</div>
+<div>
+  <%= f.label :zip %> <br/>
+  <%= f.text_field :zip %>
+</div>
+<div>
+  <%= f.label :country %> <br/>
+  <%= f.text_field :country %>
+</div>
+<div>
+  <%= f.label :website %> <br/>
+  <%= f.text_field :website %>
+</div>
+<div>
+  <%= f.label :contact %> <br/>
+  <%= f.text_area :contact, :rows=>4 %>
+</div>

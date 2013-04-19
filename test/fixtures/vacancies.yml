@@ -2,9 +2,9 @@
 
 one:
   title: MyString
-  description: MyText
+  description: MyText hmm hmm
   deadline: 2013-03-28 21:12:35
-  job_type: MyString
+  job_type: full-time
   job_address: MyString
   street: MyString
   city: MyString
@@ -12,6 +12,9 @@ one:
   zip: 1
   latitude: 1.5
   longitude: 1.5
+  min_salary: 2000
+  max_salary: 20000
+  job_duration: lt3
 
 two:
   title: MyString
@@ -25,3 +28,6 @@ two:
   zip: 1
   latitude: 1.5
   longitude: 1.5
+  min_salary: 2000
+  max_salary: 20000
+  job_duration: 3to12

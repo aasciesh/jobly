@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405095331) do
+ActiveRecord::Schema.define(:version => 20130413115744) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20130405095331) do
 
   create_table "company_profiles", :force => true do |t|
     t.string   "name"
-    t.string   "type"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -45,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130405095331) do
     t.datetime "logo_updated_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "company_type"
   end
 
   create_table "experiences", :force => true do |t|
@@ -141,6 +141,8 @@ ActiveRecord::Schema.define(:version => 20130405095331) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "type"
+    t.integer  "profile_id"
+    t.string   "profile_type"
   end
 
   create_table "vacancies", :force => true do |t|
@@ -155,8 +157,14 @@ ActiveRecord::Schema.define(:version => 20130405095331) do
     t.integer  "zip"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "min_salary"
+    t.integer  "max_salary"
+    t.string   "job_duration"
   end
+
+  add_index "vacancies", ["job_duration"], :name => "index_vacancies_on_job_duration"
+  add_index "vacancies", ["job_type"], :name => "index_vacancies_on_job_type"
 
 end
