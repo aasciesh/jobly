@@ -1,0 +1,12 @@
+
+<% if @user.profile_type=="UserProfile" %>
+<p>Hello <%= "#{@user.profile.firstname} #{@user.profile.lastname},"%></p>
+<% elsif @user.profile_type== "CompanyProfile" %>
+<p>Hello <%= "#{@user.profile.name},"%></p>
+<% end %>
+<p>Welcome to Jobly.</p>
+<p>
+	You are ready for exploring the awesomeness of Jobly. But, you need to confirm youe email to activate your account. Please click link below or copy paste it to browser for activation. This link will be valid only for 2 weeks.
+</p>
+<!-- TODO: Change localhost to real domain before production -->
+<a href="http://localhost:3000/activate/<%=@user.confirmation_code%>">Click here to confirm</a>
