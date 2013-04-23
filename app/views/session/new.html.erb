@@ -1,4 +1,5 @@
 <h1>Sign In</h1>
+<!-- FIXME: use rails path method instead of hardcoded url and also remove line for it from route.rb -->
 <%= form_for(:session, url: '/session/create', method: 'post') do |f| %>
 
       <%= f.label :email %>

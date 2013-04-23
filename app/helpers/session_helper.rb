@@ -51,7 +51,7 @@ module SessionHelper
 	def signed_in_user
 		unless signed_in?
 			store_request_path
-			redirect_to root_path
+			redirect_to signin_path
 		end	
 	end
 end
