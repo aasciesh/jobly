@@ -1,0 +1,101 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "applications"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-25 17:10:35', '2013-04-25 17:10:35', 298486374)
+  [1m[36m (226.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM "tags"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:30:38', '2013-04-25 17:30:38', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:30:38', '2013-04-25 17:30:38', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "vacancies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-25 17:30:38', '2013-04-25 17:30:38', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-25 17:30:38', '2013-04-25 17:30:38', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "experiences"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "user_profiles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "applications"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "references"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "rememeber_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "categories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "qualifications"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "language_skills"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-25 17:30:39', '2013-04-25 17:30:39', 298486374)
+  [1m[36m (251.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

@@ -1,14 +1,15 @@
+<% provide(:title, 'Jobly | Job seeker Sign up') %>
 <h1>Job Seeker SignUp</h1>
 
 <%= form_for(@user_profile) do |f| %>
 	<%= f.label :firstname %>
-	<br />
+	<br>
     <%= f.text_field :firstname %>
-    <br /><br />
+    <br><br>
     <%= f.label :lastname %>
-    <br />
+    <br>
     <%= f.text_field :lastname %>
-
+    <br>
     <%= f.fields_for :user do |af| %>
 	    <%= af.label :email %>
 	    <br />

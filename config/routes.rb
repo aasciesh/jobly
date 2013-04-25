@@ -1,4 +1,5 @@
 Jobly::Application.routes.draw do
+<<<<<<< HEAD
   resources :company_profiles
   resources :user_profiles
   match '/signin', to: 'session#create'
@@ -59,4 +60,16 @@ Jobly::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+=======
+  
+  #TODO: Take off resources development before putting into production
+  resources :user_profiles, :session, :company_profiles, :users, :development
+  root :to => 'home#index'
+  match '/signin', to: 'session#new'
+  match '/signout', to:'session#destroy', via: :delete
+  match '/signup', to: 'user_profiles#new'
+  match '/activate/:code', to: 'users#activate', via: :get
+  match '/resend_confirmation/:id', to: 'users#send_confirmation_link', via: :put
+  match '/session/create', to: 'session#create', via: :post
+>>>>>>> 93ad5c6e617c0851e97cde237019266b3e3a4974
 end
