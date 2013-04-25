@@ -7,4 +7,5 @@ class LanguageSkill < ActiveRecord::Base
   validates :type, presence: true, inclusion: {in: LANGUAGE_TYPES, message: 'Language type must be spoken or written'}
   validates :name, presence:true, uniqueness: true
   validates :level, presence: true, :inclusion => { :in => 0..5 }
+  
 end
