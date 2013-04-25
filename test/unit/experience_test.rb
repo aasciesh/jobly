@@ -7,6 +7,6 @@ class ExperienceTest < ActiveSupport::TestCase
 	#   experiences.title = ""
 	  
 
-	end
+	#end
   
 end
