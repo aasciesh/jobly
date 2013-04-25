@@ -31,7 +31,7 @@ class VacanciesControllerTest < ActionController::TestCase
 								  max_salary: 20000,
 								  job_duration: "3to12" }
 			end
-		assert_redirected_to vacancy_path(:vacancy), "FAILED"
+		assert_redirected_to vacancies_path, "FAILED"
 		assert_equal "Vacancy created successfully !", flash.now[:success], "FAILED"  
 	end
 
@@ -98,7 +98,7 @@ class VacanciesControllerTest < ActionController::TestCase
 					min_salary: 2000,
 					max_salary: 20000,
 					job_duration: "3to12" }
-		assert_redirected_to vacancy_path(:vacancy)
+		assert_redirected_to vacancy_path(vacancy1)
 		assert_equal "Information updated successfully!", flash.now[:success]
 	end
 end
