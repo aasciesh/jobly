@@ -1,4 +1,18 @@
 Jobly::Application.routes.draw do
+  get "vacancies/index"
+
+  get "vacancies/show"
+
+  get "vacancies/new"
+
+  get "vacancies/edit"
+
+  get "vacancies/create"
+
+  get "vacancies/update"
+
+  get "vacancies/destroy"
+
   resources :company_profiles
   resources :user_profiles
   match '/signin', to: 'session#create'
