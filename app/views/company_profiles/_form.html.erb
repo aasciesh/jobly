@@ -1,17 +1,7 @@
 
 <h3>Basic information</h3>
 <%= f.fields_for :user do |user| %>
-      <%= user.label :email %>
-      <br />      
-      <%= user.text_field :email %>
-      <br />
-      <%= user.label :password %>
-      <br />
-      <%= user.password_field :password %>
-      <br />
-      <%= user.label :password_confirmation %>
-      <br />
-      <%= user.password_field :password_confirmation %>
+      <%= render 'shared/user_siginup' , :user=>user %>
 <%end%>
 
 <h3>Profile Information</h3>
