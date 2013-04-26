@@ -1,7 +1,7 @@
 class UserProfile < ActiveRecord::Base
-  attr_accessible 	:avatar, :birth_date, :city, :country, 
-  					:firstname, :full_address, :gender, :hobbies, 
-  					:lastname, :self_info, :street, :zip, :user_attributes
+  attr_accessible   :avatar, :birth_date, :city, :country, 
+            :firstname, :full_address, :gender, :hobbies, 
+            :lastname, :self_info, :street, :zip, :user_attributes
 
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
@@ -13,6 +13,7 @@ class UserProfile < ActiveRecord::Base
   has_many :qualifications
   has_many :language_skills
   has_many :references
+
   USER_GENDER_TYPE= ['m','f']
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}
