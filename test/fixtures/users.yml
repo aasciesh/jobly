@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  email: MyString
+  email: getaasciesh@hotmail.com
   password_digest: MyString
-  rememeber_cookie: MyString
+  remember_cookie: MyString
 
 two:
   email: MyString
   password_digest: MyString
-  rememeber_cookie: MyString
+  remember_cookie: MyString

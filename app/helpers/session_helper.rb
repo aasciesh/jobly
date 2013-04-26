@@ -14,7 +14,7 @@ module SessionHelper
 	end
 
 	def current_profile
-		@current_profile || 
+		@current_profile ||= 
 		(CompanyProfile.find_by_id(current_user.profile_id) if current_user.type== 'c')|| 
 		(UserProfile.find_by_id(current_user.profile_id) if current_user.type== 'u')
 	end
@@ -23,10 +23,10 @@ module SessionHelper
 		@current_user ||= User.find_by_remember_cookie(cookies[:remember_cookie])
 	end
 	
-	def guest?
-		current_user.nil?
+	def user_type
+		current_user.type || 'g'
 	end
-	
+
 	def signed_in?
 	    !current_user.nil?
 	end
@@ -51,7 +51,7 @@ module SessionHelper
 	def signed_in_user
 		unless signed_in?
 			store_request_path
-			redirect_to root_path
+			redirect_to signin_path
 		end	
 	end
 end
