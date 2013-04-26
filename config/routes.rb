@@ -1,8 +1,9 @@
 Jobly::Application.routes.draw do
-HEAD
+#>>>>>>>>HEAD
   resources :company_profiles
   resources :user_profiles
-    resources :vacancies
+  resources :vacancies
+  resources :language_skills
   match '/signin', to: 'session#create'
   match '/signout', to:'session#destroy', via: :delete
   # The priority is based upon order of creation:
@@ -72,5 +73,5 @@ HEAD
   match '/activate/:code', to: 'users#activate', via: :get
   match '/resend_confirmation/:id', to: 'users#send_confirmation_link', via: :put
   match '/session/create', to: 'session#create', via: :post
- 
+ #>>>>>>> 93ad5c6e617c0851e97cde237019266b3e3a4974
 end

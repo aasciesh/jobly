@@ -99,3 +99,773 @@ Connecting to database specified by database.yml
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 11:38:06', '2013-04-26 11:38:06', 298486374)
+  [1m[36m (154.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "4078db0d999b37f46d974557f64fc0de"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$TTkdlpU4XEldrKAG8KheTOPk9Bvg13VEJycV2hEHtBQ1O/yfDv7ZW"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "-pjfXLnrgGRtfyp74GFsZA"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '1HVdttSk_urdENZgOKpQVA', "updated_at" = '2013-04-26 11:38:06.676462' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "776247bd90ff29059897ee8e8559fb4f"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$CKl442mg509H7i6oMR4oIeK78.y8z09EAXhI8vn0n52vWfO7Dd4hO"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "fAPIbLLdj0-bWK3WMRPxdw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'd07ce4dOG3J-VBaqwMJsLg', "updated_at" = '2013-04-26 11:38:06.772241' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "106374c0fcf26354716d2fa7deabd1d0"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$pDCignSlGoanDo88BumBbuvGcsjHxWG1z8qvW/d/1bM/XlRmeuviG"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "GZv__er9QsHr3B4bz2i6Iw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'SKtnvJFIbtWUKl2hfpxFxg', "updated_at" = '2013-04-26 11:38:06.856556' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "56ceb48976477645c69393bab4e108e1"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$VnNOe2jIDKtQVzgCojWX1.fA2.qOunIbWys4DgUEZB63QjjZTCk1O"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "WZ62DR4leRcnNsBpyAtA5A"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:38:06 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'W5Ow3u91KppmrhFsDCBPWA', "updated_at" = '2013-04-26 11:38:06.942571' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "53e156b75583870dd2526bf07b028a1a"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:38:07 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:38:07 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$44450UQDGlbhFSWZJ9.boOvlKRp1Jv9Nuo9AEnHxBSdjZnjIUyQO."], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "-Qx2PmyhRAstwbBF42I2Yw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:38:07 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:38:07 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:38:07 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'XTtKWf8E7v2zDKqj1AxfBw', "updated_at" = '2013-04-26 11:38:07.027298' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 11:40:32', '2013-04-26 11:40:32', 298486374)
+  [1m[36m (154.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "79b8eadaa12d144446d30031795f4044"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$NvgnIjdsuvn1LdT.Hr1U/us7nG9SbbuhXqVrWFha2NEZETWOMgayO"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "ANlpsRgUaBWzwTyscnh-iA"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'TbALWgSN0LGLo7xsz0DRJw', "updated_at" = '2013-04-26 11:40:32.641287' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "0bf7ab8a031037c693171001bfafe284"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$VlsbvhM5YgmQnOanGU2gR.Bk7vGTR0KwYlWToLrz8wBQHBHo.HdKq"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "6ZTSRd6H87JuEFM4dJ_9vQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'iNwi8cWfSaCftovGMzLQsQ', "updated_at" = '2013-04-26 11:40:32.728814' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "f44fa334b9550c5082293216bb994989"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$wbpqq2YwinH8xpmIwFq47eAIhCaHXz3ac80SRGFenT/B.RwERvFmy"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "RdnuspQyxNnVZrNGdNtUNQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'AyvXF8RbIasrSLPYD4oYSw', "updated_at" = '2013-04-26 11:40:32.812017' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "cc0f92d3589a6919659a0bb3ee69700d"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$Ir/HMb5eLPMtGxwYyBVlkuDQvQ7djVOzR9MZ/KIvnJW.J82zz3V8q"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "9En0DUynmsHoPqRrRnpo5w"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'HdgpDXDuOUfUREyXGO7odg', "updated_at" = '2013-04-26 11:40:32.896250' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "a8ee33d32b7088bc08b150d1949fcc07"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$pN1PfPf6NqTSnFi0n1KHpOo9ACCzkn2YbYqyu7VAwXCbaokkmPzS."], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "GmTTuJTBJO_tUT04TxrzQw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:40:32 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'eVaTTVtUVHvEzLNq2K1OcQ', "updated_at" = '2013-04-26 11:40:32.979932' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 11:41:40', '2013-04-26 11:41:40', 298486374)
+  [1m[36m (169.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "b5a2e721f53df2c23fecf6ec9a852ce5"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:41:40 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:41:40 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$a2MYX1hUz.cbv//0SAvEb.6a/7iGfo8ktbdi.aeK4/YLFvUJTo/TS"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "FnHFy6v2GZkZCTmkgQxDeQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:41:40 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'tEOE3dHwXW1QrcH9cglo8w', "updated_at" = '2013-04-26 11:41:41.015463' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "58687777a546c77977c948407262efcf"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$73sYnstR35rqZ.azI.dXk.C4n2TfaPFzupLQgCuGf9/X1nMBtLLke"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "uG3E0UjrK5k-FTGcbco62Q"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'KEt1HrihU6c7jktIJHgxqw', "updated_at" = '2013-04-26 11:41:41.127458' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "9654bf70750f6a30726fc708ac455387"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$XOTBopHcqkJZJEna0hzq7el.08j/ut5KC23RlaJZkr3eSlwqtTPDW"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "aVg4nHZvqjFgx0BlD1Rs3w"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'kDerDACGzINk1Js4WfnUNw', "updated_at" = '2013-04-26 11:41:41.211787' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "0b29669a804b2f181d204b8f18a7c778"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$2B2z7GSbLVpC4rTEuAjkwe4aw4dP6U54NhjO6lj.Jfa99aSomWlRu"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "xbKgngs8Dn6gwL3QCz-6EA"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'oIy2Fcdm_5hj2ppq7So-Yw', "updated_at" = '2013-04-26 11:41:41.295794' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "432960d7942e7a804d07c897902a061f"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$Lr8hZdYb96pYAHbtafN1V.MHdBh6RDbejoVuF8ayhkoVbJ.lsTdpG"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "cn58h1_sgCR0driqQu1s4w"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:41:41 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '6rWUF8ssGNs6kcJN0qNkQg', "updated_at" = '2013-04-26 11:41:41.399848' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 11:48:47', '2013-04-26 11:48:47', 298486374)
+  [1m[36m (161.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "f6ecec0fd04a9c7bbc8b581c3da8e3ec"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$igfixomvEYDiYMzLX2KAvepkHTAzfaM/js.LBDknC56qdai8OtQq."], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "zqJjyi3BIb3-2vrQZDACFw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'FqNSLsDqpxddENBqq5Ht_Q', "updated_at" = '2013-04-26 11:48:48.188136' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "b8f85802ef3c1c20d266e8a92491cfe4"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$Q98x/PUHloUsCXop66IZSOtCXZk2e98eV7ik.bCEBO6lQU67Bt0z6"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "TRPAZFij_wqlN_Xum-E40w"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'i7QCFmDHjJmXAS2mKfcngQ', "updated_at" = '2013-04-26 11:48:48.279146' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "e30267c789c68498d62f8fcad874890b"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$n6HTDVPVC3aXDbJQ51yvSu2/CN3CAwEf.lCtYoSyf.JEjG60oBT4u"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "AiaLGi722VjWrTFzsH4y4A"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '_CJQpkKcrcaDodKpWh0cUQ', "updated_at" = '2013-04-26 11:48:48.362344' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "af50a1d2c1d520965df668a198e9a252"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$BJAJgiFfgZH9vc8R.PEOnu22LBcE7aokxSKkznib1Jfcou3VmUl8m"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "20qXIbnBA5UCL3aR5gndZw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'pHvSbWi1InRbI_yXFX-Jmg', "updated_at" = '2013-04-26 11:48:48.445954' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "e907a353fe675d78ec0eeb876a7d23c8"], ["confirmation_sent_date", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$czreMb/tzYmc./d0w/LnZuAKW.bLPDwTP3yUqIL74ltQZdbcYHG3y"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "kXtntMQAf46n9W9X_2lCUA"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 11:48:48 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'ygd2rF2pvjZWjPwbSMeBcQ', "updated_at" = '2013-04-26 11:48:48.548805' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 13:31:09', '2013-04-26 13:31:09', 298486374)
+  [1m[36m (159.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "dd1f986dd3268711be8f95ed34982073"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$H3lD.LQIEu7tj69aFTcCNulZQFbv73tWmiu2W1OzzZPOl9wnyvize"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "SeA5vX4dmwIo-_xapkus3w"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '1EHDcsc4dnwgfl83ho_DjA', "updated_at" = '2013-04-26 13:31:10.143432' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "0aacff231bac6856f95515317b1e197d"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$PV92BHMQKRacqhfDLHpnUurBcbBpzXiaHFIzqcbp4z9n793NGZuhG"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "j086mGlCgvA5-eSB1fkrrw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:31:10 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '7OUycQCHJlruTvjqcm0WVA', "updated_at" = '2013-04-26 13:31:10.234337' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 13:33:27', '2013-04-26 13:33:27', 298486374)
+  [1m[36m (162.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "0ec932d407f89ad1d983bd03ff000538"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$h8l0d6OZZtU.3uF2L79a4ehp0YLAHI2VQzuH3QKcf9kY8AgjjZte."], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "h7NSbuRHeKNtxAXjAGU_Xw"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'NoCvuk2haE0P_7ZRxUkcZQ', "updated_at" = '2013-04-26 13:33:27.550865' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "abffd685b7f0eeecdd513c17a3fc71fb"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$ObUEmu.TFJlET7NEL.F/8.nL69CAKuRbv3cfAGsDXVAp43fcJ4MwG"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "qLrWgdZ5r4B25lvB47-Zkg"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:33:27 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '00w3c7Q0lOWI-_zw9tMicQ', "updated_at" = '2013-04-26 13:33:27.641801' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 13:34:24', '2013-04-26 13:34:24', 298486374)
+  [1m[36m (167.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "7c7504364717368f930885d1bce87445"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$xApY0GdB87qBp9oeglx0XeIwXSA8ZOdot8gkWXjO8FfSHEyYoMz4S"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "L0RloLwM03kBNvOOpotl6A"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'cHRkG1wDOoSFj9VeWuV5Tg', "updated_at" = '2013-04-26 13:34:24.860569' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "9dceca31ca4da17b3e70b5a3231b8a03"], ["confirmation_sent_date", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["created_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$dcTRJ4Ze33PYbzxZCjEjr.uX5xFa2tBZ4GitbhFIAzym.iwMcOxre"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "0UqCEIusDIJ6u_birg6UoQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 13:34:24 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'maF-EqW4QHiynO8ogrNZWQ', "updated_at" = '2013-04-26 13:34:24.951483' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_cookie" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 30ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "user_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '1990-03-28', 'm', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_profiles" ("firstname", "lastname", "birth_date", "gender", "full_address", "street", "city", "country", "zip", "self_info", "hobbies", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 'MyText', 'MyText', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "categories"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "tag_matches"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tag_matches" ("tag_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "tags"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "tags" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "company_profiles"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "company_profiles" ("name", "company_type", "description", "street", "city", "country", "zip", "website", "contact", "created_at", "updated_at", "id") VALUES ('MyString', 'ksdj', 'MyText', 'MyString', 'MyString', 'MyString', 1, 'www.MyString.com', 'MyText', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "qualifications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "qualifications" ("institute_name", "degree_type", "start", "end", "address", "website", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-03-28', '2013-03-28', 'MyString', 'MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "references"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "references" ("referee_name", "phone", "email", "referee_info", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyText', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "vacancies"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText hmm hmm', '2013-03-28 21:12:35.000000', 'full-time', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, 'lt3', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "vacancies" ("title", "description", "deadline", "job_type", "job_address", "street", "city", "country", "zip", "latitude", "longitude", "min_salary", "max_salary", "job_duration", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-03-28 21:12:35.000000', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 1, 1.5, 1.5, 2000, 20000, '3to12', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "language_skills"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "language_skills" ("name", "level", "type", "created_at", "updated_at", "id") VALUES ('MyString', 1, NULL, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "applications"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "applications" ("user_id", "vacancy_id", "created_at", "updated_at", "id") VALUES (1, 1, '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "experiences"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "experiences" ("employer", "full_address", "business_field", "position", "responsibilities", "start_date", "end_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', '2013-03-28', '2013-03-28', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('getaasciesh@hotmail.com', 'MyString', 'MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("email", "password_digest", "remember_cookie", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2013-04-26 14:18:44', '2013-04-26 14:18:44', 298486374)
+  [1m[36m (161.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["activated", false], ["confirmation_code", "bd36987dbf78aee857cfaaff7b6e150f"], ["confirmation_sent_date", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["created_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$EBob57QlAvtIfM/J1eYmae2ZJb5wG73YNZ9TdD/O6dZ6pgDy1HPee"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "3kC_mTFUT-7i1eDCkjgaWQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["zip", 1]]
+  [1m[35m (0.1ms)[0m  UPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = '7_w5dEAa_uLuPBKye-oq-w', "updated_at" = '2013-04-26 14:18:45.179001' WHERE "users"."id" = 980190963
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'my@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `confirmation_code`
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("activated", "confirmation_code", "confirmation_sent_date", "created_at", "email", "password_digest", "profile_id", "profile_type", "remember_cookie", "type", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["activated", false], ["confirmation_code", "13b468aad5c182a3bb4c9e331f0ee85f"], ["confirmation_sent_date", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["created_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["email", "my@email.com"], ["password_digest", "$2a$10$A3wAMn2QgR4o6hQFxWltgOam6Ojt9gmD7z0l9EuDMcTOq1Os7M/Dm"], ["profile_id", nil], ["profile_type", nil], ["remember_cookie", "__UUEgTyzBoFnF2TlMF0eQ"], ["type", nil], ["updated_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'my@email.com' AND "users"."id" != 980190963) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "user_profiles" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "birth_date", "city", "country", "created_at", "firstname", "full_address", "gender", "hobbies", "lastname", "self_info", "street", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["avatar_content_type", nil], ["avatar_file_name", nil], ["avatar_file_size", nil], ["avatar_updated_at", nil], ["birth_date", Wed, 28 Mar 1990], ["city", "helsinki"], ["country", "finland"], ["created_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["firstname", "tester"], ["full_address", "testernenkatu, helsinki, finland"], ["gender", "m"], ["hobbies", "I like testing"], ["lastname", "testernen"], ["self_info", "I am a tester"], ["street", "testernenkatu"], ["updated_at", Fri, 26 Apr 2013 14:18:45 UTC +00:00], ["zip", 1]]
+  [1m[36m (0.1ms)[0m  [1mUPDATE "users" SET "profile_type" = 'UserProfile', "profile_id" = 980190963, "remember_cookie" = 'HHpbZo8oLoVBgPDlRgyq5Q', "updated_at" = '2013-04-26 14:18:45.270045' WHERE "users"."id" = 980190963[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by LanguageSkillsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_cookie" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.1ms)[0m  rollback transaction

@@ -4,11 +4,7 @@ one:
   firstname: MyString
   lastname: MyString
   birth_date: 1990-03-28
-<<<<<<< HEAD
   gender: m
-=======
-  gender: MyString
->>>>>>> 93ad5c6e617c0851e97cde237019266b3e3a4974
   full_address: MyString
   street: MyString
   city: MyString
