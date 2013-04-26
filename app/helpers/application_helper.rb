@@ -9,19 +9,19 @@ module ApplicationHelper
 
 	
 	def user_profile_includes?(item)
-		item_name_plurified= item.class.name.downcase.pluralize
+		item_name_plurified= item.class.name.underscore.pluralize
 		current_profile.send(item_name_plurified).includes?(item)
 	end
 	def user_profile_include?(item)
-		item_name_= item.class.name.downcase
+		item_name_= item.class.name.underscore
 		current_profile.send(item_name_)== item
 	end
 	def company_profile_includes?(item)
-		item_name_plurified= item.class.name.downcase.pluralize
+		item_name_plurified= item.class.name.underscore.pluralize
 		current_profile.send(item_name_plurified).includes?(item)
 	end
 	def company_profile_include?(item)
-		item_name_= item.class.name.downcase.pluralize
+		item_name_= item.class.name.underscore.pluralize
 		current_profile.send(item_name_) == item
 	end
 	def corerct_user?(user_profile)

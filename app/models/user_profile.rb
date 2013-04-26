@@ -17,9 +17,8 @@ class UserProfile < ActiveRecord::Base
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}
   validates :lastname, presence: true, length: {minimum: 2, maximum: 50}
-  validates :country, presence: true, length: {minimum: 2, maximum: 50, message: 'Give country name'}
+  validates :country, length: {minimum: 2, maximum: 50, message: 'Give country name'}
   validate :is_birth_date_given_and_is_above_16?
-  # validates :birth_date, presence: true, message: 'birth date above 16'
   validates :gender, presence:true, inclusion: {in: USER_GENDER_TYPE, message: 'User type must be m or f'}
   validates :full_address, presence: true, length: {minimum: 2, maximum: 250}
 
