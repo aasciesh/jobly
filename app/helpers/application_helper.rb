@@ -6,11 +6,11 @@ module ApplicationHelper
 			base_title= 'Jobly'
 		end
 	end
-
 	
 	def user_profile_includes?(item)
 		item_name_plurified= item.class.name.downcase.pluralize
 		current_profile.send(item_name_plurified).includes?(item)
+		
 	end
 	def user_profile_include?(item)
 		item_name_= item.class.name.downcase

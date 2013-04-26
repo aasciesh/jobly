@@ -1,5 +1,4 @@
 require 'test_helper'
-
 class LanguageSkillsControllerTest < ActionController::TestCase
   include SessionHelper
   def setup
@@ -19,13 +18,20 @@ class LanguageSkillsControllerTest < ActionController::TestCase
   										password: "mypassword",
   										password_confirmation: "mypassword")
 
-  	@user.save
+    @language_skill = LanguageSkill.new(level: 5 ,
+                                         name: 'Nepali',
+                                          type: 'spoken')
+  	@language_skill.save 
+    @user.save
   	@user_profile.user = @user
+    @user_profile.language_skills<<@language_skill
+    @language_skill.save    
     @user_profile.save
+    login_as(@user)
   end
 
 def login_as(user)
-  @request.session[:remember_cookie] = user.remember_cookie
+  @request.cookies[:remember_cookie] = user.remember_cookie
 end
 
   # test "should get show" do
@@ -39,8 +45,14 @@ end
   end
 
   test "should get create" do
-    post :create
-    assert_response :success
+    
+    assert_difference "LanguageSkill.count", +1  do
+      post :create, language_skill: { level: 5 , name: 'Nepali', type: 'spoken'
+
+                                  }
+    end
+    assert_response :redirect
+    assert_redirected_to user_profile_path(@user_profile)
   end
 
   # test "should get edit form" do
@@ -53,9 +65,10 @@ end
   #   assert_response :success
   # end
 
-  # test "should get destroy" do
-  #   get :destroy
-  #   assert_response :success
-  # end
+  test "should get destroy" do
+    get :destroy
+    assert_response :redirect
+    assert_redirected_to user_profile_path(@user_profile)
+  end
 
 end
