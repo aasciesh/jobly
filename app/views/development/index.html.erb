@@ -1,0 +1,41 @@
+<h1>Jobly development Panel</h1>
+<br>
+<br>
+<br>
+<h3> TODO NOTES </h3>
+<% for file in @todo_notes.keys %>
+  <div class="annotated_file">
+    <p><%= file %></p>
+    <ul>
+      <% for annotation in @todo_notes[file] %>
+        <li><%= annotation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<br>
+<br>
+<h3> FIXME NOTES </h3>
+<% for file in @fixme_notes.keys %>
+  <div class="annotated_file">
+    <p><%= file %></p>
+    <ul>
+      <% for annotation in @fixme_notes[file] %>
+        <li><%= annotation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<br>
+<br>
+<h3> OPTIMIZE NOTES </h3>
+<% for file in @optimize_notes.keys %>
+  <div class="annotated_file">
+    <p><%= file %></p>
+    <ul>
+      <% for annotation in @optimize_notes[file] %>
+        <li><%= annotation %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

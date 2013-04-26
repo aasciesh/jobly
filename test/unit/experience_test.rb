@@ -44,6 +44,7 @@ class ExperienceTest < ActiveSupport::TestCase
 		assert !experience.save
 	end
 
+
 	test "Experiences should not save without end date" do
 		experience =experiences(:one)
 		experience.end_date=''

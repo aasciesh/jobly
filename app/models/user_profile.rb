@@ -1,7 +1,7 @@
 class UserProfile < ActiveRecord::Base
-  attr_accessible 	:avatar, :birth_date, :city, :country, 
-  					:firstname, :full_address, :gender, :hobbies, 
-  					:lastname, :self_info, :street, :zip, :user_attributes
+  attr_accessible   :avatar, :birth_date, :city, :country, 
+            :firstname, :full_address, :gender, :hobbies, 
+            :lastname, :self_info, :street, :zip, :user_attributes
 
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
@@ -14,13 +14,12 @@ class UserProfile < ActiveRecord::Base
   has_many :language_skills
   has_many :references
 
-USER_GENDER_TYPE= ['m','f']
+  USER_GENDER_TYPE= ['m','f']
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}
   validates :lastname, presence: true, length: {minimum: 2, maximum: 50}
-  validates :country, presence: true, length: {minimum: 2, maximum: 50, message: 'Give country name'}
+  validates :country, length: {minimum: 2, maximum: 50, message: 'Give country name'}
   validate :is_birth_date_given_and_is_above_16?
-  # validates :birth_date, presence: true, message: 'birth date above 16'
   validates :gender, presence:true, inclusion: {in: USER_GENDER_TYPE, message: 'User type must be m or f'}
   validates :full_address, presence: true, length: {minimum: 2, maximum: 250}
 
@@ -37,4 +36,5 @@ USER_GENDER_TYPE= ['m','f']
       return false
     end
   end
+
 end

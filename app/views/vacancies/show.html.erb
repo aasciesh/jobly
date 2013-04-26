@@ -1,0 +1,13 @@
+<h2><%= @vacancy.title %> </h2>
+<div>
+	<h5>Description</h5>
+	<%= @vacancy.description %> <br/>
+	<h5>Address</h5>
+	<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>
+	<%= @vacancy.country %> <br/>
+	<h5>Job Duration</h5> 
+	<%= @vacancy.job_duration %> <br/>
+	<h5>Job Type</h5>
+	<%= @vacancy.job_type %> <br/>
+</div> 
+<%= link_to "Edit", edit_vacancy_path(@vacancy) %>
