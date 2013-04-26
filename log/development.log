@@ -9499,3 +9499,72 @@ Served asset /application.js - 304 Not Modified (35ms)
 
 Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-23 05:26:38 +0300
 Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-24 17:24:38 +0300
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (39ms)
+
+
+Started GET "/development" for 127.0.0.1 at 2013-04-24 17:24:55 +0300
+Processing by DevelopmentController#index as HTML
+  Rendered development/index.html.erb within layouts/application (169.6ms)
+Completed 200 OK in 1318ms (Views: 664.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /application.css - 200 OK (60ms)
+
+
+Started GET "/assets/development.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /development.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /home.css - 304 Not Modified (83ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /session.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/user_profiles.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /user_profiles.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:57 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /jquery.js - 304 Not Modified (49ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /users.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/development.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /development.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /home.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /session.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/user_profiles.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /user_profiles.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /application.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-24 17:24:58 +0300
+Served asset /users.js - 304 Not Modified (18ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
