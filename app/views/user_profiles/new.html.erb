@@ -2,6 +2,10 @@
 <h1>Job Seeker SignUp</h1>
 
 <%= form_for(@user_profile) do |f| %>
+	<%= f.fields_for :user do |af| %>
+	    <%= render 'shared/user_signup', user: af %>
+    <%end%>
+    <br>
 	<%= f.label :firstname %>
 	<br>
     <%= f.text_field :firstname %>
@@ -10,18 +14,5 @@
     <br>
     <%= f.text_field :lastname %>
     <br>
-    <%= f.fields_for :user do |af| %>
-	    <%= af.label :email %>
-	    <br />
-	    <%= af.text_field :email %>
-	    <br /><br />
-	    <%= af.label :password %>
-	    <br />
-	    <%= af.password_field :password %>
-	    <br /><br />
-	    <%= af.label :password_confirmation %>
-	    <br />
-	    <%= af.password_field :password_confirmation %>
-    <%end%>
     <%= f.submit 'Submit' %>
 <% end %>
