@@ -1,0 +1,7 @@
+<%= form_for(@user, url: '/resend_confirmation/#{@user.id}', method: 'update') do |f| %>
+		
+      <%= f.label :email, 'Email to:' %>
+      <%= f.text_field :email %>
+  </br>
+      <%= f.submit "Send confirmation email again" %>
+    <% end %>

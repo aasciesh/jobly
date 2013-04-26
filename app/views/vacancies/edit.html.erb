@@ -1,0 +1,5 @@
+<%= form_for @vacancy, :html => { :multipart => true } do |f| %>
+	<h2>Update Vacancy</h2>
+	<%= render 'form', :f => f %>
+	<%= f.submit "Update "%> 
+<% end %>
