@@ -17,9 +17,9 @@ class EmailConfirmationTest < ActionMailer::TestCase
                                     self_info: 'I am a tester',
                                     hobbies: 'I like testing' )
     @user= User.new(email: 'getaasciesh@hotmail.com', password: '12345abd', password_confirmation: '12345abd')
-    @user.save
-    @user_profile.save
     @user.profile = @user_profile
+    @user_profile.save
+    @user.save
 
   end
 

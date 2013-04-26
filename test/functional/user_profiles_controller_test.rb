@@ -13,6 +13,9 @@ class UserProfilesControllerTest < ActionController::TestCase
                                     zip: 00001,
                                     self_info: 'I am a tester',
                                     hobbies: 'I like testing' )
+    @user= User.new(email:'tester@testernen.com', password: 'abcdef123', password_confirmation: 'abcdef123' )
+    @user.save
+    @user_profile.user=@user
     @user_profile.save
     @user_profile
   end
