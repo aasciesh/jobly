@@ -27,4 +27,10 @@ module ApplicationHelper
 	def corerct_user?(user_profile)
 		current_user.profile == user_profile
 	end 
+	def check_correct_user
+		unless user_profile_includes?(@language_skill)
+			redirect_to user_profile_path(current_profile)
+			flash[:error] = 'Couldnot delete'
+		end
+	end
 end

@@ -1,15 +1,13 @@
-class LanguageSkillsController < ApplicationController
+class LanguageSkillsController < ApplicationController		
 		before_filter :find_language_skill
-		before_filter :check_correct_user
+		before_filter :check_correct_user, only: [:destroy]
 
 		def new
 			@language_skills = LanguageSkill.new
 		end		
 
 		def create
-
 			@language_skill = current_profile.language_skills.build(params[:language_skill])
-
 			if @language_skill.save
 				flash[:success] = "Language_Skill created!"	
 				respond_to do |format|
