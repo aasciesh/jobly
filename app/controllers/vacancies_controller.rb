@@ -11,7 +11,7 @@ class VacanciesController < ApplicationController
 	def create
 		@vacancy=Vacancy.new(params[:vacancy])
 		if @vacancy.save
-			redirect_to vacancy_path(:vacancy)
+			redirect_to vacancies_path
 			flash.now[:success] = "Vacancy created successfully !"
 		else
 			render :new
@@ -30,7 +30,7 @@ class VacanciesController < ApplicationController
 	def update
 		@vacancy=Vacancy.find(params[:id])
 		if @vacancy.update_attributes(params[:vacancy])
-	     	redirect_to vacancy_path(:vacancy)
+	     	redirect_to vacancy_path(@vacancy)
 	      	flash.now[:success] = "Information updated successfully!"
     	else
 	      	render :edit

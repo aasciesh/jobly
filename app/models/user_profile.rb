@@ -14,7 +14,7 @@ class UserProfile < ActiveRecord::Base
   has_many :language_skills
   has_many :references
 
-USER_GENDER_TYPE= ['m','f']
+  USER_GENDER_TYPE= ['m','f']
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}
   validates :lastname, presence: true, length: {minimum: 2, maximum: 50}
@@ -37,4 +37,5 @@ USER_GENDER_TYPE= ['m','f']
       return false
     end
   end
+
 end
