@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="wrap">
+	<%= render 'shared/navbar' %>
+	<div class="container">
+	<div id="pull"></div>
+		<%= yield %>
+	</div>
+	<div id="push"></div>
+</div>
+<div id="footer">
+	<%= render 'shared/footer' %>
+</div>
 </body>
 </html>

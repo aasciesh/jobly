@@ -1,8 +1,9 @@
 Jobly::Application.routes.draw do
 
 #TODO: Take off resources development before putting into production
-  resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills
-  root :to => 'home#index'
+  resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :static
+  root :to => 'static#home'
+  match '/test', to: 'static#test'
   match '/signin', to: 'session#new'
   match '/signout', to:'session#destroy', via: :delete
   match '/signup', to: 'user_profiles#new'
