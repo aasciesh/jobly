@@ -16,8 +16,9 @@ class CompanyProfilesController < ApplicationController
 			sign_in(@company_profile.user)
 			flash.now[:success] = "Welcome to Jobly!"
 		else
-			render :new
-			flash.now[:error] = "Something went wrong!"
+			render 'new'
+			@error= @company_profile.errors
+			
 		end	
 	end
 

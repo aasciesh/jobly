@@ -8,7 +8,7 @@
 </div>
 <div id="job_seeker_signup">
   
-    <%= form_for(@user_profile) do |f| %>
+    <%= form_for(@user_profile|| build_user_profile) do |f| %>
     	<%= f.fields_for :user do |af| %>
     	    <%= render 'shared/user_signup', user: af %>
         <%end%>
@@ -27,7 +27,8 @@
     <% end %>
 </div>
 <div id="company_signup">
-    <%= form_for @company_profile, :html => { :multipart => true } do |f| %>
+   
+    <%= form_for (@company_profile || build_company_profile), :html => { :multipart => true } do |f| %>
        
         <%= f.fields_for :user do |user| %>
             <%= render 'shared/user_signup' , :user=>user %>
