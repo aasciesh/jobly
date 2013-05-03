@@ -11,6 +11,8 @@ before_filter :find_user_profile, on: [:show, :edit]
   def new
     @user_profile = UserProfile.new
     @user_profile.build_user
+    @company_profile=CompanyProfile.new
+    @company_profile.build_user
 
     respond_to do |format|
       format.html 
