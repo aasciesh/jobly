@@ -21,6 +21,7 @@ before_filter :find_user_profile, on: [:show, :edit]
   def create
     @user_profile = UserProfile.new(params[:user_profile])
     if @user_profile.save
+      EmailConfirmation.confirm_email(@user_profile.user).deliver
       respond_to do |format|
         format.html {render 'show'
           flash[:success]= "#{@user_profile.firstname} #{@user_profile.lastname}, your profile has been created."}
@@ -55,7 +56,7 @@ before_filter :find_user_profile, on: [:show, :edit]
                     }
         format.js    {render json: {status: 'failed', message: 'Could not update profile.'}}
       end
-      flash[:errors]= @user.errors
+      flash[:errors]= @user_profile.errors
       render action: 'edit'
     end 
   end

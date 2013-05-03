@@ -1,6 +1,7 @@
 class CompanyProfile < ActiveRecord::Base
   attr_accessible 	:city, :contact, :country, :description, 
-  					:logo_file_name, :name, :street, :type, :website, :zip
+  					:logo_file_name, :name, :street, :company_type, 
+  					:website, :zip, :logo, :user_attributes
  validates 	:description, 
  			:presence=>true, 
  			:length => {:minimum => 15 , :maximum=>3000}
@@ -12,7 +13,7 @@ class CompanyProfile < ActiveRecord::Base
  
   has_attached_file :logo
   has_one :user, as: :profile
+  accepts_nested_attributes_for :user
   has_many :vacancies
-
 
 end

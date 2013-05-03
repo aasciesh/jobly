@@ -1,0 +1,23 @@
+<table class="table">
+  <tr>  
+  	<th>Title</th>  
+    <th>description</th>    
+    <th>Date line</th>
+    <th>Address</th>     
+  
+    <th></th>    
+  </tr>
+  <% for item in @vacancies %>
+  <tr>  
+  	<td>
+      <%= link_to vacancy_path(item) do %>
+        <%= item.title %>
+		  <% end %>
+  	</td>
+    <td><%= truncate item.description, :length=>100 %></td>
+    <td><%= item.street %>  <%= item.city %><%= item.country %></td>    
+   
+    <td> <%= link_to "Edit", edit_vacancy_path(item)%> </td> 
+  </tr>
+  <% end %>
+</table>

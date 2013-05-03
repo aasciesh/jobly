@@ -2,22 +2,13 @@
 
 one:
   name: MyString
-  type: 
+  company_type: ksdj
   description: MyText
   street: MyString
   city: MyString
   country: MyString
-  zip: 1
-  website: MyString
+  zip: 00001
+  website: www.MyString.com
   contact: MyText
 
-two:
-  name: MyString
-  type: 
-  description: MyText
-  street: MyString
-  city: MyString
-  country: MyString
-  zip: 1
-  website: MyString
-  contact: MyText
+

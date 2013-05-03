@@ -1,0 +1,5 @@
+<%= form_for @company_profile, :html => { :multipart => true } do |f| %>
+	<h2>Register new company</h2>
+	<%= render 'form', :f => f %>
+	<%= f.submit "Register "%> 
+<% end %>

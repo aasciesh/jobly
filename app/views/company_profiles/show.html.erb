@@ -1,0 +1,18 @@
+<h2><%= @company_profile.name %> </h2>
+<% if (@company_profile.logo_file_name?) %>
+	<div style="width:200px">
+		<%= image_tag @company_profile.logo%> 		
+	</div> 
+<% end %> 
+<div>
+	<h5>Description</h5>
+	<%= @company_profile.description %> <br/>
+	<h5>Address</h5>
+	<%= @company_profile.street %> <%= @company_profile.city %><%= @company_profile.zip %>
+	<%= @company_profile.country %> <br/>
+	<h5>Website</h5> 
+	<%= @company_profile.website %> <br/>
+	<h5>Contacts</h5>
+	<%= @company_profile.contact %> <br/>
+</div> 
+<%= link_to "Edit", edit_company_profile_path(@company_profile) %>

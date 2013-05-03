@@ -2,26 +2,34 @@
 <h1>Job Seeker SignUp</h1>
 
 <%= form_for(@user_profile) do |f| %>
-	<%= f.label :firstname %>
-	<br />
-    <%= f.text_field :firstname %>
-    <br /><br />
-    <%= f.label :lastname %>
-    <br />
-    <%= f.text_field :lastname %>
-
-    <%= f.fields_for :user do |af| %>
-	    <%= af.label :email %>
-	    <br />
-	    <%= af.text_field :email %>
-	    <br /><br />
-	    <%= af.label :password %>
-	    <br />
-	    <%= af.password_field :password %>
-	    <br /><br />
-	    <%= af.label :password_confirmation %>
-	    <br />
-	    <%= af.password_field :password_confirmation %>
+	<%= f.fields_for :user do |af| %>
+	    <%= render 'shared/user_signup', user: af %>
     <%end%>
+    <br>
+	<%= f.label :firstname %>
+	<br>
+    <%= f.text_field :firstname, placeholder: 'Firstname' %>
+    <br><br>
+    <%= f.label :lastname %>
+    <br>
+    <%= f.text_field :lastname %>
+    <br>
+    <%= f.label :gender %>
+    <br>
+    <%= f.text_field :gender %>
+    <br>
+    <%= f.label :birth_date %>
+    <br>
+    <%= f.text_field :birth_date %>
+    <br>
+    <%= f.label :full_address %>
+    <br>
+    <%= f.text_field :full_address %>
+    <br>
+    
+    <%= f.label :lastname %>
+    <br>
+    <%= f.text_field :lastname %>
+    <br>
     <%= f.submit 'Submit' %>
 <% end %>
