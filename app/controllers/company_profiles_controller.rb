@@ -13,6 +13,7 @@ class CompanyProfilesController < ApplicationController
 		@company_profile=CompanyProfile.new(params[:company_profile])
 		if @company_profile.save
 			redirect_to company_profiles_path
+			sign_in(@company_profile.user)
 			flash.now[:success] = "Welcome to Jobly!"
 		else
 			render :new
