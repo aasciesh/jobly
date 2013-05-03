@@ -8,6 +8,15 @@
 </head>
 <body>
 <div id="wrap">
+	<div id="servermsg">
+		<div id="forceHider" class="label label-important" onclick='forceCloseMsgDiv()'>Close</div>
+		<div id="errorDiv" class="alert alert-error">
+			<%= render 'shared/error' %>
+		</div>
+		<div id="successDiv" class="alert alert-success">
+			<%= render 'shared/notice' %>
+		</div>
+	</div>
 	<%= render 'shared/navbar' %>
 	<div class="container">
 	<div id="pull"></div>

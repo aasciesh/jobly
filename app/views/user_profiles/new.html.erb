@@ -26,10 +26,9 @@
     <br>
     <%= f.text_field :full_address %>
     <br>
-    
-    <%= f.label :lastname %>
+ 
     <br>
-    <%= f.text_field :lastname %>
+    <%= f.file_field :avatar %>
     <br>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit', class: 'button button-primary' %>
 <% end %>
