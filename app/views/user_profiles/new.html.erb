@@ -28,8 +28,21 @@
 </div>
 <div id="company_signup">
     <%= form_for @company_profile, :html => { :multipart => true } do |f| %>
-        <h2>Register new company</h2>
-        <%= render 'company_Profiles/form', :f => f %>
+       
+        <%= f.fields_for :user do |user| %>
+            <%= render 'shared/user_signup' , :user=>user %>
+        <%end%><br/>
+        <%= f.label :logo %><br/>
+        <%= f.file_field :logo, :as => :file %> 
+        <div>
+          <%= f.label :name %> <br/>
+          <%= f.text_field :name %>
+        </div>
+        
+        <div>
+          <%= f.label :description %> <br/>
+          <%= f.text_area :description %>
+        </div> 
         <%= f.submit "Register "%> 
     <% end %>
 </div>
