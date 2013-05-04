@@ -15,7 +15,7 @@ module SessionHelper
 	end
 
 	def current_profile
-		@current_profile ||= current_user.profile
+		@current_profile ||= current_user.profile if current_user
 	end
 
 	def current_user

@@ -1,35 +1,34 @@
-<% provide(:title, 'Jobly | Job seeker Sign up') %>
-<h1>Job Seeker SignUp</h1>
+<% provide(:title, 'Jobly | Sign up') %>  
+<h1>User SignUp</h1>
+<div id="tabs" >
+    <ul>
+        <li><a  id="job_seeker" %>Job Seeker</a></li>
+        <li> <a  id="company"  %>Company</a></li>   
+    </ul>
+</div>
 
-<%= form_for(@user_profile) do |f| %>
-	<%= f.fields_for :user do |af| %>
-	    <%= render 'shared/user_signup', user: af %>
-    <%end%>
-    <br>
-	<%= f.label :firstname %>
-	<br>
-    <%= f.text_field :firstname, placeholder: 'Firstname' %>
-    <br><br>
-    <%= f.label :lastname %>
-    <br>
-    <%= f.text_field :lastname %>
-    <br>
-    <%= f.label :gender %>
-    <br>
-    <%= f.text_field :gender %>
-    <br>
-    <%= f.label :birth_date %>
-    <br>
-    <%= f.text_field :birth_date %>
-    <br>
-    <%= f.label :full_address %>
-    <br>
-    <%= f.text_field :full_address %>
-    <br>
-    
-    <%= f.label :lastname %>
-    <br>
-    <%= f.text_field :lastname %>
-    <br>
-    <%= f.submit 'Submit' %>
-<% end %>
+<div id="job_seeker_signup">  
+    <%= form_for(@user_profile|| build_user_profile) do |f| %>
+    	<%= f.fields_for :user do |user| %>
+    	    <%= render 'shared/user_signup', user: user %>
+      <%end%>
+    	<%= render 'new', f: f %>
+        <%= f.submit 'Submit' %>
+    <% end %>
+</div>
+
+<div id="company_signup">   
+    <%= form_for (@company_profile || build_company_profile), :html => { :multipart => true } do |f| %>
+      <%= f.fields_for :user do |user| %>
+          <%= render 'shared/user_signup' , :user=>user %>
+      <%end%><br/>
+      <%= render 'company_profiles/new' , f: f %>
+      <%= f.submit "Register "%> 
+    <% end %>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+       $('#company_signup').hide();  
+      });
+</script>

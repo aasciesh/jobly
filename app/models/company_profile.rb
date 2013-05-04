@@ -11,7 +11,7 @@ class CompanyProfile < ActiveRecord::Base
  validates 	:contact, 
  			:length => {:maximum=>2000}
  
-  has_attached_file :logo
+  has_attached_file :logo, :styles => { profile_pic: "210x210#", cv_pic: "110x110#", thumb: "40x40#" }
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
   has_many :vacancies

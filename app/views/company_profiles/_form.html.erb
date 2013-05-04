@@ -1,18 +1,9 @@
 
-<h3>Basic information</h3>
-<%= f.fields_for :user do |user| %>
-      <%= render 'shared/user_signup' , :user=>user %>
-<%end%>
-
-<h3>Profile Information</h3>
-<% if (@company_profile.logo?) %>
   <div style="width:200px">
-    <%= image_tag @company_profile.logo %> 
+    <%= image_tag @company_profile.logo if @company_profile.logo?%> 
     <%= f.file_field :logo, :as => :file %>
   </div> 
-<% else %>
-    <%= f.file_field :logo, :as => :file %>  
-<% end %> 
+
 <div>
   <%= f.label :name %> <br/>
   <%= f.text_field :name %>

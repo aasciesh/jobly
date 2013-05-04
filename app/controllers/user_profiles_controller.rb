@@ -11,6 +11,8 @@ before_filter :find_user_profile, on: [:show, :edit]
   def new
     @user_profile = UserProfile.new
     @user_profile.build_user
+    @company_profile=CompanyProfile.new
+    @company_profile.build_user
 
     respond_to do |format|
       format.html 
@@ -20,6 +22,9 @@ before_filter :find_user_profile, on: [:show, :edit]
 
   def create
     @user_profile = UserProfile.new(params[:user_profile])
+
+
+
     if @user_profile.save
       EmailConfirmation.confirm_email(@user_profile.user).deliver
       respond_to do |format|
@@ -29,7 +34,9 @@ before_filter :find_user_profile, on: [:show, :edit]
       end
     else
       respond_to do |format|
-        format.html {render 'new'}
+        format.html {
+                      @error= @user_profile.errors
+                      render 'new'}
         format.js   {render json: {status: 'failed', message: 'Could not create profile.'}}
       end
     end

@@ -7,16 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="wrap">
-	<%= render 'shared/navbar' %>
-	<div class="container">
-	<div id="pull"></div>
-		<%= yield %>
+	<div id="wrap">
+		<div class="container">
+		<%= render 'shared/header' %>
+		<div id="pull"></div>
+			<%= yield %>
+		</div>
+		<div id="push"></div>
+		
 	</div>
-	<div id="push"></div>
-</div>
-<div id="footer">
-	<%= render 'shared/footer' %>
-</div>
+	<div id="footer">
+			<%= render 'shared/footer' %>
+		</div>
+	<div id="servermsg">
+		<div id="forceHider" class="label label-important" onclick='forceCloseMsgDiv()'>Close</div>
+		<div id="errorDiv" class="alert alert-error">
+			<%= render 'shared/error' %>
+		</div>
+		<div id="successDiv" class="alert alert-success">
+			<%= render 'shared/notice' %>
+		</div>
+	</div>
 </body>
 </html>
