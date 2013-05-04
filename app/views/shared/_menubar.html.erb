@@ -1,27 +1,27 @@
- 
-<ul class="nav .nav-stacked pull-right">
-	<% if !current_user.nil? %>
-	<li id="fat-menu" class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <b class="caret"></b> </a>
-		<ul class="dropdown-menu" >
-			<li>
-				<%= link_to "Profile", current_profile %>
-			</li>
-			<li>
-				<%= link_to "Settings", '#' %>
-			</li>
-			<li class="divider"></li>
-			<li>
-				<%= link_to "Sign out", signout_path, method: :delete %>
-			</li>
+<div class="right p-menu">
+	<div class="thumb-holder">
+		<% if !current_user.nil? %>
+			<%=(link_to image_tag(current_profile.logo(:thumb), class: 'menu-thumb'), current_profile ) if current_user.profile_type== 'CompanyProfile'%> 
+			<%=(link_to image_tag(current_profile.avatar(:thumb), class: 'menu-thumb'), current_profile) if current_user.profile_type== 'UserProfile'%>
+		<% end %>
+	</div>
+	<div class="menu-opener">
+		<div class="mask"></div>
+		<i class="icon-asterisk icon-white menu-ico"></i>
+	</div>
+	<div class="short-menu">
+		<ul class="menu-list">
+			<li> <%= link_to 'Profile', current_profile %></li>
+			<div class="line"></div>
+			
+			<%if current_user.profile_type== 'UserProfile' %>
+				<li><%= link_to 'Profile Settings', edit_user_profile_path(current_profile) %></li>
+			<%end %>
+			<%if current_user.profile_type== 'CompanyProfile' %>
+				<li><%= link_to 'Profile Settings', edit_company_profile_path(current_profile) %></li>
+			<%end %>
+			<div class="line"></div>
+			<li><%= link_to 'Sign Out', signout_path, method: :delete %></li>
 		</ul>
-	</li>
-	<% else %>
-	<li>
-		<%= link_to "Signin", signin_path %>
-	</li>	
-	<li>
-		<%= link_to "Signup", signup_path %>
-	</li>
-	<% end %>
-</ul>
+	</div>
+</div>

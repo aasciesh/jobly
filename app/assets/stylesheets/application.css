@@ -21,6 +21,8 @@
  	background-color: whitesmoke;}
 
  	.brand {
+    position: relative;
+    top:-10px;
  		padding-right: 0;
  		font-weight: bold;
  		font-size: 30px !important;
@@ -247,6 +249,93 @@
 	right:-10px;
 	cursor: pointer;
 }
+
+.p-menu
+{
+width: 64px;
+top: 5px;
+position: relative;
+}
+.thumb-holder
+{
+float: left;
+padding: 0;
+height: 42px;
+width: 42px;
+border: 1px solid black;
+-webkit-box-shadow: -2px 0px 15px black;
+border-radius: 5px 0px 0px 5px;
+}
+.menu-thumb
+{
+z-index: 100;
+border-radius: 3px 0 0 3px;
+border: 1px solid rgba(255, 255, 255, 0.37);
+}
+.menu-opener
+{width: 18px;
+position: relative;
+top: 1px;
+float: left;
+height: 40px;
+background-color: #3E639B;
+border-width: 1px 1px 1px 0;
+border-color: rgba(145, 145, 145, 0);
+border-style: solid;
+-webkit-box-shadow: 2px 0px 5px #1B1818;
+border-radius: 0 3px 3px 0;
+}
+.mask{position: absolute;
+width: 18px;
+z-index: 1;
+height: 42px;
+background-color: rgba(3, 2, 2, 0.38);}
+.menu-ico{top: 13px;
+left: 2px;
+position: relative;}
+.short-menu
+{position: absolute; display: none;
+}
+.menu-list
+{
+
+list-style-type: none;
+background-color: #2E5083;
+z-index: 100;
+width: 120px;
+position: relative;
+top: 45px;
+border: 1px solid rgba(245, 245, 245, 0.34);
+right: 83px;
+-webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.43);
+border-radius: 5px 0 5px 5px;
+}
+.menu-list > li 
+{padding: 3px 5px 3px 8px;
+list-style-type: none;
+font-size: 12px;
+}
+.menu-list > li > a{color: #BCD2EE;text-shadow: 1px 1px 2px #1D1C1C;
+font-weight: bold;}
+.menu-list > li > a:hover{
+  color: #E2E8F0;
+  text-decoration: none;
+font-weight: bold;}
+.line{height: 1px;
+background-color: rgba(255, 255, 255, 0.13);
+border-bottom: 1px solid #1B3B64;}
+
+.menu-opener:hover + .short-menu {display: block;}
+
+.short-menu:hover {display: block;}
+
+
+
+
+
+
+
+
 
 
 
@@ -1647,7 +1736,7 @@
  	*margin-right: .3em;
  	line-height: 14px;
  	vertical-align: text-top;
- 	background-image: url("../img/glyphicons-halflings.png");
+ 	background-image: url("glyphicons-halflings.png");
  	background-position: 14px 14px;
  	background-repeat: no-repeat;
  	margin-top: 1px;
@@ -1670,7 +1759,7 @@
  .dropdown-submenu:focus > a > [class^="icon-"],
  .dropdown-submenu:hover > a > [class*=" icon-"],
  .dropdown-submenu:focus > a > [class*=" icon-"] {
- 	background-image: url("../img/glyphicons-halflings-white.png");
+ 	background-image: url("glyphicons-halflings-white.png");
  }
  .icon-glass {
  	background-position: 0      0;
@@ -2102,7 +2191,7 @@
  	*z-index: 2;
  }
  .navbar-inner {
- 	min-height: 50px;
+ 	height: 50px;
  	padding-left: 20px;
  	padding-right: 20px;
  	background-color: #fafafa;

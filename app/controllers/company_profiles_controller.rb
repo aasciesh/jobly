@@ -19,7 +19,7 @@ class CompanyProfilesController < ApplicationController
 		if @company_profile.save
 			#EmailConfirmation.confirm_email(@company_profile.user).deliver
 	      	respond_to do |format|
-	        format.html {render 'show'
+	        format.html {redirect_to 'show'
 	        	flash[:success]= "#{@company_profile.name} has been registered."}
 	        	format.js   {render json: {status: 'success', message: 'Successfully registered company.'}}
 	        end
@@ -39,19 +39,19 @@ class CompanyProfilesController < ApplicationController
 	def edit	
 	end
 
-	# TODO: Flash message: Message is shown in edit form while page is redirected alredy. click edit after update to see problem 
 	def update
 		@company_profile=CompanyProfile.find(params[:id])
 		if @company_profile.update_attributes(params[:company_profile])	 
-			render 'show'     
+			    
 	      	respond_to do |format|
 		        format.html {		                   
-		                    flash[:notice]= "Successfully updated profile."
+		                    flash.now[:notice]= "Successfully updated profile."
+		                    render 'show' 
 		                    }
 		        format.js {render json: {status: 'success', message: 'Successfully updated profile.'}}
 	    	end
     	else
-	      	flash[:errors]= @company_profile.errors
+	      	@error= @company_profile.errors
       		render 'edit'
     	end			
 	end

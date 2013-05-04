@@ -3,6 +3,8 @@ class UserProfile < ActiveRecord::Base
             :firstname, :full_address, :gender, :hobbies, 
             :lastname, :self_info, :street, :zip, :user_attributes
 
+  
+  has_attached_file :avatar, :styles => { profile_pic: "210x210#", cv_pic: "110x110#", thumb: "40x40#" }
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
   has_attached_file :avatar
