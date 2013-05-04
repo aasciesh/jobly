@@ -10,9 +10,9 @@
   <% for item in @company_profiles %>
   <tr>  
   	<td><%= link_to company_profile_path(item) do %>
-		<div style="width:100px">
-			<%= image_tag item.logo%> 		
-		</div> <% end %>
+		
+			<%= image_tag item.logo.url(:thumb) if item.logo? %> 		
+		 <% end %>
   		</td>
     <td><%= item.name %></td>
     <td><%= item.street %>  <%= item.city %></td>    
