@@ -3,64 +3,32 @@
 <div id="tabs" >
     <ul>
         <li><a  id="job_seeker" %>Job Seeker</a></li>
-        <li> <a  id="company" %>Company</a></li>   
+        <li> <a  id="company"  %>Company</a></li>   
     </ul>
 </div>
-<div id="job_seeker_signup">
-  
+
+<div id="job_seeker_signup">  
     <%= form_for(@user_profile|| build_user_profile) do |f| %>
-    	<%= f.fields_for :user do |af| %>
-    	    <%= render 'shared/user_signup', user: af %>
+    	<%= f.fields_for :user do |user| %>
+    	    <%= render 'shared/user_signup', user: user %>
         <%end%>
-        <br>
-    	<%= f.label "Name" %>
-    	<br>
-        <%= f.text_field :firstname, placeholder: 'First name' %>
-        <%= f.text_field :lastname, placeholder: 'Last name' %>
-        <br><br>  
-       
-        <%= f.label :full_address %>
-        <br>
-        <%= f.text_field :full_address , placeholder: 'Street | City | Zip code | Country' %>
-        <br>
+    	<%= render 'new', f: f %>
         <%= f.submit 'Submit' %>
     <% end %>
 </div>
-<div id="company_signup">
-   
+
+<div id="company_signup">   
     <%= form_for (@company_profile || build_company_profile), :html => { :multipart => true } do |f| %>
-       
-        <%= f.fields_for :user do |user| %>
-            <%= render 'shared/user_signup' , :user=>user %>
-        <%end%><br/>
-        <%= f.label :logo %><br/>
-        <%= f.file_field :logo, :as => :file %> 
-        <div>
-          <%= f.label :name %> <br/>
-          <%= f.text_field :name %>
-        </div>
-        
-        <div>
-          <%= f.label :description %> <br/>
-          <%= f.text_area :description %>
-        </div> 
-        <%= f.submit "Register "%> 
+      <%= f.fields_for :user do |user| %>
+          <%= render 'shared/user_signup' , :user=>user %>
+      <%end%><br/>
+      <%= render 'company_profiles/new' , f: f %>
+      <%= f.submit "Register "%> 
     <% end %>
 </div>
 
-
 <script type="text/javascript">
     $(function() {
-       $('#company_signup').hide();        
-        $('#company').click(function(){
-            $('#job_seeker_signup').hide();
-             $('#company_signup').fadeIn();
-        });
-
-        $('#job_seeker').click(function(){
-            $('#job_seeker_signup').fadeIn();
-            $('#company_signup').hide();
-        });
+       $('#company_signup').hide();  
       });
 </script>
-

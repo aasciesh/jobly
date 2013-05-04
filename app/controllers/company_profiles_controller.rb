@@ -3,6 +3,11 @@ class CompanyProfilesController < ApplicationController
 	def new
 		@company_profile=CompanyProfile.new
 		@company_profile.build_user
+
+	    respond_to do |format|
+	      format.html 
+	      format.js
+	    end
 	end
 
 	def index
@@ -12,13 +17,19 @@ class CompanyProfilesController < ApplicationController
 	def create
 		@company_profile=CompanyProfile.new(params[:company_profile])
 		if @company_profile.save
-			redirect_to company_profiles_path
-			sign_in(@company_profile.user)
-			flash.now[:success] = "Welcome to Jobly!"
+			EmailConfirmation.confirm_email(@company_profile.user).deliver
+	      	respond_to do |format|
+	        format.html {render 'show'
+	        	flash[:success]= "#{@company_profile.name} has been registered."}
+	        	format.js   {render json: {status: 'success', message: 'Successfully registered company.'}}
+	        end
 		else
-			render 'new'
-			@error= @company_profile.errors
-			
+			respond_to do |format|
+	        	format.html {
+	                      @error= @company_profile.errors
+	                      render :new }
+	        	format.js   {render json: {status: 'failed', message: 'Could not register company.'}}
+	        end
 		end	
 	end
 

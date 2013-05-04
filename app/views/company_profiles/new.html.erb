@@ -1,5 +1,33 @@
-<%= form_for @company_profile, :html => { :multipart => true } do |f| %>
-	<h2>Register new company</h2>
-	<%= render 'form', :f => f %>
-	<%= f.submit "Register "%> 
-<% end %>
+<% provide(:title, 'Jobly | Sign up') %>  
+<h1>User SignUp</h1>
+<div id="tabs" >
+    <ul>
+        <li><a  id="job_seeker" href="#" %>Job Seeker</a></li>
+        <li> <a  id="company"  href="#" %>Company</a></li>   
+    </ul>
+</div>
+<div id="job_seeker_signup">  
+    <%= form_for(@user_profile|| build_user_profile) do |f| %>
+    	<%= f.fields_for :user do |af| %>
+    	    <%= render 'shared/user_signup', user: af %>
+        <%end%>
+      	<%= render 'user_profiles/new', f: f %>
+        <%= f.submit 'Submit' %>
+    <% end %>
+</div>
+
+<div id="company_signup">   
+ 	<%= form_for @company_profile, :html => { :multipart => true } do |f| %>
+      <%= f.fields_for :user do |user| %>
+          <%= render 'shared/user_signup' , :user=>user %>
+      <%end%><br/>
+      <%= render 'new' , f: f %>
+      <%= f.submit "Register "%> 
+    <% end %>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+       $('#job_seeker_signup').hide(); 
+      });
+</script>

@@ -61,3 +61,15 @@ function forceCloseMsgDiv()
 	$('#successDiv').empty();
 	$('#errorDiv').empty();
 }
+
+ $(function() {             
+    $('#company').click(function(){            
+        $('#job_seeker_signup').hide();
+        $('#company_signup').fadeIn();  
+    });
+
+    $('#job_seeker').click(function(){
+        $('#job_seeker_signup').fadeIn();
+        $('#company_signup').hide();
+    });
+});
