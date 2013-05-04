@@ -1,6 +1,20 @@
 require 'test_helper'
 
 class CompanyProfilesControllerTest < ActionController::TestCase
+	def build_company
+		  @company_profile = CompanyProfile.new(name: "company profile", 
+		                      description: "company description",
+		                      street: "annankatu 12",
+		                      city: "helsinki",
+		                      country: "finland",
+		                      zip: "10201",
+		                      website: "website.com",
+		                      contact: "contact person" )
+
+	    @user= User.new(email:'testeremail@testernen.com', password: 'abcdef123', password_confirmation: 'abcdef123' )	  
+	    @company_profile.user=@user
+	    @company_profile		
+	end
 	
 	test "should get new form for company with user model" do
 		get :new
@@ -14,10 +28,9 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
-	test "should create company profile" do
-		assert_difference "CompanyProfile.count", +1, "This is failing" do
-			post :create, company_profile: {name: "company", 
-		                      type: "mytype", 
+	test "should create company profile" do	
+		assert_difference "CompanyProfile.count", +1, "This is failing" do			
+			post :create, company_profile: {name: "Company name", 
 		                      description: "company description",
 		                      street: "annankatu 12",
 		                      city: "helsinki",
@@ -25,15 +38,15 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 		                      zip: "10201",
 		                      website: "website.com",
 		                      contact: "contact person" }
-			end
-		assert_redirected_to company_profiles_path, "FAILED"
-		assert_equal "Welcome to Jobly!", flash.now[:success], "FAILED"  
+		end
+		assert_template :show, "FAILED"
+		assert_equal "Company name has been registered.", flash.now[:success], "FAILED"  
 	end
 
-	test "should not create company profile with invalid params" do
+# TODO: Functional test to assert error message for company profile
+	test "should flash error message with invalid params" do
 		assert_no_difference("CompanyProfile.count") do
 			post :create, company_profile: {name: " ", 
-		                      type: "mytype", 
 		                      description: "company description",
 		                      street: "annankatu 12",
 		                      city: "helsinki",
@@ -42,8 +55,8 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 		                      website: "website.com",
 		                      contact: "contact person" }
 			end
-		assert_template :new, "FAILED"
-		assert_equal "Something went wrong!", flash.now[:error], "FAILED"  
+		assert_template :new, "FAILED"		
+		assert_equal response.errors, flash.now[:errors], "FAILED"  
 	end
 
 	test "should build user for company profile" do
@@ -84,9 +97,9 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 				zip: "10201",
 				website: "website.com",
 				contact: "contact person" }
-		assert_response :redirect
-		assert_redirected_to company_profile_path
-		assert_equal "Information updated successfully!", flash.now[:success]
+		
+		assert_template :show, "FAILED"
+		assert_equal "Successfully updated profile.", flash.now[:notice]
 	end
 
 end

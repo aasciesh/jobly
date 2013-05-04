@@ -4,7 +4,6 @@ one:
   firstname: MyString
   lastname: MyString
   birth_date: 1990-03-28
-  gender: m
   full_address: MyString
   street: MyString
   city: MyString

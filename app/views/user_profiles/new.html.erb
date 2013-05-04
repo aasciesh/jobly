@@ -11,7 +11,7 @@
     <%= form_for(@user_profile|| build_user_profile) do |f| %>
     	<%= f.fields_for :user do |user| %>
     	    <%= render 'shared/user_signup', user: user %>
-        <%end%>
+      <%end%>
     	<%= render 'new', f: f %>
         <%= f.submit 'Submit' %>
     <% end %>
