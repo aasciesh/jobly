@@ -250,6 +250,7 @@
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
 .p-menu
 {
 width: 64px;
@@ -337,6 +338,9 @@ border-bottom: 1px solid #1B3B64;}
 
 
 
+
+
+.dropdown-menu li { float: left; display: inline-block;margin: 5px;}
 
 
 

@@ -1,3 +1,6 @@
 <% provide(:title, @user_profile.firstname+ ' '+@user_profile.lastname+' | Edit Proifle') %>
-<h1>UserProfiles#edit</h1>
-<p>Find me in app/views/user_profiles/edit.html.erb</p>
+<h3>User Profiles</h3>
+<%= form_for @user_profile, :html => { :multipart => true } do |f| %>	
+	<%= render 'form', :f => f %>
+	
+<% end %>

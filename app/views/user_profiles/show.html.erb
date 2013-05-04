@@ -1,3 +1,17 @@
 <% provide(:title, @user_profile.firstname+ ' '+ @user_profile.lastname) %>
-<h1>UserProfiles#show</h1>
-<p>Find me in app/views/user_profiles/show.html.erb</p>
+
+<div class="span4">
+<%= image_tag @user_profile.avatar if @user_profile.avatar?%> <p>
+<%= link_to "Edit Profile", edit_user_profile_path(@user_profile), class: "button button-primary" %> 
+<%= link_to "View CV Profile",  show_cv_path(@user_profile), class: "button button-primary"%></p>
+</div>
+<div class="span8">
+	<h4><%= @user_profile.firstname %> <%= @user_profile.lastname %></h4><p>
+	Full Address: 	<%= @user_profile.full_address %></p><p>
+	Age: 			<%= Time.now.year-@user_profile.birth_date.year %> (<%= @user_profile.birth_date %>)</p><p>
+	Gender:			<%= @user_profile.gender %></p><p>
+	Street:			<%= @user_profile.street %></p><p>
+	City:			<%= @user_profile.city %></p><p>
+	Zip code:		<%= @user_profile.zip %></p><p>
+	Country:		<%= @user_profile.country %></p><p>
+</div>

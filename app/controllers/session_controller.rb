@@ -16,6 +16,7 @@ class SessionController < ApplicationController
         }
         end
       else
+        #TODO Flash message: Message is not showing properly(shown in different page) when create fails
         respond_to do |format|
           format.js {render json: {state: 'failed', message: 'Incorrect credentials'}}
           format.html {

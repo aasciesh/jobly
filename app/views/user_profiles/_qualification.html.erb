@@ -1,0 +1,17 @@
+	<div>
+	  <%= f.label :degree_type %> <br/>
+	  <%= f.text_field :degree_type %>
+	</div>
+	<div>
+	  <%= f.label :institute_name %> <br/>
+	  <%= f.text_field :institute_name %>
+	</div>
+	<div>
+	  <%= f.label :start %> <br/>
+	  <%= f.date_select :start, start_year: Time.now.year - 50, default: Time.now.year - 20, end_year: Time.now.year , 
+	  :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+	</div> 
+	<div>  
+		<%= f.label :address %><br>
+		<%= f.text_field :address , placeholder: 'Street | City | Zip code | Country' %><br>
+	</div>
