@@ -9,6 +9,10 @@
   <%= f.text_field :name %>
 </div>
 <div>
+  <%= f.label :company_type %> <br/>
+  <%= f.text_field :company_type %>
+</div>
+<div>
   <%= f.label :description %> <br/>
   <%= f.text_area :description,:rows=>6 %>
 </div> 
@@ -36,3 +40,4 @@
   <%= f.label :contact %> <br/>
   <%= f.text_area :contact, :rows=>4 %>
 </div>
+  <%= f.submit "Update "%> 

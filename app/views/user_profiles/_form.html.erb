@@ -1,0 +1,60 @@
+<div class="span4">
+  	<div style="width:200px">
+	    <%= image_tag @user_profile.avatar if @user_profile.avatar?%> 
+	    <%= f.file_field :avatar, :as => :file %>
+	</div>  
+	<%= f.submit "Update "%> 
+</div>  
+
+<div class="span8">
+	<div>  
+		<%= f.label "Name" %><br>
+		<%= f.text_field :firstname, placeholder: 'First name' %><br>
+		<%= f.text_field :lastname, placeholder: 'Last name' %><br>
+	</div> 
+
+	<div>
+	  <%= f.label :birth_date %> <br/>
+	  <%= f.date_select :birth_date, start_year: 1950, end_year: Time.now.year - 16, 
+	  :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+	</div> 
+	<div>  
+		<%= f.label :full_address %><br>
+		<%= f.text_field :full_address , placeholder: 'Street | City | Zip code | Country' %><br>
+	</div>
+	<div>
+	  <%= f.label :street %> <br/>
+	  <%= f.text_field :street %>
+	</div>
+	<div>
+	  <%= f.label :city %> <br/>
+	  <%= f.text_field :city %>
+	</div>
+	<div>
+	  <%= f.label :zip %> <br/>
+	  <%= f.text_field :zip %>
+	</div>
+	<div>
+	  <%= f.label :country %> <br/>
+	  <%= f.text_field :country %>
+	</div> 
+	<div>
+		<%= f.radio_button :gender, "Male" %>
+		<%= f.label :gender, "Male", :value => "Male" %>
+		<%= f.radio_button :gender, "Female" %>
+		<%= f.label :gender, "Female", :value => "Female" %>
+	</div>
+</div> 
+
+<div class="qualifications"> 
+ 	<div class="span4">
+		<h4>Acidemic Qualifications</h4>
+	</div>
+	<div class="span8">
+		<%= link_to "Add new", "#" , class: "button button-primary"%>
+		<%= f.fields_for :qualifications do |qualification| %>			
+			<%= render 'qualification', :f=> qualification %>			
+		<% end %>
+	</div>
+</div>
+

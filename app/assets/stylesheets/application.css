@@ -246,7 +246,7 @@
 	cursor: pointer;
 }
 
-
+.dropdown-menu li { float: left; display: inline-block;margin: 5px;}
 
 
 

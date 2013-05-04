@@ -17,6 +17,7 @@ class CompanyProfilesController < ApplicationController
 	def create
 		@company_profile=CompanyProfile.new(params[:company_profile])
 		if @company_profile.save
+			sign_in(@company_profile.user)
 			#EmailConfirmation.confirm_email(@company_profile.user).deliver
 	      	respond_to do |format|
 	        format.html {render 'show'
