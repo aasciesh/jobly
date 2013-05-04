@@ -126,6 +126,8 @@
  			color: rgb(14, 39, 94);}
  			input[type="text"], input[type="email"], input[type="password"], textarea{width: 200px;}
 
+ 			.right{float:right;}
+ 			.left{float: left;}
 
  			/* FOR BUTTONS */
 
