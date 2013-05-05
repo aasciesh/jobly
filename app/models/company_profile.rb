@@ -17,4 +17,7 @@ class CompanyProfile < ActiveRecord::Base
   accepts_nested_attributes_for :user
   has_many :vacancies
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
 end
