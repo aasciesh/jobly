@@ -17,7 +17,7 @@ body
 {height:100%;
  	font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
  	font-size:14px; 
- 	color: color: #323949;
+ 	color: #323949;
  	background-color: whitesmoke;
 }
 
@@ -26,7 +26,7 @@ body
     top:-10px;
     padding-right: 0;
     font-weight: bold;
-    font-size: 30px !important;
+    font-size: 32px !important;
     padding: 0px;
     margin-top: 5px;
     color: #a2a3b3;
@@ -81,7 +81,7 @@ a
    position: relative;
    border-radius: 15px 5px 2px 5px;
    top: 2px;
-   -webkit-box-shadow: 1px 1px 5px black;
+   margin-right: 2px;
  }
 
 a:hover 
