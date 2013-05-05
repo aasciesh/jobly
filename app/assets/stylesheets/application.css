@@ -61,7 +61,7 @@ a
    -webkit-box-shadow: inset 0 1px rgb(94, 24, 24),0 1px 5px rgba(34,25,25,0.6);
 }
 
-.jumbotron:after {
+.jumbotron:after, .navbar-inner:after {
    content: '';
    display: block;
    position: absolute;
