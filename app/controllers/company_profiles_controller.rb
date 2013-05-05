@@ -1,5 +1,6 @@
 class CompanyProfilesController < ApplicationController
 	before_filter :find_company_profile, only: [:show, :edit]
+	before_filter :get_company_vacancies, only: [:show]
 	def new
 		@company_profile=CompanyProfile.new
 		@company_profile.build_user
@@ -60,6 +61,9 @@ class CompanyProfilesController < ApplicationController
 
 	    def find_company_profile
 	    	@company_profile = CompanyProfile.find(params[:id])
+	    end
+	    def get_company_vacancies
+	    	@vacancies=current_profile.vacancies
 	    end
 
 end

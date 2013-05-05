@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130504184204) do
+ActiveRecord::Schema.define(:version => 20130505090221) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130504184204) do
 
   create_table "company_profiles", :force => true do |t|
     t.string   "name"
+    t.string   "company_type"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -44,7 +45,6 @@ ActiveRecord::Schema.define(:version => 20130504184204) do
     t.datetime "logo_updated_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.string   "company_type"
   end
 
   create_table "experiences", :force => true do |t|
@@ -164,11 +164,12 @@ ActiveRecord::Schema.define(:version => 20130504184204) do
     t.integer  "zip"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "min_salary"
     t.integer  "max_salary"
     t.string   "job_duration"
+    t.integer  "company_profile_id"
   end
 
   add_index "vacancies", ["job_duration"], :name => "index_vacancies_on_job_duration"

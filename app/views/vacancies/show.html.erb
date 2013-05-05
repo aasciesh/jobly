@@ -1,13 +1,13 @@
-<h2><%= @vacancy.title %> </h2>
-<div>
-	<h5>Description</h5>
-	<%= @vacancy.description %> <br/>
-	<h5>Address</h5>
-	<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>
-	<%= @vacancy.country %> <br/>
-	<h5>Job Duration</h5> 
-	<%= @vacancy.job_duration %> <br/>
-	<h5>Job Type</h5>
-	<%= @vacancy.job_type %> <br/>
+<div class="span4"><p>
+	<%= image_tag @vacancy.company_profile.logo.url(:profile_pic) if @vacancy.company_profile.logo? %> <br>
+	Address:		<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>	<%= @vacancy.country %></p><p> 
+	Job Duration:	<%= @vacancy.job_duration %> </p><p>
+	Job Type:		<%= @vacancy.job_type %> </p><p>
+	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary"%>
+	<%= link_to "Apply", "#", class: "button button-primary"%></p>
 </div> 
-<%= link_to "Edit", edit_vacancy_path(@vacancy) %>
+
+<div class="span8">
+	<h4><%= @vacancy.title %> </h4>
+	<%= raw @vacancy.description %> 
+</div>

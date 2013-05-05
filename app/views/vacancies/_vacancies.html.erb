@@ -1,0 +1,18 @@
+<table class="table">
+  <tr>  
+  	<th>Title</th>    
+    <th>Dead line</th>   
+    <th></th>    
+  </tr>
+  <% for item in @vacancies %>
+  <tr>  
+  	<td>
+      <%= link_to vacancy_path(item) do %>
+        <%= item.title %>
+		  <% end %>
+  	</td>  
+    <td> <%= item.deadline%> </td>  
+    <td> <%= link_to "Edit", edit_vacancy_path(item)%> </td> 
+  </tr>
+  <% end %>
+</table>
