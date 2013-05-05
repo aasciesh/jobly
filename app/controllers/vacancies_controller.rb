@@ -10,12 +10,21 @@ class VacanciesController < ApplicationController
 
 	def create
 		@vacancy=Vacancy.new(params[:vacancy])
+		@vacancy.company_profile=current_profile
 		if @vacancy.save
-			redirect_to vacancies_path
-			flash.now[:success] = "Vacancy created successfully !"
+			respond_to do |format|
+		        format.html {render 'show'
+		        flash[:success]= "#{@vacancy.title}, has been created."}
+		        format.js   {render json: {status: 'success', message: 'Successfully created vacancy.'}}
+      		end
 		else
-			render :new
-			flash.now[:error] = "Something went wrong!"
+			respond_to do |format|
+		        format.html {
+		                      @error= @user_profile.errors
+		                      render 'new'
+		                  	}
+		        format.js 	{ render json: {status: 'failed', message: 'Could not create vacancy.'} }
+		    end
 		end	
 	end
 
