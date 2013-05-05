@@ -4,8 +4,7 @@ one:
   firstname: MyString
   lastname: MyString
   birth_date: 1990-03-28
-  gender: m
-  full_address: MyString
+  full_address: Female
   street: MyString
   city: MyString
   country: MyString
@@ -18,7 +17,7 @@ two:
   firstname: MyString
   lastname: MyString
   birth_date: 2013-03-28
-  gender: MyString
+  gender: Male
   full_address: MyString
   street: MyString
   city: MyString

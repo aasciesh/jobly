@@ -33,6 +33,5 @@ class EmailConfirmationTest < ActionMailer::TestCase
  
     assert_equal "Welcome to Jobly", confirm_email.subject
     assert_equal @user.email, confirm_email.to[0]
-    assert_match(/Please click link below or copy paste it to browser for activation/, confirm_email.body)
   end
 end

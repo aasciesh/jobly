@@ -2,8 +2,8 @@
 
 one:
   email: getaasciesh@hotmail.com
-  password_digest: MyString
-  remember_cookie: MyString
+  password_digest: MyString123
+  remember_cookie: MyString123
 
 two:
   email: MyString

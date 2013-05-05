@@ -1,5 +1,5 @@
 class UserProfilesController < ApplicationController
-before_filter :find_user_profile, on: [:show, :edit]
+before_filter :find_user_profile, on: [:show, :edit, :show_cv]
 
   def index
     @user_profile = UserProfile.all
@@ -8,9 +8,15 @@ before_filter :find_user_profile, on: [:show, :edit]
   def show
   end
 
+  def show_cv
+    
+  end
+
   def new
     @user_profile = UserProfile.new
     @user_profile.build_user
+    @company_profile=CompanyProfile.new
+    @company_profile.build_user
 
     respond_to do |format|
       format.html 
@@ -21,6 +27,7 @@ before_filter :find_user_profile, on: [:show, :edit]
   def create
     @user_profile = UserProfile.new(params[:user_profile])
     if @user_profile.save
+      sign_in(@user_profile.user)
       EmailConfirmation.confirm_email(@user_profile.user).deliver
       respond_to do |format|
         format.html {render 'show'
@@ -29,7 +36,9 @@ before_filter :find_user_profile, on: [:show, :edit]
       end
     else
       respond_to do |format|
-        format.html {render 'new'}
+        format.html {
+                      @error= @user_profile.errors
+                      render 'new'}
         format.js   {render json: {status: 'failed', message: 'Could not create profile.'}}
       end
     end
@@ -51,13 +60,13 @@ before_filter :find_user_profile, on: [:show, :edit]
     else
       respond_to do |format|
         format.html {
-                      render 'show'
-                      flash[:notice]= "Successfully updated"
+                      flash[:errors]= "Update failed"
                     }
         format.js    {render json: {status: 'failed', message: 'Could not update profile.'}}
-      end
+      end  
+      render 'edit'
       flash[:errors]= @user_profile.errors
-      render action: 'edit'
+    
     end 
   end
 

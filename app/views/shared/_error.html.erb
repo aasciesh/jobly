@@ -1,0 +1,15 @@
+
+<% unless @error.nil? %>
+	<h5>
+      The form contains <%= pluralize(@error.count, "error") %>.
+    </h5>
+    <ul>
+      <% @error.full_messages.each do |msg| %>
+        <li>* <%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+<% unless flash.alert.nil? %>
+	<h5>Error</h5>
+	<p><%= flash.alert %></p>
+<% end %>
