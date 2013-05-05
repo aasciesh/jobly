@@ -17,7 +17,7 @@ body
 {height:100%;
  	font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
  	font-size:14px; 
- 	color: rgb(14, 39, 94);
+ 	color: color: #323949;
  	background-color: whitesmoke;
 }
 
@@ -43,6 +43,7 @@ a
 }
 .jumbotron 
 {
+   display: none;
    position: relative;
    padding: 10px 0;
    color: #fff;
@@ -283,7 +284,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 .p-menu.right
 {
     width: 64px;
-    top: 5px;
+    top: 2px;
     position: relative;
 }
 .thumb-holder
@@ -2596,15 +2597,17 @@ input[type="submit"].btn.btn-mini {
   border-radius: 6px 0 6px 6px;
 }
 .navbar-inverse .navbar-inner {
-  background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #2F4D64, #1E2752);
+background-color: #1E2752;
+background-image: -moz-linear-gradient(top, #2F4D64, #1E2752);
 background-image: background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2F4D64), to( #1E2752));
 background-image: -webkit-linear-gradient(top, #2F4D64, #1E2752);
 background-image: -o-linear-gradient(top, #2F4D64, #1E2752);
 background-image: linear-gradient(to bottom, #2F4D64, #1E2752);
 background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F4D64', endColorstr='#1E2752', GradientType=0);
+-webkit-box-shadow: 1px 0 15px #201F1F;
 border-color: #252525;
+border-bottom: 3px solid #D8D8D8;
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
