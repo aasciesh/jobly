@@ -29,11 +29,12 @@ body
     font-size: 30px !important;
     padding: 0px;
     margin-top: 5px;
+    margin-right: 50px;
     color: #a2a3b3;
     text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-    -webkit-transition: all 1.5s linear;
-    -moz-transition: all 1.5s linear;
-    transition: all 1.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 a 
@@ -79,7 +80,7 @@ a
   height: 32px;
    width: 32px;
    position: relative;
-   border-radius: 15px 5px 2px 5px;
+   border-radius: 2px 2px 2px 2px;
    top: 2px;
    -webkit-box-shadow: 1px 1px 5px black;
  }
@@ -381,6 +382,29 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 .menu-opener:hover + .short-menu {display: block;}
 
 .short-menu:hover {display: block;}
+
+.search-box{border: 1px solid rgba(245, 245, 245, 0.11);
+height: 28px;
+font-size: 16px;
+color: silver;
+background-color: #253557;
+line-height: 16px;
+padding-top: 5px;
+padding: 5px 5px 0 5px;
+-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.59);}
+
+.search{width: 250px !important;}
+.place{width: 150px !important;}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2269,9 +2293,13 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 .navbar .brand {
+  position: relative;
+  top:0px;
   float: left;
   display: block;
-  padding: 10px 20px 10px;
+  padding: 2px 3px 2px 3px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 8px black;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -2281,6 +2309,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand:hover,
 .navbar .brand:focus {
   text-decoration: none;
+  color: whiteSmoke;
 }
 .navbar-text {
   margin-bottom: 0;
@@ -2607,7 +2636,7 @@ background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F4D64', endColorstr='#1E2752', GradientType=0);
 -webkit-box-shadow: 1px 0 15px #201F1F;
 border-color: #252525;
-border-bottom: 3px solid #D8D8D8;
+border-bottom: 3px solid #A52B2B;
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
@@ -2624,6 +2653,7 @@ border-bottom: 3px solid #D8D8D8;
 	color: #969EAC;
 font-weight: bold;
 z-index: 5;
+border: 1px solid rgba(255, 255, 255, 0.09);
 text-shadow: 1px 1px 5px black;
 }
 .navbar-inverse .navbar-text {
