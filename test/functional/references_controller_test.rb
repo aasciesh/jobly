@@ -18,12 +18,13 @@ include SessionHelper
     	@user = User.new(email: "my@email.com",
     										password: "mypassword",
     										password_confirmation: "mypassword")
+      	
+        @reference = Reference.new(referee_name: 'Jack', email: 'jack@email.com')
 
-      	@reference = Reference.new(name: 'Jack', email: 'jack@email.com')
-    	@reference.save 
+    	  @reference.save 
       	@user.save
-    	@user_profile.user = @user
-      	@user_profile.reference<<@reference
+    	  @user_profile.user = @user
+      	@user_profile.references<<@reference
       	@reference.save    
       	@user_profile.save
       	login_as(@user)
@@ -41,7 +42,7 @@ include SessionHelper
   test "should create new reference" do
     
     assert_difference "Reference.count", +1  do
-      post :create, reference: { name: 'Jack', email: 'jack@email.com'}
+      post :create, reference: { referee_name: 'Jack', email: 'jack@email.com'}
     end
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)

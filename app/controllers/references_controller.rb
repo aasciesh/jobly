@@ -1,26 +1,14 @@
 class ReferencesController < ApplicationController
-
-	def new
-		@user_profile.reference = UserProfile.Reference.new(name: 'Jack', email: 'jack@email.com')
-		@user_profile.reference.build_user
-
-		respond_to do |format|
-			format.html
-			format.js
-		end
-
-end
-
-class ReferencesController < ApplicationController
+	
 	before_filter :find_reference
 	before_filter :check_correct_user, only: [:destroy]
 
 	def new
-			@reference = Reference.new
+			@references = Reference.new
 		end		
 
 		def create
-			@reference = current_profile.reference.build(params[:reference])
+			@reference = current_profile.references.build(params[:reference])
 			if @reference.save
 				flash[:success] = "Reference created!"	
 				respond_to do |format|
@@ -46,7 +34,7 @@ class ReferencesController < ApplicationController
 		@reference = Reference.find_by_id(params[:id])
 	end
 	def check_correct_user
-		unless user_profile_includes?(@language_skill) 
+		unless user_profile_includes?(@reference) 
 			redirect_to user_profile_path(current_profile)
 			flash[:error] = 'Couldnot delete'
 		end
