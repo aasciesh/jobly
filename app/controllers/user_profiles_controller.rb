@@ -1,6 +1,6 @@
 class UserProfilesController < ApplicationController
 before_filter :find_user_profile, only: [:show, :edit, :show_cv]
-
+load_and_authorize_resource
   def index
     @user_profile = UserProfile.all
   end

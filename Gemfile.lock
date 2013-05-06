@@ -38,6 +38,7 @@ GEM
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
+    cancan (1.6.9)
     choice (0.1.6)
     ckeditor (4.0.4)
       mime-types
@@ -144,6 +145,7 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   binding_of_caller
+  cancan
   ckeditor
   coffee-rails (~> 3.2.1)
   friendly_id (~> 4.0.9)
