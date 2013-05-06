@@ -28,6 +28,20 @@ class UserProfile < ActiveRecord::Base
   extend FriendlyId
   friendly_id :firstname, use: :slugged
 
+  def avatar(style)
+    case style
+    when :profile_pic
+      return ('/assets/default_pics/user-210.png' unless self.avatar? ) || self.avatar(:profile_pic)
+    when :cv_pic
+      return ('/assets/default_pics/user-110.png' unless self.avatar? ) || self.avatar(:cv_pic)
+    when :thumb
+      return ('/assets/default_pics/user-40.png' unless self.avatar? ) || self.avatar(:thumb)
+    else
+      return '/assets/default_pics/user-210.png'
+    end
+  end
+
+
   private
 
   def is_birth_date_given_and_is_above_16?
@@ -41,4 +55,5 @@ class UserProfile < ActiveRecord::Base
     end
   end
 
+  
 end

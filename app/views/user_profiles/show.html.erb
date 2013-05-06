@@ -8,7 +8,7 @@
 <div class="span8">
 	<h4><%= @user_profile.firstname %> <%= @user_profile.lastname %></h4><p>
 	Full Address: 	<%= @user_profile.full_address %></p><p>
-	Age: 			<%= Time.now.year-@user_profile.birth_date.year %> (<%= @user_profile.birth_date %>)</p><p>
+	Age: 			<%= ('#{Time.now.year-@user_profile.birth_date.year}' '#{@user_profile.birth_date}') unless @user_profile.birth_date.nil? %></p><p>
 	Gender:			<%= @user_profile.gender %></p><p>
 	Street:			<%= @user_profile.street %></p><p>
 	City:			<%= @user_profile.city %></p><p>
