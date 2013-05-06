@@ -7,12 +7,13 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 gem "ckeditor"
+gem "friendly_id", "~> 4.0.9"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :development do
 	gem "rails-erd"
-	  gem 'better_errors'
+	gem 'better_errors'
   gem "binding_of_caller"
 end
 

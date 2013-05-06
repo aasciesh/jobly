@@ -25,6 +25,9 @@ class UserProfile < ActiveRecord::Base
   validates :gender, inclusion: {in: USER_GENDER_TYPE, message: 'User type must be Male or Female'}, allow_blank: true
   validates :full_address, presence: true, length: {minimum: 2, maximum: 250}
 
+  extend FriendlyId
+  friendly_id :firstname, use: :slugged
+
   private
 
   def is_birth_date_given_and_is_above_16?

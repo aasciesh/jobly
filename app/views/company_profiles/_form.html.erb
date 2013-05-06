@@ -1,44 +1,46 @@
+<div class="span4">
+    <div style="width:200px">
+      <%= image_tag @company_profile.logo if @company_profile.logo?%> 
+      <%= f.file_field :logo, :as => :file %>
+    </div> 
 
-  <div style="width:200px">
-    <%= image_tag @company_profile.logo if @company_profile.logo?%> 
-    <%= f.file_field :logo, :as => :file %>
-  </div> 
+  <div>
+    <%= f.label :name %> <br/>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :company_type %> <br/>
+    <%= f.text_field :company_type %>
+  </div>
 
-<div>
-  <%= f.label :name %> <br/>
-  <%= f.text_field :name %>
+  <div>
+    <%= f.label :street %> <br/>
+    <%= f.text_field :street %>
+  </div>
+  <div>
+    <%= f.label :city %> <br/>
+    <%= f.text_field :city %>
+  </div>
+  <div>
+    <%= f.label :zip %> <br/>
+    <%= f.text_field :zip %>
+  </div>
+  <div>
+    <%= f.label :country %> <br/>
+    <%= f.text_field :country %>
+  </div>
+  <div>
+    <%= f.label :website %> <br/>
+    <%= f.text_field :website %>
+  </div>
+  <div>
+    <%= f.label :contact %> <br/>
+    <%= f.text_area :contact, :rows=>4 %>
+  </div>
+  <%= f.submit "Update "%> 
 </div>
-<div>
-  <%= f.label :company_type %> <br/>
-  <%= f.text_field :company_type %>
-</div>
-
-<div>
-  <%= f.label :street %> <br/>
-  <%= f.text_field :street %>
-</div>
-<div>
-  <%= f.label :city %> <br/>
-  <%= f.text_field :city %>
-</div>
-<div>
-  <%= f.label :zip %> <br/>
-  <%= f.text_field :zip %>
-</div>
-<div>
-  <%= f.label :country %> <br/>
-  <%= f.text_field :country %>
-</div>
-<div>
-  <%= f.label :website %> <br/>
-  <%= f.text_field :website %>
-</div>
-<div>
-  <%= f.label :contact %> <br/>
-  <%= f.text_area :contact, :rows=>4 %>
-</div>
-<div>
+<div class="span8">
   <%= f.label :description %> <br/>
   <%= f.cktext_area :description %>
 </div> 
-  <%= f.submit "Update "%> 
+  

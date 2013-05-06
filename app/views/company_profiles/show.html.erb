@@ -1,6 +1,12 @@
 <div class="span4">
 	<%= image_tag @company_profile.logo.url(:profile_pic) if @company_profile.logo? %> <br>
-	<%= link_to "Edit", edit_company_profile_path(@company_profile), class: "button button-primary"%>		
+	<%= link_to "Edit", edit_company_profile_path(@company_profile), class: "button button-primary"%>	
+	
+	<div class="company_vacancies">
+		<h4>Vacancy Announcements  <%= link_to "New", new_vacancy_path, class: "button button-primary"%></h4>
+		<%= render 'vacancies/vacancies' %>
+	</div>
+
 </div> 
 <div class="span8">
 	<h3><%= @company_profile.name %> </h3>	
