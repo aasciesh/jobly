@@ -1,4 +1,4 @@
-<div>
+<div id="search_bar">
 <%= form_tag("/search", :method => "get", class: 'navbar-search', autocomplete: 'off') do %>
   <%= text_field_tag :query, "", class: 'search search-box', placeholder: 'Search Jobs' %>
   <span style="color: #B9B9B9"> around </span>
