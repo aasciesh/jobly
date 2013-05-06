@@ -26,14 +26,15 @@ body
     top:-10px;
     padding-right: 0;
     font-weight: bold;
-    font-size: 32px !important;
+    font-size: 25px !important;
     padding: 0px;
     margin-top: 5px;
+    margin-right: 50px;
     color: #a2a3b3;
     text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-    -webkit-transition: all 1.5s linear;
-    -moz-transition: all 1.5s linear;
-    transition: all 1.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 a 
@@ -41,45 +42,14 @@ a
    color: #0088cc;
    text-decoration: none;
 }
-.jumbotron 
-{
-   display: none;
-   position: relative;
-   padding: 10px 0;
-   color: #fff;
-   text-align: center;
-   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-   background: rgb(100, 11, 22);
-   background: -moz-linear-gradient(45deg, rgb(100, 11, 22) 0%, rgb(102, 26, 47) 100%);
-   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgb(100, 11, 22)), color-stop(100%,rgb(102, 26, 47)));
-   background: -webkit-linear-gradient(45deg, rgb(100, 11, 22) 0%,rgb(102, 26, 47) 100%);
-   background: -o-linear-gradient(45deg, rgb(100, 11, 22) 0%,rgb(102, 26, 47) 100%);
-   background: -ms-linear-gradient(45deg, rgb(100, 11, 22) 0%,rgb(102, 26, 47) 100%);
-   background: linear-gradient(45deg, rgb(100, 11, 22) 0%,rgb(102, 26, 47) 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(100, 11, 22)', endColorstr='rgb(102, 26, 47)',GradientType=1 );
-   box-shadow: inset 0 1px rgb(94, 24, 24),0 1px 5px rgba(34,25,25,0.6);
-   -moz-box-shadow: inset 0 1px rgb(94, 24, 24),0 1px 5px rgba(34,25,25,0.6);
-   -webkit-box-shadow: inset 0 1px rgb(94, 24, 24),0 1px 5px rgba(34,25,25,0.6);
-}
 
-.jumbotron:after, .navbar-inner:after {
-   content: '';
-   display: block;
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   background: url(bs-docs-masthead-pattern.png) repeat center center;
-   opacity: .4;
-}
 
 .logo
 {
   height: 32px;
    width: 32px;
    position: relative;
-   border-radius: 15px 5px 2px 5px;
+   border-radius: 2px 2px 2px 2px;
    top: 2px;
    margin-right: 2px;
  }
@@ -286,6 +256,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     width: 64px;
     top: 2px;
     position: relative;
+    border-radius: 3px 0 0 3px;
 }
 .thumb-holder
 {
@@ -294,17 +265,20 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     height: 42px;
     width: 42px;
     border: 1px solid black;
-    -webkit-box-shadow: -2px 0px 15px black;
+    -webkit-box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.57);
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.57);
+   -moz-box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.57);
     border-radius: 5px 0px 0px 5px;
     -webkit-border-radius: 5px 0px 0px 5px;
     -moz-border-radius: 5px 0px 0px 5px;
 
 }
+
 .menu-thumb
 {
     z-index: 100;
     border-radius: 3px 0 0 3px;
-    border: 1px solid rgba(255, 255, 255, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.21);
 }
 .menu-opener
 {
@@ -318,6 +292,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     border-color: rgba(145, 145, 145, 0);
     border-style: solid;
     -webkit-box-shadow: 2px 0px 5px #1B1818;
+     box-shadow:  2px 0px 5px #1B1818;
+   -moz-box-shadow:  2px 0px 5px #1B1818;
     border-radius: 0 3px 3px 0;
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
@@ -350,6 +326,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea
         border: 1px solid rgba(245, 245, 245, 0.34);
         right: 83px;
         -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.43);
+         box-shadow:  2px 0px 10px rgba(0, 0, 0, 0.43);
+   -moz-box-shadow:   2px 0px 10px rgba(0, 0, 0, 0.43);
         border-radius: 5px 0 5px 5px;
         -webkit-border-radius: 5px 0 5px 5px;
         -moz-border-radius: 5px 0 5px 5px;
@@ -359,11 +337,13 @@ input[type="text"], input[type="email"], input[type="password"], textarea
       padding: 3px 5px 3px 8px;
         list-style-type: none;
         font-size: 12px;
+
 }
 .menu-list > li > a
 {
       color: #BCD2EE;text-shadow: 1px 1px 2px #1D1C1C;
         font-weight: bold;
+        display: block;
 }
 .menu-list > li > a:hover
 {
@@ -381,6 +361,35 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 .menu-opener:hover + .short-menu {display: block;}
 
 .short-menu:hover {display: block;}
+
+.search-box{border: 1px solid rgba(245, 245, 245, 0.11);
+height: 28px;
+font-size: 16px;
+color: silver;
+background-color: #213050;
+line-height: 20px;
+padding-top: 5px;
+padding: 5px 5px 0 5px;
+-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.59);
+box-shadow:  inset 0 0 5px rgba(0, 0, 0, 0.59);
+-moz-box-shadow:   inset 0 0 5px rgba(0, 0, 0, 0.59);
+border-radius: 4px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+}
+ #search_bar {position: relative; top:2px;}
+.search{width: 250px !important;}
+.place{width: 150px !important;}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2269,9 +2278,16 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 .navbar .brand {
+  position: relative;
+  top:0px;
   float: left;
+  background-color: rgba(255, 255, 255, 0.04);
   display: block;
-  padding: 10px 20px 10px;
+  padding: 5px 3px 4px 3px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 8px black;
+    box-shadow:  0 0 8px black;
+   -moz-box-shadow:  0 0 8px black;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -2281,6 +2297,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand:hover,
 .navbar .brand:focus {
   text-decoration: none;
+  color: whiteSmoke;
 }
 .navbar-text {
   margin-bottom: 0;
@@ -2607,7 +2624,7 @@ background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F4D64', endColorstr='#1E2752', GradientType=0);
 -webkit-box-shadow: 1px 0 15px #201F1F;
 border-color: #252525;
-border-bottom: 3px solid #D8D8D8;
+border-bottom: 3px solid #A52B2B;
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
@@ -2624,6 +2641,7 @@ border-bottom: 3px solid #D8D8D8;
 	color: #969EAC;
 font-weight: bold;
 z-index: 5;
+border: 1px solid rgba(255, 255, 255, 0.09);
 text-shadow: 1px 1px 5px black;
 }
 .navbar-inverse .navbar-text {

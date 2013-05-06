@@ -2,7 +2,7 @@
 	<div class="thumb-holder">
 
 			<%=(link_to image_tag(current_profile.logo(:thumb), class: 'menu-thumb'), current_profile ) if current_user.profile_type== 'CompanyProfile'%> 
-			<%=(link_to image_tag(current_profile.avatar(:thumb), class: 'menu-thumb'), current_profile) if current_user.profile_type== 'UserProfile'%>
+			<%=(link_to image_tag(current_profile.avatar(:thumb) || default_pic(:thumb), class: 'menu-thumb'), current_profile) if current_user.profile_type== 'UserProfile'%>
 
 	</div>
 	<div class="menu-opener">

@@ -2,6 +2,8 @@
 <% if !current_user.nil? %>	
 	<%= render '/shared/user_menu' %>
 <% else %>
+<div class="right">
 		<%= link_to "Signin", signin_path %>
 		<%= link_to "Signup", signup_path %>
+	</div>
 <% end %>

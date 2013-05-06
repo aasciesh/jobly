@@ -12,7 +12,7 @@ Jobly::Application.routes.draw do
 >>>>>>> d5681636a3590f4ea3024c295523aec5483691a3
   match '/signin', to: 'session#new'
   match '/signout', to:'session#destroy', via: :delete
-  match '/signup', to: 'user_profiles#new'
+  match '/signup', to: 'user_profiles#new', via: :get
   match '/activate/:code', to: 'users#activate', via: :get
   match '/resend_confirmation/:id', to: 'users#send_confirmation_link', via: :put
   match '/session/create', to: 'session#create', via: :post

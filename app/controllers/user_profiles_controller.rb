@@ -1,5 +1,5 @@
 class UserProfilesController < ApplicationController
-before_filter :find_user_profile, on: [:show, :edit, :show_cv]
+before_filter :find_user_profile, only: [:show, :edit, :show_cv]
 
   def index
     @user_profile = UserProfile.all
@@ -76,6 +76,6 @@ before_filter :find_user_profile, on: [:show, :edit, :show_cv]
   private
 
     def find_user_profile
-     @user_profile = UserProfile.find_by_id(params[:id])
+     @user_profile = UserProfile.find(params[:id])
     end
 end
