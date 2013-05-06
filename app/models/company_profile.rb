@@ -27,11 +27,11 @@ class CompanyProfile < ActiveRecord::Base
   def logo(style)
     case style
     when :profile_pic
-      return '/assets/default_pics/co-210.png' unless self.logo? ) || self.logo(:profile_pic)
+      return ('/assets/default_pics/co-210.png' unless self.logo? ) || self.logo(:profile_pic)
   	when :medium
-      return '/assets/default_pics/co-110.png' unless self.logo? ) || self.logo(:medium)
+      return ('/assets/default_pics/co-110.png' unless self.logo? ) || self.logo(:medium)
     when :thumb
-      return '/assets/default_pics/co-40.png' unless self.logo? ) || self.logo(:thumb)
+      return ('/assets/default_pics/co-40.png' unless self.logo? ) || self.logo(:thumb)
     else
       return '/assets/default_pics/user-110.png'
     end
