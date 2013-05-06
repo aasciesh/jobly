@@ -33,6 +33,7 @@ module ApplicationHelper
 			flash[:error] = 'Couldnot delete'
 		end
 	end
+<<<<<<< HEAD
 
 	def build_company_profile
 		@company_profile=CompanyProfile.new
@@ -43,5 +44,18 @@ module ApplicationHelper
 		@user_profile=UserProfile.new
     	@user_profile.build_user
     	@user_profile
+=======
+	def check_correct_user
+		unless user_profile_includes?(@reference) 
+			redirect_to user_profile_path(current_profile)
+			flash[:error] = 'Couldnot delete'
+		end
+	end
+	def check_correct_user
+		unless user_profile_includes?(@qualification) 
+			redirect_to user_profile_path(current_profile)
+			flash[:error] = 'Couldnot delete'
+		end
+>>>>>>> experiences
 	end
 end

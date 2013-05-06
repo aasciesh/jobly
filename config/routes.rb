@@ -1,15 +1,12 @@
 Jobly::Application.routes.draw do
 
-#TODO: Take off resources development before putting into production
-<<<<<<< HEAD
-  resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills
-  root :to => 'home#index'  
-=======
-  resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :static
+#TODO: Take off resources development before putting into production  
+  resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :references,
+        :qualifications, :experiences, :static
   root :to => 'static#home'
+   root :to => 'home#index'
   match '/user_profiles/:id/cv', :controller => 'user_profiles', :action => 'show_cv', via: :get , as: 'show_cv'
   match '/test', to: 'static#test'
->>>>>>> d5681636a3590f4ea3024c295523aec5483691a3
   match '/signin', to: 'session#new'
   match '/signout', to:'session#destroy', via: :delete
   match '/signup', to: 'user_profiles#new', via: :get
