@@ -288,7 +288,6 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     top: 2px;
     position: relative;
     border-radius: 3px 0 0 3px;
-    border: 1px solid rgba(255, 255, 255, 0.37);
 }
 .thumb-holder
 {
@@ -296,8 +295,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     padding: 0;
     height: 42px;
     width: 42px;
-    /*border: 1px solid black;
-    -webkit-box-shadow: -2px 0px 15px black;*/
+    border: 1px solid black;
+    -webkit-box-shadow: -2px 0px 15px black;
     border-radius: 5px 0px 0px 5px;
     -webkit-border-radius: 5px 0px 0px 5px;
     -moz-border-radius: 5px 0px 0px 5px;
@@ -308,7 +307,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 {
     z-index: 100;
     border-radius: 3px 0 0 3px;
-    border-right: 1px solid rgba(255, 255, 255, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.21);
 }
 .menu-opener
 {
@@ -317,11 +316,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     top: 1px;
     float: left;
     height: 40px;
-    /*background-color: #3E639B;
+    background-color: #3E639B;
     border-width: 1px 1px 1px 0;
     border-color: rgba(145, 145, 145, 0);
     border-style: solid;
-    -webkit-box-shadow: 2px 0px 5px #1B1818;*/
+    -webkit-box-shadow: 2px 0px 5px #1B1818;
     border-radius: 0 3px 3px 0;
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
@@ -332,7 +331,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
     width: 18px;
     z-index: 1;
     height: 42px;
-    /*background-color: rgba(3, 2, 2, 0.38);*/
+    background-color: rgba(3, 2, 2, 0.38);
 }
 .menu-ico
 {
@@ -2302,7 +2301,7 @@ input[type="submit"].btn.btn-mini {
   top:0px;
   float: left;
   display: block;
-  padding: 2px 3px 2px 3px;
+  padding: 0px 3px 0px 3px;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 8px black;
   margin-left: -20px;
