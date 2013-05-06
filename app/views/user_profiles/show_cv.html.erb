@@ -1,7 +1,7 @@
 <% provide(:title, @user_profile.firstname+ ' | CV') %>
 
 <div class="span4">
-<%= image_tag @user_profile.avatar if @user_profile.avatar?%> <p>
+<%= image_tag @user_profile.avatar(:cv_pic) if @user_profile.avatar?%> <p>
 <%= link_to "Edit Profile", edit_user_profile_path(@user_profile), class: "button button-primary", type: "submit" %> </p><p>
 <%= link_to "View CV Profile", "#" , class: "button button-primary"%></p>
 </div>
