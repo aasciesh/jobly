@@ -1,6 +1,6 @@
 
  <% if current_user %>
-		<%= link_to image_tag(current_profile.avatar.url(:tiny), :border=>0, class: 'pic_tiny'), current_profile %>
+		<%= link_to image_tag(current_profile.image(:tiny), :border=>0, class: 'pic_tiny'), current_profile %>
 		<span class="user-option"><%= link_to fullname, current_user, class: 'user-name' %> <i class="icon-cog icon-black"></i> </span>
 		 <ul >
 		    

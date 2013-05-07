@@ -1,6 +1,7 @@
 class CompanyProfilesController < ApplicationController
 	before_filter :find_company_profile, only: [:show, :edit]
 	before_filter :get_company_vacancies, only: [:show]
+	load_and_authorize_resource
 	def new
 		@company_profile=CompanyProfile.new
 		@company_profile.build_user

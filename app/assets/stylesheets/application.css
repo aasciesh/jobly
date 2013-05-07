@@ -381,8 +381,19 @@ border-radius: 4px;
 .search{width: 250px !important;}
 .place{width: 150px !important;}
 
-
-
+.user-options{position: relative;
+top: 10px;
+padding: 5px;
+font-weight: bold;}
+.user-options>a {
+color: #A7A7A7;
+padding: 5px;
+border: 1px solid rgba(255, 255, 255, 0.06);
+-webkit-box-shadow: 0 1px 5px black;
+}
+.user-options>a:hover{background-color: rgba(255, 255, 255, 0.06);text-decoration: none;color: whitesmoke;}
+.log_in{border-radius: 5px 0px 0 5px;}
+.sign_up{border-radius: 0px 5px 5px 0;}
 
 
 

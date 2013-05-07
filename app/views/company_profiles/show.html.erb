@@ -1,5 +1,5 @@
 <div class="span4">
-	<%= image_tag @company_profile.logo.url(:profile_pic) if @company_profile.logo? %> <br>
+	<%= image_tag @company_profile.logo(:profile_pic) if @company_profile.logo? %> <br>
 	<%= link_to "Edit", edit_company_profile_path(@company_profile), class: "button button-primary"%>	
 	
 	<div class="company_vacancies">

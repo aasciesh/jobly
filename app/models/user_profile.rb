@@ -4,7 +4,7 @@ class UserProfile < ActiveRecord::Base
             :lastname, :self_info, :street, :zip, :user_attributes, :qualification_attributes
 
 
-  has_attached_file :avatar, :styles => { profile_pic: "210x210#", cv_pic: "110x110#", thumb: "40x40#" }
+  has_attached_file :avatar, styles: { profile_pic: "210x210#", cv_pic: "110x110#", thumb: "40x40#" }, default_url: "/assets/default_pics/user-:style.png"
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
 
@@ -28,18 +28,6 @@ class UserProfile < ActiveRecord::Base
   extend FriendlyId
   friendly_id :firstname, use: :slugged
 
-  def avatar(style)
-    case style
-    when :profile_pic
-      return ('/assets/default_pics/user-210.png' unless self.avatar? ) || self.avatar(:profile_pic)
-    when :cv_pic
-      return ('/assets/default_pics/user-110.png' unless self.avatar? ) || self.avatar(:cv_pic)
-    when :thumb
-      return ('/assets/default_pics/user-40.png' unless self.avatar? ) || self.avatar(:thumb)
-    else
-      return '/assets/default_pics/user-210.png'
-    end
-  end
 
 
   private

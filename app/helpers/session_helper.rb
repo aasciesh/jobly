@@ -23,7 +23,7 @@ module SessionHelper
 	end
 	
 	def user_type
-		current_user.profile_type || 'g'
+		current_user.profile_type || 'guest'
 	end
 
 	def signed_in?

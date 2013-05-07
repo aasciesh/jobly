@@ -1,6 +1,6 @@
 class UserProfilesController < ApplicationController
 before_filter :find_user_profile, only: [:show, :edit, :show_cv]
-
+load_and_authorize_resource
   def index
     @user_profile = UserProfile.all
   end
@@ -48,7 +48,7 @@ before_filter :find_user_profile, only: [:show, :edit, :show_cv]
   end
 
   def update
-    if @user_profile.update_attributes(params[:user_profile])
+    if current_profile.update_attributes(params[:user_profile])
      
       respond_to do |format|
         format.html {
