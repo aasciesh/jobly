@@ -4,6 +4,7 @@ Jobly::Application.routes.draw do
   resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :references,
   			:qualifications, :experiences
   root :to => 'home#index'
+  #match '/delete', to: 'experience#destroy', via: :delete
   match '/signin', to: 'session#new'
   match '/signout', to:'session#destroy', via: :delete
   match '/signup', to: 'user_profiles#new'

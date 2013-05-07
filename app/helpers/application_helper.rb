@@ -45,4 +45,10 @@ module ApplicationHelper
 			flash[:error] = 'Couldnot delete'
 		end
 	end
+	def check_correct_user
+		unless user_profile_includes?(@experience) 
+			redirect_to user_profile_path(current_profile)
+			flash[:error] = 'Couldnot delete'
+		end
+	end
 end
