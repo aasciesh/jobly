@@ -13,7 +13,7 @@ class Ability
             end 
 
             can :update, Application do |application|
-                application.try(:vacancy).try(:company_profile) ==user.company_profile       
+                application.try(:vacancy).try(:company_profile) ==user.profile  
             end 
 
              can [:update,:delete], CompanyProfile do |company_profile|
@@ -23,7 +23,7 @@ class Ability
             can :read, UserProfile
 
         elsif user.profile_type=='UserProfile'
-            can :read, [ CompanyProfile, Vacancy, UserProfile]
+            can :read, [ CompanyProfile, Vacancy, UserProfile, Application]
             can :create, Application
             can :show_cv, [UserProfile]
             can :update, UserProfile do |user_profile|

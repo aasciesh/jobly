@@ -18,17 +18,17 @@
 	    <th>City</th> 
 	    <th>Age</th>       
 	  </tr>
-		<%  @vacancy.applications.each do|applicant| %> 
-			<%= link_to user_profile_path(applicant) do %>	
+		<% @vacancy.applications.each do |applicant| %> 
+			<a hrem="<%= user_profile_path(applicant.user_profile) %>" >	
 			  	<tr>  
 				  	<td>
-				  		<%= image_tag applicant.avatar.url(:thumb) if applicant.logo? %> 		
+				  		<%= image_tag applicant.user_profile.avatar.url(:thumb) if applicant.user_profile.avatar? %> 		
 				  	</td>
-				    <td><%= applicant.name %></td>
-				    <td><%= applicant.city %></td>    
-				    <td><%= applicant.age %></td> 
+				    <td><%=  applicant.user_profile.firstname %></td>
+				    <td><%=  applicant.user_profile.city %></td>    
+				    <td><%=  Time.now.year-applicant.user_profile.birth_date.year %></td> 
 			  	</tr> 
-	  		<% end %>
+	  		</a>
 	  	<% end %>
 	</table>
 </div>
