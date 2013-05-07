@@ -394,13 +394,41 @@ border: 1px solid rgba(255, 255, 255, 0.06);
 .user-options>a:hover{background-color: rgba(255, 255, 255, 0.06);text-decoration: none;color: whitesmoke;}
 .log_in{border-radius: 5px 0px 0 5px;}
 .sign_up{border-radius: 0px 5px 5px 0;}
+i.add_icon{height: 16px;
+width: 16px;
+background-image: url(/assets/black16x16/ic_plus.png);
+background-repeat: no-repeat;
+display: inline-block;}
 
-
-
-
-
-
-
+.cv_attr{min-height: 50px !important;
+overflow: auto;
+}
+.attr_head{border-bottom: 1px solid #CBCBEC;
+border-top: 1px solid #CBCBEC;
+height: 40px;
+padding: 0 5px;
+overflow: auto;}
+.headText{width: 300px;
+float: left;}
+.attr_option
+{margin: 7px 10px 0 0;
+vertical-align: top;}
+.buttonify{border: 1px solid transparent;padding: 3px;}
+.buttonify:hover
+{
+border: 1px solid rgba(255, 255, 255, 0.29);
+border-radius: 2px;
+cursor: pointer;
+-webkit-box-shadow: 0 0 6px rgba(116, 116, 116, 0.83);
+box-shadow:  0 0 6px rgba(116, 116, 116, 0.83);
+-moz-box-shadow:  0 0 6px rgba(116, 116, 116, 0.83);
+background-color: rgba(255, 255, 255, 0.47);
+}
+.decorate{-webkit-box-shadow: 0 1px 5px rgba(119, 117, 117, 0.68);
+-moz-box-shadow:   0 1px 5px rgba(119, 117, 117, 0.68);
+background-color:  0 1px 5px rgba(119, 117, 117, 0.68);
+}
+}
 
 
 
