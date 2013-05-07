@@ -1,7 +1,8 @@
 class Ability
     include CanCan::Ability
+    include SessionHelper
     def initialize(user)
-        user ||= User.new # guest user (not logged in)
+        user ||=  User.new # guest user (not logged in)
         alias_action :create, :read, :update, :destroy, :to => :crud
 
         if user.profile_type=="CompanyProfile"
@@ -24,7 +25,7 @@ class Ability
         elsif user.profile_type=='UserProfile'
             can :read, [ CompanyProfile, Vacancy, UserProfile]
             can :create, Application
-         
+            can :show_cv, [UserProfile]
             can :update, UserProfile do |user_profile|
                 user_profile.try(:user) ==user       
             end 
