@@ -22,7 +22,7 @@ class Ability
             can :read, UserProfile
 
         elsif user.profile_type=='UserProfile'
-            can :read, [ CompanyProfile, Vacancy]
+            can :read, [ CompanyProfile, Vacancy, UserProfile]
             can :create, Application
          
             can :update, UserProfile do |user_profile|
