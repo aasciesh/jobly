@@ -66,15 +66,15 @@ function forceCloseMsgDiv()
 
 function displayAjaxForm()
 {
-	$('#cover').show();
+	$('#cover').fadeIn();
 	$('#ajaxForm').show();
-	$("#ajaxForm").animate({"right": "+=500px"}, "fast");
+	$("#ajaxForm").animate({"right": "+=500px"}, 300);
 }
 function hideAjaxForm()
 {
 
-	$("#ajaxForm").animate({"right": "-=500px"}, "fast");
-	setTimeout(function(){$('#cover').hide(); $('#ajaxForm').hide();}, 500)
+	$("#ajaxForm").animate({"right": "-=500px"}, 300);
+	setTimeout(function(){$('#cover').fadeOut(); $('#ajaxForm').hide();}, 200)
 	
 }
  $(function() {             

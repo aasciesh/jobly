@@ -446,7 +446,7 @@ box-shadow: :  0 1px 5px rgba(119, 117, 117, 0.68);
   height: 100%;
 background-color: whitesmoke; 
 padding: 10px;
-position: absolute;
+position: fixed;
 right: -500px;
 top: 0px;
 z-index: 5001;
@@ -454,6 +454,26 @@ z-index: 5001;
 -moz-box-shadow:   -2px 0 15px rgba(0, 0, 0, 0.8);
 box-shadow: -2px 0 15px rgba(0, 0, 0, 0.8);
 }
+
+.cv_tables td:first-child
+{border-right: 2px solid #1E85BE;
+  text-align: right;
+font-weight: bold;
+width: 200px;
+}
+.cv_tables td 
+{
+  padding: 2px 5px;
+}
+.cv_tables{margin-right: 100px; width: 850px; font-size: 12px; margin-bottom: 15px;}
+.cv_tables tr:last-child{margin-bottom: 10px;}
+
+
+
+
+
+
+
 
 
 

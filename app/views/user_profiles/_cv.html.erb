@@ -29,6 +29,7 @@
 				 <% end%>
 			</div>
 			<div>
+				
 				<% @user_profile.qualifications.each do |qualification| %>
 					<%= render 'qualifications/show', locals: {qualification: qualification} %>
 				<% end  if @user_profile.qualifications.any?%>
