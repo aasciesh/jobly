@@ -13,6 +13,7 @@ class ActiveSupport::TestCase
 	def login_as_job_seeker
 	    @user_profile = UserProfile.new(firstname: 'tester',
 	                                      lastname: 'testernen',
+	                                      user_name: 'user_name1',
 	                                      birth_date: '1990-03-28',
 	                                      gender: 'Male',
 	                                      full_address: 'testernenkatu, helsinki, finland',
