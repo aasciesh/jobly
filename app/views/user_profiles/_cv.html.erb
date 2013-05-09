@@ -21,27 +21,49 @@
 		<div class="qualifications cv_attr span12">
 			<div class="attr_head">
 				<span class="headText"><h4>Qualifications</h4> </span>
-				<span class="right attr_option buttonify">
-					<i class="add_icon"></i> Add
-				</span>
+				
+				<%= link_to new_qualification_path, remote: true do %>
+				 <span class="right  attr_option buttonify">
+				 	<i class="add_icon"></i> Add
+				 </span>
+				 <% end%>
+			</div>
+			<div>
+				<%= @user_profile.qualifications.each do |qualification| %>
+					<%= render 'show', locals: {qualification: qualification} %>
+				<% end %>
 			</div>
 		</div>
 
 		<div class="experiences cv_attr span12">
 			<div class="attr_head">
 				<span class="headText"><h4>Experiences</h4> </span>
+				<%= link_to new_experience_path, remote: true do %>
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
 				 </span>
+				 <% end%>
+			</div>
+			<div>
+				<%= @user_profile.experiences.each do |experience| %>
+					<%= render 'show', locals: {experience: experience} %>
+				<% end %>
 			</div>
 		</div>
 
 		<div class="languageSkills cv_attr span12">
 			<div class="attr_head ">
 				<span class="headText"><h4>Language Skills</h4> </span>
+				<%= link_to new_language_skill_path, remote: true do %>
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
 				 </span>
+				 <% end%>
+			</div>
+			<div>
+				<%= @user_profile.language_skills.each do |language_skill| %>
+					<%= render 'show', locals: {language_skill: language_skill} %>
+				<% end %>
 			</div>
 		</div>
 	

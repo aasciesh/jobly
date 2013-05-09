@@ -24,12 +24,14 @@ class Ability
 
         elsif user.profile_type=='UserProfile'
             can :read, [ CompanyProfile, Vacancy, UserProfile, Application]
-            can :create, Application
+            can :create, [Application, LanguageSkill, Experience, Qualification]
             can :show_cv, [UserProfile]
             can :update, UserProfile do |user_profile|
                 user_profile.try(:user) ==user       
             end 
-            
+            can :destroy, [Application, LanguageSkill, Experience, Qualification] do |model|
+                model.try(:user) == user
+            end
         end
         can :read , Vacancy
     #

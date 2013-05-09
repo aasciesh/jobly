@@ -24,6 +24,7 @@ $(document).ready( function(){
 	{
 		displaySuccess();
 	}
+	$('#cover').click(function(){hideAjaxForm();});
 });
 var errorThread= null;
 var successThread= null;
@@ -63,6 +64,19 @@ function forceCloseMsgDiv()
 	$('#errorDiv').empty();
 }
 
+function displayAjaxForm()
+{
+	$('#cover').show();
+	$('#ajaxForm').show();
+	$("#ajaxForm").animate({"right": "+=500px"}, "fast");
+}
+function hideAjaxForm()
+{
+
+	$("#ajaxForm").animate({"right": "-=500px"}, "fast");
+	setTimeout(function(){$('#cover').hide(); $('#ajaxForm').hide();}, 500)
+	
+}
  $(function() {             
     $('#company').click(function(){            
         $('#job_seeker_signup').hide();

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507161434) do
+ActiveRecord::Schema.define(:version => 20130509091925) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20130507161434) do
 
   create_table "company_profiles", :force => true do |t|
     t.string   "name"
-    t.string   "company_type"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20130507161434) do
     t.datetime "logo_updated_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "company_type"
     t.string   "slug"
   end
 
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130507161434) do
     t.date     "end_date"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "user_profile_id"
   end
 
   create_table "friendly_id_slugs", :force => true do |t|

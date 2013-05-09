@@ -1,6 +1,6 @@
 require 'test_helper'
 class LanguageSkillsControllerTest < ActionController::TestCase
-  include SessionHelper
+include SessionHelper
 
   def setup
       @user_profile = UserProfile.new(firstname: 'tester',
@@ -35,11 +35,6 @@ class LanguageSkillsControllerTest < ActionController::TestCase
     @request.cookies[:remember_cookie] = user.remember_cookie
   end
 
-  # test "should get show" do
-  #   get :show
-  #   assert_response :success
-  # end
-
   test "should get new" do
     get :new
     assert_response :success
@@ -56,6 +51,13 @@ class LanguageSkillsControllerTest < ActionController::TestCase
     assert_redirected_to user_profile_path(@user_profile)
   end
 
+  test "should get destroy" do
+    get :destroy
+    assert_response :redirect
+    assert_redirected_to user_profile_path(@user_profile)
+  end
+
+  
   # test "should get edit form" do
   #   get :edit
   #   assert_response :success
@@ -66,10 +68,5 @@ class LanguageSkillsControllerTest < ActionController::TestCase
   #   assert_response :success
   # end
 
-  test "should get destroy" do
-    get :destroy
-    assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)
-  end
 
 end

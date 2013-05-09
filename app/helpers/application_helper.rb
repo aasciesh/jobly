@@ -34,6 +34,7 @@ module ApplicationHelper
 		end
 	end
 
+
 	def build_company_profile
 		@company_profile=CompanyProfile.new
     	@company_profile.build_user
@@ -43,5 +44,6 @@ module ApplicationHelper
 		@user_profile=UserProfile.new
     	@user_profile.build_user
     	@user_profile
+
 	end
 end
