@@ -68,12 +68,12 @@ function displayAjaxForm()
 {
 	$('#cover').fadeIn();
 	$('#ajaxForm').show();
-	$("#ajaxForm").animate({"right": "+=500px"}, 300);
+	$("#ajaxForm").animate({"right": "0px"}, 300);
 }
 function hideAjaxForm()
 {
 
-	$("#ajaxForm").animate({"right": "-=500px"}, 300);
+	$("#ajaxForm").animate({"right": "-500px"}, 300);
 	setTimeout(function(){$('#cover').fadeOut(); $('#ajaxForm').hide();}, 200)
 	
 }
