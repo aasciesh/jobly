@@ -7,7 +7,8 @@ class CompanyProfile < ActiveRecord::Base
  			:length => {:minimum => 15 , :maximum=>3000}
  validates 	:name, 
  			:presence=>true, 
- 			:length => {:minimum => 3 , :maximum=>120}
+ 			:length => {:minimum => 3 , :maximum=>120},
+ 			:uniqueness => true
  validates 	:contact, 
  			:length => {:maximum=>2000}
  

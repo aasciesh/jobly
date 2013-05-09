@@ -1,7 +1,7 @@
 class UserProfile < ActiveRecord::Base
-  attr_accessible   :avatar, :birth_date, :city, :country, 
-            :firstname, :full_address, :gender, :hobbies, 
-            :lastname, :self_info, :street, :zip, :user_attributes, :qualification_attributes
+  attr_accessible :user_name,:avatar, :birth_date, :city, :country, 
+                  :firstname, :full_address, :gender, :hobbies, 
+                  :lastname, :self_info, :street, :zip, :user_attributes, :qualification_attributes
 
 
   has_attached_file :avatar, styles: { profile_pic: "210x210#", cv_pic: "110x110#", thumb: "40x40#" }, default_url: "/assets/default_pics/user-:style.png"
@@ -24,9 +24,10 @@ class UserProfile < ActiveRecord::Base
   validate :is_birth_date_given_and_is_above_16?
   validates :gender, inclusion: {in: USER_GENDER_TYPE, message: 'User type must be Male or Female'}, allow_blank: true
   validates :full_address, presence: true, length: {minimum: 2, maximum: 250}
-
+  validates :user_name, :uniqueness => true
+  
   extend FriendlyId
-  friendly_id :firstname, use: :slugged
+  friendly_id :user_name, use: :slugged
 
 
 
