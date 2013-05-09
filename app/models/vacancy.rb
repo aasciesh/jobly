@@ -1,13 +1,15 @@
 class Vacancy < ActiveRecord::Base
   attr_accessible :city, :country, :deadline, :description, :job_address, 
   					:job_type, :latitude, :longitude, :street, :title, :zip, 
-					:min_salary, :max_salary, :job_duration
+					:min_salary, :max_salary, :job_duration, :application_attributes
 
   belongs_to :category
   belongs_to :company_profile
   has_many :applications, foreign_key: 'vacancy_id'
   has_many :tag_matches
   has_many :tags, through: :tag_matches
+
+  accepts_nested_attributes_for :applications
 
   JOB_TYPES = ['full-time','part-time','shift','weekend']
   JOB_DURATION = ['lt3','3to12','gt12','s']
