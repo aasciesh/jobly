@@ -432,7 +432,7 @@ box-shadow: :  0 1px 5px rgba(119, 117, 117, 0.68);
 #cover
 {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.32);
   z-index: 5000;
@@ -465,11 +465,14 @@ width: 200px;
 {
   padding: 2px 5px;
 }
-.cv_tables{margin-right: 100px; width: 850px; font-size: 12px; margin-bottom: 15px;}
+.cv_tables{margin-right: 100px; width: 700px; font-size: 12px; margin-bottom: 15px; float: left;}
 .cv_tables tr:last-child{margin-bottom: 10px;}
+.hidden-options{
+  width: 10px;
+float: left;
+padding-top: 10px;}
 
-
-
+.experience > .hidden-options:hover{display: block;}
 
 
 
