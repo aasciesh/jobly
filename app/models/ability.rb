@@ -31,6 +31,7 @@ class Ability
             can [:read, :show_cv], UserProfile
 
         elsif user.profile_type=='UserProfile'
+
             can :create, [Application, Experience, LanguageSkill, Qualification, Reference]
             can :read, [ Application, CompanyProfile, Experience, LanguageSkill, Qualification,Reference, Vacancy]            
            
@@ -45,7 +46,7 @@ class Ability
             can [:read, :update,:delete], User do |owner|
                 owner ==user       
             end
-            
+
         end
         can :read , [Vacancy, CompanyProfile, UserProfile]
         can :create, [CompanyProfile, UserProfile] if user.profile.nil?

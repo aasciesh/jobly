@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= set_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title><%= set_title(yield(:title)) %></title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 	<div id="wrap">
@@ -17,8 +17,15 @@
 		
 	</div>
 	<div id="footer">
-			<%= render 'shared/footer' %>
+		<%= render 'shared/footer' %>
 	</div>
+	<div id="cover">
+	</div>
+	<div id="ajaxForm">
+		
+		<div id="formHolder"></div>
+	</div>
+	
 	<div id="servermsg">
 		<div id="forceHider" class="label label-important" onclick='forceCloseMsgDiv()'>Close</div>
 		<div id="errorDiv" class="alert alert-error">
