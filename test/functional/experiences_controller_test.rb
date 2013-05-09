@@ -26,7 +26,7 @@ include SessionHelper
  									 responsibilities: 'Outbound customer calling to company standards 
  									 and targets with related supporting administrative tasks')
 
-	@experience.save 
+	 @experience.save 
     @user.save
     @user_profile.user = @user
     @user_profile.experiences<<@experience
@@ -59,9 +59,10 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    get :destroy
+    delete :destroy, id: experiences(:one).id
     assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)
+    assert_redirected_to user_profile_path(@user_profile)   
+
   end
 
 end

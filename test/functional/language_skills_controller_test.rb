@@ -52,11 +52,10 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    get :destroy
+    delete :destroy, id: language_skills(:one).id
     assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)
+    assert_redirected_to user_profile_path(@user_profile)   
   end
-
   
   # test "should get edit form" do
   #   get :edit
