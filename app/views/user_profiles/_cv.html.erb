@@ -29,9 +29,9 @@
 				 <% end%>
 			</div>
 			<div>
-				<%= @user_profile.qualifications.each do |qualification| %>
-					<%= render 'show', locals: {qualification: qualification} %>
-				<% end %>
+				<% @user_profile.qualifications.each do |qualification| %>
+					<%= render 'qualifications/show', locals: {qualification: qualification} %>
+				<% end  if @user_profile.qualifications.any?%>
 			</div>
 		</div>
 
@@ -45,9 +45,10 @@
 				 <% end%>
 			</div>
 			<div>
-				<%= @user_profile.experiences.each do |experience| %>
-					<%= render 'show', locals: {experience: experience} %>
-				<% end %>
+				<% @user_profile.experiences.each do |experience| %>
+
+					<%= render partial: 'experiences/show', locals: {experience: experience}%>
+				<% end if @user_profile.experiences.any?%>
 			</div>
 		</div>
 
@@ -61,9 +62,9 @@
 				 <% end%>
 			</div>
 			<div>
-				<%= @user_profile.language_skills.each do |language_skill| %>
-					<%= render 'show', locals: {language_skill: language_skill} %>
-				<% end %>
+				<% @user_profile.language_skills.each do |language_skill| %>
+					<%= render 'language_skills/show', locals: {language_skill: language_skill} %>
+				<% end  if @user_profile.language_skills.any?%>
 			</div>
 		</div>
 	
