@@ -30,7 +30,7 @@ class ActiveSupport::TestCase
 
 	    @language_skill = LanguageSkill.new(level: 5 ,
 	                                        name: 'Nepali',
-	                                        type: 'spoken')
+	                                        skill_type: 'spoken')
 	    @language_skill.save 
 	    @user.save
 	    @user_profile.user = @user
