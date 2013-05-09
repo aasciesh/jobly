@@ -1,7 +1,7 @@
 class LanguageSkillsController < ApplicationController		
-		
+	
 before_filter :find_language_skill
-before_filter :check_correct_user, only: [:destroy]
+#before_filter :check_correct_user, only: [:destroy]
 
 	def new
 		@language_skills = LanguageSkill.new
@@ -23,11 +23,12 @@ before_filter :check_correct_user, only: [:destroy]
 			raise 'didnt save'
 		end
 	end
-		def destroy
-    		@language_skill.destroy
-    		redirect_to user_profile_path(current_profile)
-    		flash[:success] = "Language_Skill deleted succesfully!"	  
-		end
+
+	def destroy
+		@language_skill.destroy
+		redirect_to user_profile_path(current_profile)
+		flash[:success] = "Language_Skill deleted succesfully!"	  
+	end
 
 
   	private
