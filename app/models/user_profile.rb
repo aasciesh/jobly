@@ -15,7 +15,7 @@ class UserProfile < ActiveRecord::Base
   has_many :language_skills
   has_many :references
 
-  accepts_nested_attributes_for :user, :qualifications
+  accepts_nested_attributes_for :user, :qualifications, :references
   USER_GENDER_TYPE= ['Male','Female']
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}

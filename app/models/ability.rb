@@ -6,49 +6,85 @@ class Ability
         alias_action :create, :read, :update, :destroy, :to => :crud
 
         if user.profile_type=="CompanyProfile"
-            can [:read, :create], [Vacancy, CompanyProfile]
-         
-            can [:update,:delete], Vacancy do |vacancy|
-                vacancy.try(:company_profile).try(:user) ==user       
-            end 
+            can :create, Vacancy
+            can :read, [Application, CompanyProfile, Experience, LanguageSkill, Qualification, Reference, UserProfile, Vacancy ]
+
 
             can :update, Application do |application|
                 application.try(:vacancy).try(:company_profile) ==user.profile  
             end 
 
-             can [:update,:delete], CompanyProfile do |company_profile|
+            can [:update,:delete], CompanyProfile do |company_profile|
                 company_profile.try(:user) ==user       
+            end
+            
+            can [:update,:delete], Vacancy do |vacancy|
+                vacancy.try(:company_profile).try(:user) ==user       
             end 
 
-            can :read, UserProfile
+            
+            can [:read, :update,:delete], User do |owner|
+                owner ==user       
+            end
+             
+
+            can [:read, :show_cv], UserProfile
 
         elsif user.profile_type=='UserProfile'
-            can :read, [ CompanyProfile, Vacancy, UserProfile, Application]
-            can :create, [Application, LanguageSkill, Experience, Qualification]
-            can :show_cv, [UserProfile]
-            can :update, UserProfile do |user_profile|
+
+            can :create, [Application, Experience, LanguageSkill, Qualification, Reference]
+            can :read, [ Application, CompanyProfile, Experience, LanguageSkill, Qualification,Reference, Vacancy]            
+           
+            can [:update, :destroy], [ Experience, LanguageSkill, Qualification, Reference ] do |item|
+                item.try(:user_profile) ==user.profile       
+            end 
+
+            can [:show_cv, :update, :destroy], UserProfile do |user_profile|
                 user_profile.try(:user) ==user       
             end 
-            can :destroy, [Application, LanguageSkill, Experience, Qualification] do |model|
-                model.try(:user) == user
+
+            can [:read, :update,:delete], User do |owner|
+                owner ==user       
             end
+
         end
-        can :read , Vacancy
-    #
-    # The first argument to `can` is the action you are giving the user 
-    # permission to do.
-    # If you pass :manage it will apply to every action. Other common actions
-    # here are :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on. 
-    # If you pass :all it will apply to every resource. Otherwise pass a Ruby
-    # class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the
-    # objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, :published => true
+        can :read , [Vacancy, CompanyProfile, UserProfile]
+        can :create, [CompanyProfile, UserProfile] if user.profile.nil?
+    
+=begin
+
+        C=Create        R= Read        U=Update        (crud)= only if user owns        D= Destroy        
+        ---------------------------------------------------------------------------------------------
+
+                                        guest       Job seeker           Company
+                                ---------------------------------------------------
+        Application             |       --      |       CR          |       R(u)
+
+        Category            
+        
+        company_profile         |       CR      |       R           |       R(ud)
+        
+        Experience              |       --      |       CR(ud)      |       R
+        
+        LanguageSkill           |       --      |       CR(ud)      |       R       
+        
+        Qualification           |       --      |       CR(ud)      |       R
+        
+        Reference               |       --      |       CR(ud)      |       R
+        
+        TagMatch            
+        
+        Tag         
+        
+        UserProfile             |       CR      |       (rud)       |       R
+        
+        Vacancy                 |       R       |       R           |       CR(ud)       
+        
+        User                    |       --      |       (rud)       |       (rud)     
+
+=end
+
+
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities

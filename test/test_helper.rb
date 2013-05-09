@@ -52,6 +52,7 @@ class ActiveSupport::TestCase
 	    @user = User.new(email: "my@email.com",	password: "mypassword",
 	    				password_confirmation: "mypassword")
   		@company_profile.user=@user
+  		@user.save
 	   	@company_profile.save	    
 	    login_as(@user)
 	end
