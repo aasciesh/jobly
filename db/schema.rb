@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-# <<<<<<< HEAD
-#ActiveRecord::Schema.define(:version => 20130509123724) do
-# =======
-ActiveRecord::Schema.define(:version => 20130509091925) do
-# >>>>>>> 9deb85293734a31429bdec6c6145d5aba9d56f5a
+ActiveRecord::Schema.define(:version => 20130509123724) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
