@@ -1,10 +1,6 @@
 <div class="span4"><p>
 	<%= image_tag @vacancy.company_profile.logo.url(:profile_pic) if @vacancy.company_profile.logo? %> <br><p>
 	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary" if  can? :update, @vacancy %>
-<% @application=build_application %>
-
-
-
 	<%= link_to "Apply","#", class: "button button-primary"  %></p>
 
 	Address:		<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>	<%= @vacancy.country %></p><p> 

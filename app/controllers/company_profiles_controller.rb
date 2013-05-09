@@ -1,7 +1,7 @@
 class CompanyProfilesController < ApplicationController
-	before_filter :find_company_profile, only: [:show, :edit]
-	before_filter :get_company_vacancies, only: [:show]
+	
 	load_and_authorize_resource
+
 	def new
 		@company_profile=CompanyProfile.new
 		@company_profile.build_user
@@ -18,11 +18,10 @@ class CompanyProfilesController < ApplicationController
 
 	def create
 		@company_profile=CompanyProfile.new(params[:company_profile])
-		if @company_profile.save
-			sign_in(@company_profile.user)
-			#EmailConfirmation.confirm_email(@company_profile.user).deliver
+		if @company_profile.save					
 	      	respond_to do |format|
-	        format.html {redirect_to 'show'
+	        format.html {
+	        	redirect_to company_profile_path(:company_profile)
 	        	flash[:success]= "#{@company_profile.name} has been registered."}
 	        	format.js   {render json: {status: 'success', message: 'Successfully registered company.'}}
 	        end
@@ -58,13 +57,5 @@ class CompanyProfilesController < ApplicationController
       		render 'edit'
     	end			
 	end
-	private
-
-	    def find_company_profile
-	    	@company_profile = CompanyProfile.find(params[:id])
-	    end
-	    def get_company_vacancies
-	    	@vacancies=current_profile.vacancies
-	    end
 
 end
