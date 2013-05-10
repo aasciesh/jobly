@@ -28,7 +28,7 @@ class CompanyProfilesControllerTest < ActionController::TestCase
 		assert_equal "Company name has been registered.", flash.now[:success], "FAILED"  
 	end
 
-# TODO: Functional test to assert error message for company profile
+
 	test "should flash error message with invalid params" do
 		assert_no_difference("CompanyProfile.count") do
 			post :create, company_profile: {name: " ", 

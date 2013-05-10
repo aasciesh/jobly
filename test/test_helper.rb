@@ -35,6 +35,9 @@ class ActiveSupport::TestCase
 	    @user.save
 	    @user_profile.user = @user
 	    @user_profile.language_skills<<@language_skill
+	    @experience=build_experience
+	    @user_profile.experiences<<@experience
+	    @experience.save
 	    @language_skill.save    
 	    @user_profile.save
 	    login_as(@user)
@@ -83,6 +86,14 @@ class ActiveSupport::TestCase
 								  job_duration: "3to12"  ) 		
 	end
 
+	def build_experience
+	 	@experience = Experience.new(business_field: 'IT',
+    								 start_date: '2008-05-09', 
+    								 end_date: '2010-10-15', 
+ 									 position: 'Personal Assistant',
+ 									 responsibilities: 'Outbound customer calling to company standards 
+ 									 and targets with related supporting administrative tasks')
+	end
 	def login_as(user)
 	  @request.cookies[:remember_cookie] = user.remember_cookie
 	  session[:user_id] = user.id 
