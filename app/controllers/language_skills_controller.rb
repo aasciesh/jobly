@@ -1,11 +1,12 @@
 class LanguageSkillsController < ApplicationController		
+	load_and_authorize_resource
+	before_filter :find_language_skill
 	
-before_filter :find_language_skill
-#before_filter :check_correct_user, only: [:destroy]
+	def new	
+	end	
 
-	def new
-		@language_skills = LanguageSkill.new
-	end		
+	def edit
+	end	
 
 	def create
 		@language_skill = current_profile.language_skills.build(params[:language_skill])
@@ -24,6 +25,23 @@ before_filter :find_language_skill
 		end
 	end
 
+	def update
+		@language_skill=LanguageSkill.find(params[:id])
+		if @language_skill.update_attributes(params[:language_skill])	 	 
+			redirect_to cv_path(@language_skill.user_profile)
+	      	respond_to do |format|
+		        format.html {		                   
+		                    flash.now[:success]= "Successfully updated language_skill."
+		                  
+		                    }
+		        format.js {render json: {status: 'success', message: 'Successfully updated language_skill.'}}
+	    	end
+    	else
+	      	@error= @language_skill.errors
+      		
+    	end	
+	end
+
 	def destroy
 		@language_skill.destroy
 		redirect_to user_profile_path(current_profile)
@@ -32,16 +50,7 @@ before_filter :find_language_skill
 
 
   	private
-
-	def find_language_skill
-		@language_skill = LanguageSkill.find_by_id(params[:id])
-	end
-
-	def check_correct_user
-		unless user_profile_includes?(@language_skill) 
-			redirect_to user_profile_path(current_profile)
-			flash[:error] = 'Couldnot delete'
+		def find_language_skill
+			@language_skill = LanguageSkill.find_by_id(params[:id])
 		end
-	end
-	
 end

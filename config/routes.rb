@@ -5,7 +5,7 @@ Jobly::Application.routes.draw do
   resources :user_profiles, :session, :company_profiles, :users, 
             :development, :vacancies,:experiences,:qualifications, :language_skills, :static, :applications
   root :to => 'static#home'
-  match '/user_profiles/:id/cv', :controller => 'user_profiles', :action => 'show_cv', via: :get , as: 'show_cv'
+  match '/user_profiles/:id/cv', :controller => 'user_profiles', :action => 'show_cv', via: :get , as: 'cv'
   match '/test', to: 'static#test'
 
   match '/signin', to: 'session#new'

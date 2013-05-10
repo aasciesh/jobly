@@ -24,13 +24,13 @@ class ActiveSupport::TestCase
 	                                      self_info: 'I am a tester',
 	                                      hobbies: 'I like testing' )
 
-	    @user = User.new(email: "my@email.com",
+	    @user = User.new(email: "job_seeker@email.com",
 	    				password: "mypassword",
 	    				password_confirmation: "mypassword")
 
 	    @language_skill = LanguageSkill.new(level: 5 ,
 	                                        name: 'Nepali',
-	                                        type: 'spoken')
+	                                        skill_type: 'spoken')
 	    @language_skill.save 
 	    @user.save
 	    @user_profile.user = @user
@@ -41,7 +41,23 @@ class ActiveSupport::TestCase
 	end
 
 	def login_as_company
-	     @company_profile = CompanyProfile.new(name: "company profile", 
+	    @company_profile = build_company_profile
+	    @user = User.new(email: "company@email.com",	password: "mypassword",
+	    				password_confirmation: "mypassword")
+	   
+	    @vacancy=build_vacancy
+	    @vacancy.company_profile=@company_profile
+	    @vacancy.save
+	    @application=Application.new(user_id: 1, vacancy_id: @vacancy.id)
+	    @application.save
+  		@company_profile.user=@user
+  		@user.save
+	   	@company_profile.save	    
+	    login_as(@user)
+	end
+	
+	def build_company_profile
+	  @company_profile = CompanyProfile.new(name: "company profile", 
 		                      description: "company description",
 		                      street: "annankatu 12",
 		                      city: "helsinki",
@@ -49,15 +65,23 @@ class ActiveSupport::TestCase
 		                      zip: "10201",
 		                      website: "website.com",
 		                      contact: "contact person" )
-
-	    @user = User.new(email: "my@email.com",	password: "mypassword",
-	    				password_confirmation: "mypassword")
-  		@company_profile.user=@user
-  		@user.save
-	   	@company_profile.save	    
-	    login_as(@user)
 	end
-
+	def build_vacancy
+		@vacancy=Vacancy.new(	title: "MyString",
+								  description: "10 characters for description",
+								  deadline: '2013-05-28 21:12:35',
+								  job_type: "full-time",
+								  job_address: "MyString",
+								  street: "MyString",
+								  city: "MyString",
+								  country: "MyString",
+								  zip: 12345,
+								  latitude: '1.5',
+								  longitude: '1.5',
+								  min_salary: 2000,
+								  max_salary: 20000,
+								  job_duration: "3to12"  ) 		
+	end
 
 	def login_as(user)
 	  @request.cookies[:remember_cookie] = user.remember_cookie

@@ -5,8 +5,7 @@ class ApplicationsController < ApplicationController
 	def new		
 	end
 	
-	def create
-		@application=Application.new(params[:application])
+	def create		
 		if @application.save		
 	      	respond_to do |format|
 	        format.html {	        
@@ -26,8 +25,7 @@ class ApplicationsController < ApplicationController
 
 
 
-	def update
-		@application=Application.find(params[:id])
+	def update		
 		if @application.update_attributes(params[:application])	 	 
 		 redirect_to vacancy_path(@application.vacancy_id) 		    
 	      	respond_to do |format|
@@ -42,4 +40,6 @@ class ApplicationsController < ApplicationController
       		redirect_to :back 
     	end			
 	end
+
+
 end

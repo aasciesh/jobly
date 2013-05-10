@@ -1,7 +1,8 @@
 <div class="span4"><p>
 	<%= image_tag @vacancy.company_profile.logo.url(:profile_pic) if @vacancy.company_profile.logo? %> <br><p>
-	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary"%>
-	<%= link_to "Apply", "#", class: "button button-primary" if current_user.profile_type== 'UserProfile'%></p>
+	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary" if  can? :update, @vacancy %>
+	<%= link_to "Apply","#", class: "button button-primary"  %></p>
+
 	Address:		<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>	<%= @vacancy.country %></p><p> 
 	Job Duration:	<%= @vacancy.job_duration %> </p><p>
 	Job Type:		<%= @vacancy.job_type %> </p>
@@ -18,17 +19,17 @@
 	    <th>City</th> 
 	    <th>Age</th>       
 	  </tr>
-		<% @vacancy.applications.each do |applicant| %> 
-			<a hrem="<%= user_profile_path(applicant.user_profile) %>" >	
-			  	<tr>  
-				  	<td>
-				  		<%= image_tag applicant.user_profile.avatar.url(:thumb) if applicant.user_profile.avatar? %> 		
-				  	</td>
-				    <td><%=  applicant.user_profile.firstname %></td>
-				    <td><%=  applicant.user_profile.city %></td>    
-				    <td><%=  Time.now.year-applicant.user_profile.birth_date.year %></td> 
-			  	</tr> 
-	  		</a>
+		<% @vacancy.applications.each do |applicant| %> 			
+		  	<tr>  
+			  	<td>
+			  		<a href="<%= user_profile_path(applicant.user_profile) %>" >	
+			  			<%= image_tag applicant.user_profile.avatar.url(:thumb) if applicant.user_profile.avatar? %> 
+			  		</a>		
+			  	</td>
+			    <td><%=  applicant.user_profile.firstname %></td>
+			    <td><%=  applicant.user_profile.city %></td>    
+			    <td><%=  Time.now.year-applicant.user_profile.birth_date.year %></td> 
+		  	</tr> 	  		
 	  	<% end %>
 	</table>
 </div>

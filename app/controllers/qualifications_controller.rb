@@ -23,7 +23,7 @@ class QualificationsController < ApplicationController
 			end
 		end
 
-		def destroy
+	def destroy
     	@qualification.destroy
     	redirect_to user_profile_path(current_profile)
     	flash[:success] = "Qualification deleted succesfully!"	  
