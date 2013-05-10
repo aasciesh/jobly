@@ -1,3 +1,4 @@
+
 <div class="qualification qualification-<%= qualification.id%>">
 <table class="cv_tables">
 	<tr>
@@ -25,7 +26,7 @@
 		<i class="icon-edit"></i>
 	<%end%>
 	<% end%>
-	<% if can? :delete , qualification %>
+	<% if can? :destroy , qualification %>
 	<%= link_to qualification, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
 	<% end %>

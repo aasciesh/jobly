@@ -1,5 +1,5 @@
-$('#successDiv').html('Successfully added language_skills to your CV.');
+$('#successDiv').html('Successfully added language_skill to your CV.');
 displaySuccess();
-$('div.language_skillss').append("<%= j render(partial: 'show', locals: {language_skills: @language_skills})%>");
+$('div.languageSkills').append("<%= j render(partial: 'show', locals: {language_skill: @language_skill})%>");
 hideAjaxForm();
-// $('language_skills-<%=@language_skills.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});
+// $('language_skill-<%=@language_skill.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});

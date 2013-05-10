@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20130509150454) do
 
   create_table "company_profiles", :force => true do |t|
     t.string   "name"
-    t.string   "company_type"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20130509150454) do
     t.datetime "logo_updated_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "company_type"
     t.string   "slug"
   end
 

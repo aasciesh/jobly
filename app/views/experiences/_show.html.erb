@@ -29,7 +29,7 @@
 		<i class="icon-edit"></i>
 	<%end%>
 	<% end%>
-	<% if can? :delete , experience %>
+	<% if can? :destroy , experience %>
 	<%= link_to experience, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
 	<% end %>

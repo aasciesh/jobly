@@ -1,4 +1,4 @@
-<% language_skill ||= object %>
+
 <div class="language_skill language_skill-<%= language_skill.id%>">
 <table class="cv_tables">
 	<tr>
@@ -19,7 +19,7 @@
 		<i class="icon-edit"></i>
 	<%end%>
 	<%end%>
-	<% if can? :delete , language_skill %>
+	<% if can? :destroy , language_skill %>
 	<%= link_to language_skill, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
 	<% end %>
