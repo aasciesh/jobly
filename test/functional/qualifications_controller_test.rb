@@ -51,21 +51,23 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    delete :destroy, id: qualifications(:one).id
+    delete :destroy, id: @qualification.id
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
   end
-
   
-  # test "should get edit form" do
-  #   get :edit
-  #   assert_response :success
-  # end
+  test "should get edit form" do
+    get :edit, id: @qualification.id
+    assert_response :success
+  end
 
-  # test "should get update" do
-  #   get :update
-  #   assert_response :success
-  # end
+  test "should get update" do
+    raise @qualification.id
+    put :update, id: @user_profile.qualifications.first.id,
+    qualification: {degree_type: 'Bachelor In Business Information Technology', 
+                          institute_name: 'Haaga-Helia UAS'}
+    assert_response :success
+  end
 
   
 end
