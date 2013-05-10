@@ -49,9 +49,7 @@ class ActiveSupport::TestCase
 	    @user_profile.references<<@reference    
 	  
 	    @user_profile.save
-	    login_as(@user)
-	    
-
+	    login_as(@user)    
 	end
 
 	def login_as_company
