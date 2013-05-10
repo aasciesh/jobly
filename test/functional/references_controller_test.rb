@@ -54,16 +54,6 @@ include SessionHelper
     assert_redirected_to user_profile_path(@user_profile)
   end
 
-  
-  # test "should get edit form" do
-  #   get :edit
-  #   assert_response :success
-  # end
-
-  # test "should get update" do
-  #   get :update
-  #   assert_response :success
-  # end
 
 
 end

@@ -21,20 +21,8 @@ class QualificationsControllerTest < ActionController::TestCase
     end
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
-  end
-
-<<<<<<< HEAD
-  test "should  destroy qualification" do 
-    delete :destroy, id: @user_profile.qualifications.first.id
-    assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)
-  end
-
-  test "should get edit form" do
-    get :edit, id: @user_profile.qualifications.first.id
-    assert_response :success
-  end
-
+  end 
+ 
   test "should update qualification" do    
     put :update, id: @user_profile.qualifications.first.id,
          qualification: {
@@ -43,7 +31,9 @@ class QualificationsControllerTest < ActionController::TestCase
                           address: 'Pasila, Helsinki',                        
                           start: '2009-08-20'
         }
-=======
+        assert_response :success
+     end
+
   test "should get destroy" do
     delete :destroy, id: @qualification.id
     assert_response :redirect
@@ -53,16 +43,7 @@ class QualificationsControllerTest < ActionController::TestCase
   test "should get edit form" do
     get :edit, id: @qualification.id
     assert_response :success
-  end
-
-  test "should get update" do
-    raise @qualification.id
-    put :update, id: @user_profile.qualifications.first.id,
-    qualification: {degree_type: 'Bachelor In Business Information Technology', 
-                          institute_name: 'Haaga-Helia UAS'}
->>>>>>> experiences
-    assert_response :success
-  end
+  end 
 
   
 end
