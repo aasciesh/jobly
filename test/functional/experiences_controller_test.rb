@@ -58,17 +58,10 @@ include SessionHelper
   end
 
   test "should get destroy" do
-<<<<<<< HEAD
+
     delete :destroy, id: @user_profile.experiences.last.id
     assert_response :success
     assert_redirected_to user_profile_path(@user_profile)
-=======
-
-    delete :destroy, id: experience.id
-    assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)   
-
->>>>>>> 08a5e493288511ae6264bcf974403b4b14a274dd
   end
 
 end

@@ -22,7 +22,7 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    delete :destroy, id: references(:one).id
+    delete :destroy, id: @application.references.first
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
   end

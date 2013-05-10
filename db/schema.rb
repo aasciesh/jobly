@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509150454) do
+ActiveRecord::Schema.define(:version => 20130510113711) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -108,8 +108,10 @@ ActiveRecord::Schema.define(:version => 20130509150454) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "user_profile_id"
+    t.integer  "application_id"
   end
 
+  add_index "references", ["application_id"], :name => "index_references_on_application_id"
   add_index "references", ["user_profile_id"], :name => "index_references_on_user_profile_id"
 
   create_table "tag_matches", :force => true do |t|
