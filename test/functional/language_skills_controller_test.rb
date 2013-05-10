@@ -18,7 +18,7 @@ include SessionHelper
       post :create, language_skill: { level: 5 ,
                                      name: 'Nepali', 
                                      skill_type: 'spoken'}
-    end 
+  end 
 
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
@@ -38,9 +38,9 @@ include SessionHelper
 
   test "should update language_skill" do
     puts "*"*100
-    puts @user_profile.language_skills.first.name
+    puts language_skill_id=@language_skill.id
     puts "*"*100
-    put :update, id: @user_profile.language_skills.first.id,
+    put :update, id: language_skill_id,
         language_skill: {
           name: 'Nepali',
           level: 1,
