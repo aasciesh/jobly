@@ -1,11 +1,11 @@
 class QualificationsController < ApplicationController
 
 	before_filter :find_qualification
-	before_filter :check_correct_user, only: [:destroy]
+	include SessionHelper
+	load_and_authorize_resource
 
-	def new
-			@qualifications = Qualification.new
-		end		
+	def new			
+	end		
 
 		def create
 			@qualification = current_profile.qualifications.build(params[:qualification])
@@ -24,20 +24,20 @@ class QualificationsController < ApplicationController
 		end
 
 	def destroy
-    	@qualification.destroy
-    	redirect_to user_profile_path(current_profile)
+    	@qualification.destroy    	
+    	redirect_to user_profile_path(@qualification.user_profile)
     	flash[:success] = "Qualification deleted succesfully!"	  
+	end
+
+	def edit
+	end
+	def update
 	end
 
 	private
 	def find_qualification
 		@qualification = Qualification.find_by_id(params[:id])
 	end
-	def check_correct_user
-		unless user_profile_includes?(@qualification) 
-			redirect_to user_profile_path(current_profile)
-			flash[:error] = 'Couldnot delete'
-		end
-	end
+	
 end
 

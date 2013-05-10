@@ -4,7 +4,35 @@ class ExperiencesControllerTest < ActionController::TestCase
 include SessionHelper
 
   def setup
-     login_as_job_seeker
+      @user_profile = UserProfile.new(firstname: 'tester',
+                                      lastname: 'testernen',
+                                      birth_date: '1990-03-28',
+                                      gender: 'm',
+                                      full_address: 'testernenkatu, helsinki, finland',
+                                      street: 'testernenkatu',
+                                      city: 'helsinki',
+                                      country: 'finland',
+                                      zip: 00001,
+                                      self_info: 'I am a tester',
+                                      hobbies: 'I like testing' )
+
+    	@user = User.new(email: "my@email.com",
+    										password: "mypassword",
+    										password_confirmation: "mypassword")
+    	@experience = Experience.new(business_field: 'IT',
+    								 start_date: '2008-05-09', 
+    								 end_date: '2010-10-15', 
+ 									 position: 'Personal Assistant',
+ 									 responsibilities: 'Outbound customer calling to company standards 
+ 									 and targets with related supporting administrative tasks')
+
+	 @experience.save 
+    @user.save
+    @user_profile.user = @user
+    @user_profile.experiences<<@experience
+    @experience.save    
+    @user_profile.save
+    login_as(@user)
   end
 
  
@@ -30,9 +58,17 @@ include SessionHelper
   end
 
   test "should get destroy" do
+<<<<<<< HEAD
     delete :destroy, id: @user_profile.experiences.last.id
     assert_response :success
     assert_redirected_to user_profile_path(@user_profile)
+=======
+
+    delete :destroy, id: experience.id
+    assert_response :redirect
+    assert_redirected_to user_profile_path(@user_profile)   
+
+>>>>>>> 08a5e493288511ae6264bcf974403b4b14a274dd
   end
 
 end

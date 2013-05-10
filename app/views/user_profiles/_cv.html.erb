@@ -64,7 +64,7 @@
 			</div>
 			<div>
 				<% @user_profile.language_skills.each do |language_skill| %>
-					<%= render 'language_skills/show', locals: {language_skill: language_skill} %>
+					<%= render 'language_skills/show', object: language_skill %>
 				<% end  if @user_profile.language_skills.any?%>
 			</div>
 		</div>
