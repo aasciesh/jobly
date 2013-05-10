@@ -1,4 +1,4 @@
-<%= form_for @language_skills , remote: true do |f|%>
+<%= form_for @language_skill , remote: true do |f|%>
 	<table class="cv_tables form_table">
 		<tr>
 			<td><span>Name</span></td>
@@ -6,12 +6,12 @@
 		</tr>
 		<tr>
 			<ul><span>Level</span>
-			<li><%= f.radio_button :level "0" %></li>
-			<li><%= f.radio_button :level "1" %></li>
-			<li><%= f.radio_button :level "2" %></li>
-			<li><%= f.radio_button :level "3" %></li>
-			<li><%= f.radio_button :level "4" %></li>
-			<li><%= f.radio_button :level "5" %></li>
+			<li><%= f.radio_button :level, "0" %></li>
+			<li><%= f.radio_button :level, "1" %></li>
+			<li><%= f.radio_button :level, "2" %></li>
+			<li><%= f.radio_button :level, "3" %></li>
+			<li><%= f.radio_button :level, "4" %></li>
+			<li><%= f.radio_button :level, "5" %></li>
 		</ul>
 		</tr>
 		<tr>
