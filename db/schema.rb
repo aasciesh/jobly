@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130505180429) do
+ActiveRecord::Schema.define(:version => 20130509150454) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
     t.integer  "vacancy_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.integer  "user_profile_id"
+    t.boolean  "bookmark",        :default => false
   end
 
   add_index "applications", ["user_profile_id"], :name => "index_applications_on_user_profile_id"
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130505180429) do
     t.date     "end_date"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "user_profile_id"
   end
 
   create_table "friendly_id_slugs", :force => true do |t|
@@ -76,7 +78,7 @@ ActiveRecord::Schema.define(:version => 20130505180429) do
   create_table "language_skills", :force => true do |t|
     t.string   "name"
     t.integer  "level"
-    t.string   "type"
+    t.string   "skill_type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "user_profile_id"
@@ -147,6 +149,7 @@ ActiveRecord::Schema.define(:version => 20130505180429) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "slug"
+    t.string   "user_name"
   end
 
   add_index "user_profiles", ["slug"], :name => "index_user_profiles_on_slug", :unique => true

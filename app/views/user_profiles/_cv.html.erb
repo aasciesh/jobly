@@ -1,0 +1,72 @@
+<div>
+		<div class="basic_info">
+			<h3><%= @user_profile.firstname %> <%= @user_profile.lastname %>'s CV</h3>
+			<div  class="span4">
+				<%= image_tag @user_profile.avatar(:profile_pic), class: "decorate" %> <p>
+			</div>
+			<div  class="span8">
+				<div>
+					<h4><%= @user_profile.firstname %> <%= @user_profile.lastname %></h4><p>
+					Address: 	<%= @user_profile.full_address %></p><p>
+					Age: 			<%= (Time.now.year-@user_profile.birth_date.year) if @user_profile.birth_date %> <%= "(#{@user_profile.birth_date })" %></p><p>
+					Gender:			<%= @user_profile.gender %></p><p>
+					Street:			<%= @user_profile.street %></p><p>
+					City:			<%= @user_profile.city %></p><p>
+					Zip code:		<%= @user_profile.zip %></p><p>
+					Country:		<%= @user_profile.country %></p><p>
+				</div>
+			</div>
+		</div>
+
+		<div class="qualifications cv_attr span12">
+			<div class="attr_head">
+				<span class="headText"><h4>Qualifications</h4> </span>
+				
+				<%= link_to new_qualification_path, remote: true do %>
+				 <span class="right  attr_option buttonify">
+				 	<i class="add_icon"></i> Add
+				 </span>
+				 <% end%>
+			</div>
+			<div>
+				
+				<% @user_profile.qualifications.each do |qualification| %>
+					<%= render 'qualifications/show', locals: {qualification: qualification} %>
+				<% end  if @user_profile.qualifications.any?%>
+			</div>
+		</div>
+
+		<div class="experiences cv_attr span12">
+			<div class="attr_head">
+				<span class="headText"><h4>Experiences</h4> </span>
+				<%= link_to new_experience_path, remote: true do %>
+				 <span class="right  attr_option buttonify">
+				 	<i class="add_icon"></i> Add
+				 </span>
+				 <% end%>
+			</div>
+			<div>
+				<% @user_profile.experiences.each do |experience| %>
+
+					<%= render partial: 'experiences/show', locals: {experience: experience}%>
+				<% end if @user_profile.experiences.any?%>
+			</div>
+		</div>
+
+		<div class="languageSkills cv_attr span12">
+			<div class="attr_head ">
+				<span class="headText"><h4>Language Skills</h4> </span>
+				<%= link_to new_language_skill_path, remote: true do %>
+				 <span class="right  attr_option buttonify">
+				 	<i class="add_icon"></i> Add
+				 </span>
+				 <% end%>
+			</div>
+			<div>
+				<% @user_profile.language_skills.each do |language_skill| %>
+					<%= render 'language_skills/show', locals: {language_skill: language_skill} %>
+				<% end  if @user_profile.language_skills.any?%>
+			</div>
+		</div>
+	
+</div>

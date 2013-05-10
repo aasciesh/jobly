@@ -5,7 +5,7 @@ class ReferencesController < ApplicationController
 
 	def new
 			@references = Reference.new
-		end		
+	end		
 
 		def create
 			@reference = current_profile.references.build(params[:reference])
@@ -23,7 +23,7 @@ class ReferencesController < ApplicationController
 			end
 		end
 
-		def destroy
+	def destroy
     	@reference.destroy
     	redirect_to user_profile_path(current_profile)
     	flash[:success] = "Reference deleted succesfully!"	  

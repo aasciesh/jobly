@@ -10,7 +10,92 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def login_as(user)
-  @request.cookies[:remember_cookie] = user.remember_cookie
-end
+	def login_as_job_seeker
+	    @user_profile = UserProfile.new(firstname: 'tester',
+	                                      lastname: 'testernen',
+	                                      user_name: 'user_name1',
+	                                      birth_date: '1990-03-28',
+	                                      gender: 'Male',
+	                                      full_address: 'testernenkatu, helsinki, finland',
+	                                      street: 'testernenkatu',
+	                                      city: 'helsinki',
+	                                      country: 'finland',
+	                                      zip: 00001,
+	                                      self_info: 'I am a tester',
+	                                      hobbies: 'I like testing' )
+
+	    @user = User.new(email: "job_seeker@email.com",
+	    				password: "mypassword",
+	    				password_confirmation: "mypassword")
+
+	    @language_skill = LanguageSkill.new(level: 5 ,
+	                                        name: 'Nepali',
+	                                        skill_type: 'spoken')
+	    @language_skill.save 
+	    @user.save
+	    @user_profile.user = @user
+	    @user_profile.language_skills<<@language_skill
+	    @experience=build_experience
+	    @user_profile.experiences<<@experience
+	    @experience.save
+	    @language_skill.save    
+	    @user_profile.save
+	    login_as(@user)
+	end
+
+	def login_as_company
+	    @company_profile = build_company_profile
+	    @user = User.new(email: "company@email.com",	password: "mypassword",
+	    				password_confirmation: "mypassword")
+	   
+	    @vacancy=build_vacancy
+	    @vacancy.company_profile=@company_profile
+	    @vacancy.save
+	    @application=Application.new(user_id: 1, vacancy_id: @vacancy.id)
+	    @application.save
+  		@company_profile.user=@user
+  		@user.save
+	   	@company_profile.save	    
+	    login_as(@user)
+	end
+	
+	def build_company_profile
+	  @company_profile = CompanyProfile.new(name: "company profile", 
+		                      description: "company description",
+		                      street: "annankatu 12",
+		                      city: "helsinki",
+		                      country: "finland",
+		                      zip: "10201",
+		                      website: "website.com",
+		                      contact: "contact person" )
+	end
+	def build_vacancy
+		@vacancy=Vacancy.new(	title: "MyString",
+								  description: "10 characters for description",
+								  deadline: '2013-05-28 21:12:35',
+								  job_type: "full-time",
+								  job_address: "MyString",
+								  street: "MyString",
+								  city: "MyString",
+								  country: "MyString",
+								  zip: 12345,
+								  latitude: '1.5',
+								  longitude: '1.5',
+								  min_salary: 2000,
+								  max_salary: 20000,
+								  job_duration: "3to12"  ) 		
+	end
+
+	def build_experience
+	 	@experience = Experience.new(business_field: 'IT',
+    								 start_date: '2008-05-09', 
+    								 end_date: '2010-10-15', 
+ 									 position: 'Personal Assistant',
+ 									 responsibilities: 'Outbound customer calling to company standards 
+ 									 and targets with related supporting administrative tasks')
+	end
+	def login_as(user)
+	  @request.cookies[:remember_cookie] = user.remember_cookie
+	  session[:user_id] = user.id 
+	end
 end

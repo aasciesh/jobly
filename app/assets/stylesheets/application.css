@@ -232,7 +232,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
      margin-left: -300px;
      left: 50%;
      top: 50px;
-     z-index: 3600;
+     z-index: 5010;
 }
 
 #errorDiv, #successDiv
@@ -240,6 +240,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
      width: 550px;
      min-height: 50px;
      display: none;
+     z-index: 20002
 }
 
 #forceHider
@@ -394,10 +395,84 @@ border: 1px solid rgba(255, 255, 255, 0.06);
 .user-options>a:hover{background-color: rgba(255, 255, 255, 0.06);text-decoration: none;color: whitesmoke;}
 .log_in{border-radius: 5px 0px 0 5px;}
 .sign_up{border-radius: 0px 5px 5px 0;}
+i.add_icon{height: 16px;
+width: 16px;
+background-image: url(/assets/black16x16/ic_plus.png);
+background-repeat: no-repeat;
+display: inline-block;}
 
+.cv_attr{min-height: 50px !important;
+overflow: auto;
+}
+.attr_head{border-bottom: 1px solid #CBCBEC;
+border-top: 1px solid #CBCBEC;
+height: 40px;
+padding: 0 5px;
+overflow: auto;}
+.headText{width: 300px;
+float: left;}
+.attr_option
+{margin: 7px 10px 0 0;
+vertical-align: top;}
+.buttonify{border: 1px solid transparent;padding: 3px;}
+.buttonify:hover
+{
+border: 1px solid rgba(255, 255, 255, 0.29);
+border-radius: 2px;
+cursor: pointer;
+-webkit-box-shadow: 0 0 6px rgba(116, 116, 116, 0.83);
+box-shadow:  0 0 6px rgba(116, 116, 116, 0.83);
+-moz-box-shadow:  0 0 6px rgba(116, 116, 116, 0.83);
+background-color: rgba(255, 255, 255, 0.47);
+}
+.decorate{-webkit-box-shadow: 0 1px 5px rgba(119, 117, 117, 0.68);
+-moz-box-shadow:   0 1px 5px rgba(119, 117, 117, 0.68);
+box-shadow: :  0 1px 5px rgba(119, 117, 117, 0.68);
+}
+#cover
+{
+  display: none;
+  position: fixed;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.32);
+  z-index: 5000;
+  top: 0;
+  left: 0;
+}
+#ajaxForm
+{padding: 40px;
+  display: none;
+  width:500px;
+  height: 100%;
+background-color: whitesmoke; 
+padding: 10px;
+position: fixed;
+right: -500px;
+top: 0px;
+z-index: 5001;
+-webkit-box-shadow: -2px 0 15px rgba(0, 0, 0, 0.8);
+-moz-box-shadow:   -2px 0 15px rgba(0, 0, 0, 0.8);
+box-shadow: -2px 0 15px rgba(0, 0, 0, 0.8);
+}
 
+.cv_tables td:first-child
+{border-right: 2px solid #1E85BE;
+  text-align: right;
+font-weight: bold;
+width: 200px;
+}
+.cv_tables td 
+{
+  padding: 2px 5px;
+}
+.cv_tables{margin-right: 100px; width: 700px; font-size: 12px; margin-bottom: 15px; float: left;}
+.cv_tables tr:last-child{margin-bottom: 10px;}
+.hidden-options{
+  width: 10px;
+float: left;
+padding-top: 10px;}
 
-
+.experience > .hidden-options:hover{display: block;}
 
 
 
@@ -2627,7 +2702,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .navbar-inner {
 background-color: #1E2752;
 background-image: -moz-linear-gradient(top, #2F4D64, #1E2752);
-background-image: background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2F4D64), to( #1E2752));
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2F4D64), to( #1E2752));
 background-image: -webkit-linear-gradient(top, #2F4D64, #1E2752);
 background-image: -o-linear-gradient(top, #2F4D64, #1E2752);
 background-image: linear-gradient(to bottom, #2F4D64, #1E2752);

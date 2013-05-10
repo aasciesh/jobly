@@ -1,5 +1,4 @@
 Jobly::Application.routes.draw do
-
 #TODO: Take off resources development before putting into production  
   resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :references,
         :qualifications, :experiences, :static

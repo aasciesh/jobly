@@ -1,9 +1,5 @@
-module VacanciesHelper
-	def get_applicants(vacancy)
-		@applicants=vacancy.applications		
-	end
-	
-	def get_applications(user_profile)
-		@applications=user_profile.applications		
+module VacanciesHelper	
+	def get_vacancies(company_profile)
+		@vacancies=company_profile.vacancies
 	end
 end
