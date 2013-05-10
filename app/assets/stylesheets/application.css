@@ -281,7 +281,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 {
     z-index: 100;
     border-radius: 3px 0 0 3px;
-    border: 1px solid rgba(255, 255, 255, 0.21);
+    border:1px solid rgba(255, 255, 255, 0);
 }
 .menu-opener
 {
