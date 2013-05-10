@@ -41,6 +41,4 @@ include SessionHelper
     assert_response :success
   end 
 
-
-
 end

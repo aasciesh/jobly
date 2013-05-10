@@ -13,11 +13,15 @@
 </table>
 
 <div class="hidden-options">
+	<% if can? :update , language_skill %>
 	<%= link_to edit_language_skill_path(language_skill), remote: true do %>
 		<i class="icon-edit"></i>
 	<%end%>
+	<%end%>
+	<% if can? :delete , language_skill %>
 	<%= link_to language_skill, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
+	<% end %>
 	<% end %>
 </div>
 </div>
