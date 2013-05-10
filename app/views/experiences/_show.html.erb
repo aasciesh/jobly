@@ -24,11 +24,15 @@
 	</tr>
 </table>
 <div class="hidden-options">
+	<% if can? :update , experience %>
 	<%= link_to edit_experience_path(experience), remote: true do %>
 		<i class="icon-edit"></i>
 	<%end%>
+	<% end%>
+	<% if can? :delete , experience %>
 	<%= link_to experience, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
+	<% end %>
 	<% end %>
 </div>
 </div>

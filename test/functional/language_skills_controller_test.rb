@@ -24,9 +24,8 @@ include SessionHelper
     assert_redirected_to user_profile_path(@user_profile)
   end
 
-
-  test "should get destroy" do
-    delete :destroy, id: @user_profile.language_skills.first.id
+  test "should  destroy language_skill" do 
+    delete :destroy, id: @user_profile.language_skills.last.id
     assert_response :redirect
     assert_redirected_to @user_profile   
   end
@@ -36,7 +35,6 @@ include SessionHelper
     get :edit, id: @language_skill.id
     assert_response :success
   end
-
 
   test "should update language_skill" do
     puts "*"*100
