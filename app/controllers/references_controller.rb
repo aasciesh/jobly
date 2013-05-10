@@ -1,10 +1,7 @@
 class ReferencesController < ApplicationController
 	
 	before_filter :find_reference
-	include SessionHelper
-	load_and_authorize_resource
-
-	
+	load_and_authorize_resource	
 
 	def new
 			@references = Reference.new
@@ -34,7 +31,23 @@ class ReferencesController < ApplicationController
 
 	def edit		
 	end
-	def update		
+	def update	
+	if @reference.update_attributes(params[:reference])
+			respond_to do |format|
+			format.html{
+				flash[:success] = "Reference updated!"	
+				redirect_to user_profile_path(current_profile)
+			}
+			format.js
+			end	
+
+		else
+			@error=@reference.errors
+			respond_to do |format|
+				format.html
+				format.js {render 'shared/error'}
+			end
+		end	
 	end
 
 	private
