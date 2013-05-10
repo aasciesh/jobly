@@ -59,7 +59,7 @@
 		<div class="languageSkills cv_attr span12">
 			<div class="attr_head ">
 				<span class="headText"><h4>Language Skills</h4> </span>
-				<% if can? :create , language_skill %>
+				<% if can? :create , LanguageSkill %>
 				<%= link_to new_language_skill_path, remote: true do %>
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
