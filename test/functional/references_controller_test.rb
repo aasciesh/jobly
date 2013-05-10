@@ -1,6 +1,6 @@
 require 'test_helper'
 class ReferencesControllerTest < ActionController::TestCase
-include SessionHelper
+
 
   def setup 
     login_as_job_seeker     
@@ -22,23 +22,23 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    delete :destroy, id: @application.references.first
+    delete :destroy, id: @user_profile.references.first
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
   end
 
   test "should update reference" do    
-    put :update, id: @user_profile.references.first.id,
+    put :update, id: @reference.id,
          reference: {
                       referee_name: 'Jack',
                       email: 'jack@email.com'
         }
-        assert_response :success
-     end
+        assert_redirected_to user_profile_path(@reference.user_profile)
+  end
 
-    test "should get edit form" do
+  test "should get edit form" do
     get :edit, id: @reference.id
-    assert_response :success
+  assert_response :success
   end 
 
 end
