@@ -16,7 +16,6 @@ load_and_authorize_resource
 			flash[:success] = "Experience created!"	
 			respond_to do |format|
 			format.html{
-			flash[:success] = "Experience created!"	
 			redirect_to user_profile_path(current_profile)
 			}
 			format.js
@@ -59,12 +58,18 @@ load_and_authorize_resource
 	end
 
 	def destroy
-		@experience.destroy
-		respond_to do |format|
-			format.html{flash[:success] = "Experience deleted succesfully!"	
-			redirect_to user_profile_path(current_profile)
-			}
-			format.js 
+		if @experience.destroy
+			respond_to do |format|
+				format.html{flash[:success] = "Experience deleted succesfully!"	
+				redirect_to user_profile_path(current_profile)
+				}
+				format.js 
+			end
+		else
+			format.html{flash[:error] = "Could not delete"	
+				redirect_to user_profile_path(current_profile)
+				}
+				format.js {render 'shared/error'}
 		end
 	end
 

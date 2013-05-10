@@ -1,17 +1,32 @@
 <% provide(:title, @user_profile.firstname+ ' '+ @user_profile.lastname) %>
 
 <div class="span4">
+
 <%= image_tag @user_profile.avatar(:profile_pic)%> <p>
 <%= link_to "Edit Profile", edit_user_profile_path(@user_profile), class: "button button-primary" %> 
 <%= link_to "View CV Profile",  cv_path(@user_profile), class: "button button-primary"%></p>
+
 </div>
 <div class="span8">
-	<h4><%= @user_profile.firstname %> <%= @user_profile.lastname %></h4><p>
-	Full Address: 	<%= @user_profile.full_address %></p><p>
-	Age: 			<%= ('#{Time.now.year-@user_profile.birth_date.year}' '#{@user_profile.birth_date}') unless @user_profile.birth_date.nil? %></p><p>
-	Gender:			<%= @user_profile.gender %></p><p>
-	Street:			<%= @user_profile.street %></p><p>
-	City:			<%= @user_profile.city %></p><p>
-	Zip code:		<%= @user_profile.zip %></p><p>
-	Country:		<%= @user_profile.country %></p><p>
+	<h4><%= @user_profile.firstname %> <%= @user_profile.lastname %></h4>
+	<p>
+		Full Address: 	<%= @user_profile.full_address %></p>
+		<p>
+			Age: 			<%= ('#{Time.now.year-@user_profile.birth_date.year}' '#{@user_profile.birth_date}') unless @user_profile.birth_date.nil? %>
+		</p>
+		<p>
+			Gender:			<%= @user_profile.gender %>
+		</p>
+		<p>
+			Street:			<%= @user_profile.street %>
+		</p>
+		<p>
+			City:			<%= @user_profile.city %>
+		</p>
+		<p>
+		Zip code:		<%= @user_profile.zip %>
+		</p>
+		<p>
+		Country:		<%= @user_profile.country %>
+		</p>
 </div>
