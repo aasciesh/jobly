@@ -20,7 +20,7 @@ load_and_authorize_resource
 		else
 			respond_to do |format|
 		        format.html {
-		                      @error= @user_profile.errors
+		                      @error= @vacancy.errors
 		                      render 'new'
 		                  	}
 		        format.js 	{ render json: {status: 'failed', message: 'Could not create vacancy.'} }

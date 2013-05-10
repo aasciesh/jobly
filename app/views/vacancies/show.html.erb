@@ -1,7 +1,7 @@
 <div class="span4"><p>
 	<%= image_tag @vacancy.company_profile.logo.url(:profile_pic) if @vacancy.company_profile.logo? %> <br><p>
 	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary" if  can? :update, @vacancy %>
-	<%= link_to "Apply",create_application_path(@application), class: "button button-primary"  %></p>
+	<%= link_to "Apply",new_application_path, class: "button button-primary"  %></p>
 
 	Address:		<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>	<%= @vacancy.country %></p><p> 
 	Job Duration:	<%= @vacancy.job_duration %> </p><p>
