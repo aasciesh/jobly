@@ -13,7 +13,7 @@
 		<td>Job Position</td><td><%=experience.position%></td>
 	</tr>
 	<tr>
-		<td>Responsibilities</td><td><%=experience.responsibilities%></td>
+		<td>Responsibilities</td><td><%=experience.responsibilities.gsub(/\n/, '<br>').html_safe%></td>
 	</tr>
 	<tr>
 		<td>Start date</td><td><%=experience.start_date%></td>

@@ -1,0 +1,4 @@
+$('#successDiv').html('Updated language_skills successfully.');
+$('.language_skills-<%=@language_skills.id%>').replaceWith("<%=j render(partial: 'show', locals: {language_skills: @language_skills})%>");
+displaySuccess();
+hideAjaxForm();

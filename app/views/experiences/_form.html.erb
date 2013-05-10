@@ -1,5 +1,5 @@
 <%= form_for @experience , remote: true do |f|%>
-	<table>
+	<table class="cv_tables form_table">
 		<tr>
 			<td><span>Employer</span></td>
 			<td><%= f.text_field :employer %></td>
@@ -28,6 +28,6 @@
 			<td><span>End Date</span></td>
 			<td><%= f.text_field :end_date %></td>
 		</tr>
-		<tr><td><%=f.submit 'Save', class: "button button-primary"%></td></tr>
+		<tr><td colspan="2"><%=f.submit 'Save', class: "button button-primary"%></td></tr>
 	</table>
 	<% end %>
