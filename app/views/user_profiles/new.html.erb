@@ -13,7 +13,7 @@
     	    <%= render 'shared/user_signup', user: user %>
       <%end%>
     	<%= render 'new', f: f %>
-        <%= f.submit 'Submit' %>
+        <%= f.submit 'Submit', class: 'btn btn-primary'%>
     <% end %>
 </div>
 
@@ -23,7 +23,7 @@
           <%= render 'shared/user_signup' , :user=>user %>
       <%end%><br/>
       <%= render 'company_profiles/new' , f: f %>
-      <%= f.submit "Register "%> 
+      <%= f.submit "Register ", class: 'btn btn-primary'%> 
     <% end %>
 </div>
 
