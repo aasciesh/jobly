@@ -20,11 +20,15 @@
 	</tr>
 </table>
 <div class="hidden-options">
+	<% if can? :update , qualification %>
 	<%= link_to edit_qualification_path(qualification), remote: true do %>
 		<i class="icon-edit"></i>
 	<%end%>
+	<% end%>
+	<% if can? :delete , qualification %>
 	<%= link_to qualification, :method => :delete,remote: true, :confirm => "You sure?"  do%>
 	<i class=" icon-trash"></i>
+	<% end %>
 	<% end %>
 </div>
 </div>
