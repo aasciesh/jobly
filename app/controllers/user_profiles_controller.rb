@@ -52,7 +52,7 @@ load_and_authorize_resource
      
       respond_to do |format|
         format.html {
-                      render 'show'
+                      redirect_to :action => "show", :id => current_profile.id
                       flash[:notice]= "Successfully updated profile."
                     }
         format.js    {render json: {status: 'success', message: 'Successfully updated profile.'}}
