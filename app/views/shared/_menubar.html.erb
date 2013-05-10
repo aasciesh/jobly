@@ -3,7 +3,7 @@
 	<%= render '/shared/user_menu' %>
 <% else %>
 <div class="right user-options">
-		<%= link_to "Signin", signin_path, class: 'log_in' %>
+		<%= link_to "Signin", signin_path, remote: true, class: 'log_in' %>
 		<%= link_to "Signup", signup_path, class: 'sign_up' %>
 	</div>
 <% end %>

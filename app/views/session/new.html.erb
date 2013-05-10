@@ -1,13 +1,4 @@
 <h3>Sign In</h3>
 <!-- FIXME: use rails path method instead of hardcoded url and also remove line for it from route.rb -->
-<%= form_for(:session, url: '/session/create', method: 'post') do |f| %>
-
-      <%= f.label :email %><br />  
-      <%= f.text_field :email %><br />  
-
-      <%= f.label :password %><br />  
-      <%= f.password_field :password %><br />  
-  </br>
-      <%= f.submit "Sign in",class: 'btn btn-primary' %>
-    <% end %>
+<%= render 'form' %>
 

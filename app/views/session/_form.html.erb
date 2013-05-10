@@ -1,0 +1,10 @@
+<%= form_for(:session, url: '/session/create', method: 'post') do |f| %>
+
+      <%= f.label :email %><br />  
+      <%= f.text_field :email %><br />  
+
+      <%= f.label :password %><br />  
+      <%= f.password_field :password %><br />  
+  </br>
+      <%= f.submit "Sign in",class: 'btn btn-primary' %>
+    <% end %>

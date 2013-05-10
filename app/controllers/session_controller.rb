@@ -1,6 +1,12 @@
 class SessionController < ApplicationController
  
   def new
+    respond_to do |format|
+        format.js {
+        }
+        format.html {
+        }
+        end
   end
   def create
   	user= User.find_by_email(params[:session][:email])
