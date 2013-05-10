@@ -209,6 +209,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea
 }
 .button 
 {
+  display: block;
      height: 2.7em;
      padding: 0 .9em;
      border-width: 1px;
