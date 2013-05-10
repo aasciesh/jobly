@@ -1,6 +1,9 @@
 require 'test_helper'
-
 class VacanciesControllerTest < ActionController::TestCase
+
+	def setup
+		login_as_company
+	end
  	
  	test "should get new form for vacancy" do
 		get :new
@@ -31,7 +34,7 @@ class VacanciesControllerTest < ActionController::TestCase
 								  max_salary: 20000,
 								  job_duration: "3to12" }
 			end
-		assert_redirected_to vacancies_path, "FAILED"
+		assert_redirected_to vacancy_path(:vacancy), "FAILED"
 		assert_equal "Vacancy created successfully !", flash.now[:success], "FAILED"  
 	end
 

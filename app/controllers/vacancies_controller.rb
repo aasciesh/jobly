@@ -1,5 +1,6 @@
 class VacanciesController < ApplicationController
 load_and_authorize_resource
+	
 	def new
 		@vacancy=Vacancy.new
 	end
@@ -13,7 +14,7 @@ load_and_authorize_resource
 		@vacancy.company_profile=current_profile
 		if @vacancy.save
 			respond_to do |format|
-		        format.html {render 'show'
+		        format.html {redirect_to vacancy_path(@vacancy),
 		        flash[:success]= "#{@vacancy.title}, has been created."}
 		        format.js   {render json: {status: 'success', message: 'Successfully created vacancy.'}}
       		end

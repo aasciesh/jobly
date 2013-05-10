@@ -5,13 +5,15 @@
     <th></th>    
     <th></th>    
   </tr>
+
+
   <% if get_vacancies(company).count >0 %>
     
   
   <% for item in @vacancies %>
     <tr>  
     	<td>
-        <%= link_to vacancy_path(item) do %>
+     <%= link_to vacancy_path(item) do %>
           <%= item.title %>
   		  <% end %>
     	</td>  
