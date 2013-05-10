@@ -87,12 +87,13 @@ class ActiveSupport::TestCase
 	end
 
 	def build_experience
-	 	@experience = Experience.new(business_field: 'IT',
-    								 start_date: '2008-05-09', 
-    								 end_date: '2010-10-15', 
- 									 position: 'Personal Assistant',
- 									 responsibilities: 'Outbound customer calling to company standards 
- 									 and targets with related supporting administrative tasks')
+	 	@experience = Experience.new(business_field: 'IT 5 character',
+                				full_address: "merokatu timrosahar hamro desh",
+    							start_date: '2008-05-09', 
+                				employer: 'mero oy',
+ 								position: 'Personal Assistant',
+ 								responsibilities: 'Outbound customer calling to company standards 
+ 								and targets with related supporting administrative tasks')
 	end
 	def login_as(user)
 	  @request.cookies[:remember_cookie] = user.remember_cookie

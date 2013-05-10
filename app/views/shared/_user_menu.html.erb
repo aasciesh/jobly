@@ -17,7 +17,7 @@
 			<%if current_user.profile_type== 'UserProfile' %>
 				<li><%= link_to 'Profile Settings', edit_user_profile_path(current_profile) %></li>
 				<div class="line"></div>
-				<li><%= link_to "My CV",  show_cv_path(current_profile) %></li>
+				<li><%= link_to "My CV",  cv_path(current_profile) %></li>
 			<%end %>
 			<%if current_user.profile_type== 'CompanyProfile' %>
 				<li><%= link_to 'Profile Settings', edit_company_profile_path(current_profile) %></li>

@@ -31,7 +31,7 @@ include SessionHelper
 
   test "should get destroy" do
     delete :destroy, id: @user_profile.experiences.last.id
-    assert_response :redirect
+    assert_response :success
     assert_redirected_to user_profile_path(@user_profile)
   end
 
