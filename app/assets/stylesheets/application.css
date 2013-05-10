@@ -95,17 +95,18 @@ a:hover
 
 textarea 
 {
-    min-height: 100px;
-    border: 1px solid rgba(33, 86, 167, 0.52);
-    border-bottom: 2px solid rgb(33, 86, 167);
+    height: 100px;
+    border: 1px solid #4B5D79;
     background-color: transparent;
+
 }
 textarea:focus, input:focus {outline: none}
 input
 {
     border: none;
     background-color: transparent;
-    border-bottom: 2px solid rgb(33, 86, 167);
+    border: 1px solid #4B5D79;
+    padding: 2px;
 }
 
 textarea, input 
@@ -456,14 +457,20 @@ box-shadow: -2px 0 15px rgba(0, 0, 0, 0.8);
 }
 
 .cv_tables td:first-child
-{border-right: 2px solid #1E85BE;
+{border-right: 1px solid #5A93B3;
   text-align: right;
 font-weight: bold;
+vertical-align: top;
 width: 200px;
 }
 .cv_tables td 
 {
   padding: 2px 5px;
+}
+.line_red {;
+background-color: #E46666;
+-webkit-box-shadow: 0 1px 1px rgba(80, 73, 73, 0.58);
+height: 2px;
 }
 .cv_tables{margin-right: 100px; width: 700px; font-size: 12px; margin-bottom: 15px; float: left;}
 .cv_tables tr:last-child{margin-bottom: 10px;}
@@ -471,10 +478,11 @@ width: 200px;
   width: 10px;
 float: left;
 padding-top: 10px;}
-
+.form_table tr:last-child td{border-top: 1px solid grey;}
+.form_table tr:last-child td:first-child{border-right: transparent; padding-right: 50px;}
 .experience > .hidden-options:hover{display: block;}
 
-
+.pad-10{padding: 10px;}
 
 
 
