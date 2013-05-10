@@ -14,16 +14,16 @@ class Ability
                 application.try(:vacancy).try(:company_profile) ==user.profile  
             end 
 
-            can [:update,:delete], CompanyProfile do |company_profile|
+            can [:update,:destroy], CompanyProfile do |company_profile|
                 company_profile.try(:user) ==user       
             end
             
-            can [:update,:delete], Vacancy do |vacancy|
+            can [:update,:destroy], Vacancy do |vacancy|
                 vacancy.try(:company_profile).try(:user) ==user       
             end 
 
             
-            can [:read, :update,:delete], User do |owner|
+            can [:read, :update,:destroy], User do |owner|
                 owner ==user       
             end
              
@@ -43,7 +43,7 @@ class Ability
                 user_profile.try(:user) ==user       
             end 
 
-            can [:read, :update,:delete], User do |owner|
+            can [:read, :update,:destroy], User do |owner|
                 owner ==user       
             end
 
