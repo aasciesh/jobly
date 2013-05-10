@@ -1,4 +1,4 @@
-class language_skillsController < ApplicationController
+class LanguageSkillsController < ApplicationController
 before_filter :find_language_skill
 load_and_authorize_resource
 
@@ -77,7 +77,7 @@ load_and_authorize_resource
   	private
 
 	def find_language_skill
-		@language_skill = language_skill.find_by_id(params[:id])
+		@language_skill = LanguageSkill.find_by_id(params[:id])
 	end
 
 	

@@ -49,7 +49,7 @@ include SessionHelper
   end
 
   test "should get destroy" do
-    get :destroy
+    delete :destroy, id: references(:one).id
     assert_response :redirect
     assert_redirected_to user_profile_path(@user_profile)
   end

@@ -2,9 +2,11 @@ require 'test_helper'
 class LanguageSkillsControllerTest < ActionController::TestCase
 include SessionHelper
 
+
     def setup
        login_as_job_seeker
     end 
+
 
   test "should get new" do
     get :new
@@ -22,18 +24,34 @@ include SessionHelper
     assert_redirected_to user_profile_path(@user_profile)
   end
 
-  test "should  destroy language_skill" do
- 
-    delete :destroy, id: @language_skill.id
+<<<<<<< HEAD
+  test "should  destroy language_skill" do 
+    delete :destroy, id: @user_profile.language_skills.last.id
+=======
+  test "should get destroy" do
+    delete :destroy, id: language_skills(:one).id
+>>>>>>> experiences
     assert_response :redirect
-    assert_redirected_to user_profile_path(@user_profile)
+    assert_redirected_to user_profile_path(@user_profile)   
   end
+<<<<<<< HEAD
 
-  
   test "should get edit form" do
     get :edit, id: @language_skill.id
     assert_response :success
   end
+=======
+  
+  # test "should get edit form" do
+  #   get :edit
+  #   assert_response :success
+  # end
+
+  # test "should get update" do
+  #   get :update
+  #   assert_response :success
+  # end
+>>>>>>> experiences
 
   test "should update language_skill" do
     raise @language_skill.id
@@ -45,8 +63,5 @@ include SessionHelper
         }
     assert_response :success
   end
-
- 
-
 
 end
