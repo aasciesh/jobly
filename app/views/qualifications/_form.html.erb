@@ -1,5 +1,5 @@
 <%= form_for @qualification , remote: true do |f|%>
-	<table>
+	<table class="cv_tables form_table">
 		<tr>
 			<td><span>Institute Name</span></td>
 			<td><%= f.text_field :institute_name %></td>
@@ -25,6 +25,6 @@
 			<td><%= f.text_field :website %></td>
 		</tr>
 		
-		<tr><td><%=f.submit 'Save', class: "button button-primary"%></td></tr>
+		<tr><td colspan="2"><%=f.submit 'Save', class: "button button-primary"%></td></tr>
 	</table>
 	<% end %>
