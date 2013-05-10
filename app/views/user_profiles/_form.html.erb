@@ -1,6 +1,6 @@
 <div class="span4">
   	<div style="width:200px">
-	    <%= image_tag @user_profile.avatar if @user_profile.avatar?%> 
+	    <%= image_tag @user_profile.avatar(:profile_pic)%> 
 	    <%= f.file_field :avatar, :as => :file %>
 	</div>  
 	<%= f.submit "Update "%> 
@@ -49,16 +49,4 @@
 		<%= f.label :gender, "Female", :value => "Female" %>
 	</div>
 </div> 
-
-<div class="qualifications"> 
- 	<div class="span4">
-		<h4>Acidemic Qualifications</h4>
-	</div>
-	<div class="span8">
-		<%= link_to "Add new", "#" , class: "button button-primary"%>
-		<%= f.fields_for :qualifications do |qualification| %>			
-			<%= render 'qualification', :f=> qualification %>			
-		<% end %>
-	</div>
-</div>
 
