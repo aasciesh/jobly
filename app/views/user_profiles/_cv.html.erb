@@ -32,7 +32,7 @@
 			<div>
 				
 				<% @user_profile.qualifications.each do |qualification| %>
-					<%= render 'qualifications/show', locals: {qualification: qualification} %>
+					<%= render partial: 'qualifications/show', locals: {qualification: qualification}%>
 				<% end  if @user_profile.qualifications.any?%>
 			</div>
 		</div>
