@@ -27,20 +27,27 @@ class ActiveSupport::TestCase
 	    @user = User.new(email: "job_seeker@email.com",
 	    				password: "mypassword",
 	    				password_confirmation: "mypassword")
-
-	    @language_skill = LanguageSkill.new(level: 5 ,
-	                                        name: 'Nepali',
-	                                        skill_type: 'spoken')
-	    @language_skill.save 
+	    
+	    
 	    @user.save
 	    @user_profile.user = @user
+
+	    @language_skill=build_language_skill
+	    @language_skill.save  
 	    @user_profile.language_skills<<@language_skill
+
 	    @experience=build_experience
-	    @user_profile.experiences<<@experience
 	    @experience.save
-	    @language_skill.save    
+	    @user_profile.experiences<<@experience
+
+	    @qualification=build_qualification
+	    @qualification.save	 	   
+	    @user_profile.qualifications<<@qualification	    
+	  
 	    @user_profile.save
 	    login_as(@user)
+	    
+
 	end
 
 	def login_as_company
@@ -84,6 +91,23 @@ class ActiveSupport::TestCase
 								  min_salary: 2000,
 								  max_salary: 20000,
 								  job_duration: "3to12"  ) 		
+	end
+
+	def build_qualification
+		@qualification = Qualification.new(degree_type: 'Bachelor In Business Information Technology', 
+        									institute_name: 'Haaga-Helia UAS',
+        									address: 'Pasila, Helsinki',        								
+        									start: '2009-08-20'
+        								)
+
+	end
+
+	def build_language_skill
+	@language_skill = LanguageSkill.new(level: 5 ,
+	                                        name: 'Nepali',
+	                                        skill_type: 'spoken')
+	
+		
 	end
 
 	def build_experience
