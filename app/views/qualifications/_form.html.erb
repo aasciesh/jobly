@@ -1,0 +1,30 @@
+<%= form_for @qualification , remote: true do |f|%>
+	<table>
+		<tr>
+			<td><span>Institute Name</span></td>
+			<td><%= f.text_field :institute_name %></td>
+		</tr>
+		<tr>
+			<td><span>Degree Type</span></td>
+			<td><%= f.text_field :degree_type %></td>
+		</tr>
+		<tr>
+			<td><span>Start Date</span></td>
+			<td><%= f.text_field :start %></td>
+		</tr>
+		<tr>
+			<td><span>End Date</span></td>
+			<td><%= f.text_field :end %></td>
+		</tr>
+		<tr>
+			<td><span>Address</span></td>
+			<td><%= f.text_area :address %></td>
+		</tr>
+		<tr>
+			<td><span>Website</span></td>
+			<td><%= f.text_field :website %></td>
+		</tr>
+		
+		<tr><td><%=f.submit 'Save', class: "button button-primary"%></td></tr>
+	</table>
+	<% end %>

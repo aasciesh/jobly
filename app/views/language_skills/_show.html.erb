@@ -1,0 +1,23 @@
+<div class="language_skill language_skill-<%= language_skill.id%>">
+<table class="cv_tables">
+	<tr>
+		<td>Name </td><td><%=language_skill.name %></td>
+	</tr>
+	<tr>
+		<td>Level</td><td><%=language_skill.level%></td>
+	</tr>
+	<tr>
+		<td>Skill Type</td><td><%=language_skill_type%></td>
+	</tr>
+	
+</table>
+
+<div class="hidden-options">
+	<%= link_to edit_language_skill_path(language_skill), remote: true do %>
+		<i class="icon-edit"></i>
+	<%end%>
+	<%= link_to language_skill, :method => :delete,remote: true, :confirm => "You sure?"  do%>
+	<i class=" icon-trash"></i>
+	<% end %>
+</div>
+</div>
