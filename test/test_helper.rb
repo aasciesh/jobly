@@ -42,7 +42,11 @@ class ActiveSupport::TestCase
 
 	    @qualification=build_qualification
 	    @qualification.save	 	   
-	    @user_profile.qualifications<<@qualification	    
+	    @user_profile.qualifications<<@qualification	
+
+	    @reference=build_reference
+	    @reference.save	 	   
+	    @user_profile.references<<@reference    
 	  
 	    @user_profile.save
 	    login_as(@user)
@@ -117,6 +121,12 @@ class ActiveSupport::TestCase
  									 position: 'Personal Assistant',
  									 responsibilities: 'Outbound customer calling to company standards 
  									 and targets with related supporting administrative tasks')
+	end
+
+	def build_reference
+		@reference = Reference.new(referee_name: 'Jack',
+                      email: 'jack@email.com')
+		
 	end
 	def login_as(user)
 	  @request.cookies[:remember_cookie] = user.remember_cookie

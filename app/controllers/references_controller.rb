@@ -1,7 +1,10 @@
 class ReferencesController < ApplicationController
 	
 	before_filter :find_reference
-	before_filter :check_correct_user, only: [:destroy]
+	include SessionHelper
+	load_and_authorize_resource
+
+	
 
 	def new
 			@references = Reference.new
@@ -29,15 +32,15 @@ class ReferencesController < ApplicationController
     	flash[:success] = "Reference deleted succesfully!"	  
 	end
 
+	def edit		
+	end
+	def update		
+	end
+
 	private
 	def find_reference
 		@reference = Reference.find_by_id(params[:id])
 	end
-	def check_correct_user
-		unless user_profile_includes?(@reference) 
-			redirect_to user_profile_path(current_profile)
-			flash[:error] = 'Couldnot delete'
-		end
-	end
+	
 end
 

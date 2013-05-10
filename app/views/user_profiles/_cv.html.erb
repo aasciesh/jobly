@@ -21,12 +21,13 @@
 		<div class="qualifications cv_attr span12">
 			<div class="attr_head">
 				<span class="headText"><h4>Qualifications</h4> </span>
-				
-				<%= link_to new_qualification_path, remote: true do %>
+				<% if can? :create , Qualification %>
+				<%= link_to new_qualification_path, remote: true do %>	
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
 				 </span>
 				 <% end%>
+				 <% end %>
 			</div>
 			<div>
 				
@@ -38,12 +39,14 @@
 
 		<div class="experiences cv_attr span12">
 			<div class="attr_head">
-				<span class="headText"><h4>Experiences</h4> </span>
+				<span class="headText"><h4>Experiences</h4> </span>	
+				<% if can? :create , Experience %>	
 				<%= link_to new_experience_path, remote: true do %>
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
 				 </span>
 				 <% end%>
+				 <% end%>					
 			</div>
 			<div>
 				<% @user_profile.experiences.each do |experience| %>
@@ -56,11 +59,14 @@
 		<div class="languageSkills cv_attr span12">
 			<div class="attr_head ">
 				<span class="headText"><h4>Language Skills</h4> </span>
+				<% if can? :create , language_skill %>
 				<%= link_to new_language_skill_path, remote: true do %>
 				 <span class="right  attr_option buttonify">
 				 	<i class="add_icon"></i> Add
 				 </span>
 				 <% end%>
+				 <% end%>
+
 			</div>
 			<div>
 				<% @user_profile.language_skills.each do |language_skill| %>
