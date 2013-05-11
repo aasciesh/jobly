@@ -1,4 +1,6 @@
 Jobly::Application.routes.draw do
+  get "search/index"
+
 #TODO: Take off resources development before putting into production  
   resources :user_profiles, :session, :company_profiles, :users, :development, :vacancies, :language_skills, :references,
         :qualifications, :experiences, :static, :applications
@@ -12,5 +14,6 @@ Jobly::Application.routes.draw do
   match '/activate/:code', to: 'users#activate', via: :get
   match '/resend_confirmation/:id', to: 'users#send_confirmation_link', via: :put
   match '/session/create', to: 'session#create', via: :post
+  match '/search', to: 'search#index'
 
 end

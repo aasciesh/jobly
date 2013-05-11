@@ -1,0 +1,12 @@
+<p>Total results: <%=@results.total_entries%></p>
+<% @results.each do |item| %>
+	<div>
+		<span><%=item.company_name%></span>
+		<span><%=(item.highlight.title[0].html_safe unless (item.highlight.nil?|| item.highlight.title.nil? ))|| item.title%></span>
+		<span><%=(item.highlight.description[0].html_safe unless (item.highlight.nil? || item.highlight.description.nil? ))|| truncate(item.description, length: 150)%></span>
+		<span><%=item.job_address%></span>
+		<span><%=item.location.to_s%></span>
+	</div>
+<% end %>
+
+<%= will_paginate @results %>
