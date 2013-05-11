@@ -12,7 +12,7 @@ class Vacancy < ActiveRecord::Base
   accepts_nested_attributes_for :applications
 
   JOB_TYPES = ['full-time','part-time','shift','weekend']
-  JOB_DURATION = ['lt3','3to12','gt12','s']
+  JOB_DURATION = ['less than 3 months','3 to 12 months','more than 12 months','summer',]
   
   validates :title, presence: true, length: {minimum: 5, maximum: 150}
   validates :description, presence: true, length: {minimum:10, maximum: 3000}

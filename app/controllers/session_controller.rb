@@ -24,11 +24,11 @@ class SessionController < ApplicationController
         end
       else
         #TODO Flash message: Message is not showing properly(shown in different page) when create fails
+
+        flash.now[:alert]= "We couldn't recognize you."
         respond_to do |format|
-          format.js {render json: {state: 'failed', message: 'Incorrect credentials'}}
-          format.html {
-            render 'new'
-            flash[:alert]= "We couldn't recognize you."}
+          format.js {render 'shared/error'}
+          format.html {render 'new'}
         end
       end
   end
