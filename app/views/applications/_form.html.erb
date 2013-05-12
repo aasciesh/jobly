@@ -12,7 +12,13 @@
 		
 		<tr><td colspan="2"></td></tr>
 	</table>
-
+ <div class='field' >  
+   <%= f.label :references %> <br/>
+    <% for reference in  current_profile.references %>     
+        <%= check_box_tag "application[reference_ids][]", reference.id, @application.references.include?(reference) %>
+        <%= raw reference.referee_name %>       
+    <% end %> 
+  </div>
 	<%=f.submit 'Apply', class: "btn btn-primary right"%>
 <% end %>
 

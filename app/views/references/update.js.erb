@@ -1,0 +1,4 @@
+$('#successDiv').html('Updated reference successfully.');
+$('.reference-<%=@reference.id%>').replaceWith("<%=j render(partial: 'show', locals: {reference: @reference})%>");
+displaySuccess();
+hideAjaxForm();

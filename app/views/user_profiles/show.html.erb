@@ -5,6 +5,17 @@
 <%= image_tag @user_profile.avatar(:profile_pic)%> <p>
 <%= link_to "Edit Profile", edit_user_profile_path(@user_profile), class: "btn btn-primary" %> 
 <%= link_to "View CV Profile",  cv_path(@user_profile), class: "btn btn-primary"%></p>
+<div>
+	<% if @user_profile.references.count>0 %>	
+		<h4>References</h4>
+		<% @user_profile.references.each do |reference| %>
+			<%= link_to reference_path(reference) do %>
+			<%= reference.referee_name %> 
+			<%= reference.email %> <br>
+		<% end %>
+		<% end %>
+	<% end %>
+</div>
 
 </div>
 <div class="span8">

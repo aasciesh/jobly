@@ -23,11 +23,7 @@ class ReferencesController < ApplicationController
 			end
 		end
 
-	def destroy
-    	@reference.destroy
-    	redirect_to user_profile_path(current_profile)
-    	flash[:success] = "Reference deleted succesfully!"	  
-	end
+
 
 	def edit		
 	end
@@ -48,6 +44,23 @@ class ReferencesController < ApplicationController
 				format.js {render 'shared/error'}
 			end
 		end	
+	end
+
+
+	def destroy
+		if @reference.destroy
+			respond_to do |format|
+				format.html{flash[:success] = "reference deleted succesfully!"	
+				redirect_to user_profile_path(current_profile)
+				}
+				format.js 
+			end
+		else
+			format.html{flash[:error] = "Could not delete"	
+				redirect_to reference_path(@reference)
+				}
+				format.js {render 'shared/error'}
+		end
 	end
 
 	private
