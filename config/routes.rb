@@ -13,6 +13,7 @@ Jobly::Application.routes.draw do
   match '/signup', to: 'user_profiles#new', via: :get
   match '/activate/:code', to: 'users#activate', via: :get
   match '/resend_confirmation/:id', to: 'users#send_confirmation_link', via: :put
+  match '/edit_banner', to: 'company_profiles#edit_banner', via: :get
   match '/session/create', to: 'session#create', via: :post
   match '/search', to: 'search#index'
 

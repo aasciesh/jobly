@@ -56,4 +56,11 @@ class CompanyProfilesController < ApplicationController
     	end			
 	end
 
+	def edit_banner	
+		@company_profile= CompanyProfile.find_by_id(params[:id])
+		respond_to do |format|
+			format.js
+		end
+	end
+	
 end

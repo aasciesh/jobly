@@ -537,8 +537,30 @@ font-weight: bold;
 }
 .pagination{margin: 10px 20px;}
 
+.banner {
+  width: 940px; height: 200px; background-color: blue; position: relative;
+  top:-14px;
+  overflow: hidden;
+  margin: auto;
+ background: #446b7e; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #446b7e 0%, #060c14 99%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#446b7e), color-stop(99%,#060c14)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #446b7e 0%,#060c14 99%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #446b7e 0%,#060c14 99%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #446b7e 0%,#060c14 99%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #446b7e 0%,#060c14 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#446b7e', endColorstr='#060c14',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
-
+.banner-text {margin-left:20px;font-size: 150px; color: white;}
+.banner-cover{width: 940px; margin:auto; height: 25px;}
+.banner-link{border: 1px solid rgba(0, 0, 0, 0.59);
+padding: 3px;
+position: relative;
+background: rgba(255, 255, 255, 0.45);
+color: black;
+top: -35px;
+border-radius: 0 5px 0 0;}
 
 
 
