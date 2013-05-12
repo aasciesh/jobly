@@ -526,6 +526,28 @@ color: #184885;}
   border-top: 1px solid grey;
 padding-top: 30px;}
 
+.current {
+background-color: #489BDB;
+padding: 5px 9px;
+border-radius: 25px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+color: white;
+font-weight: bold;
+}
+.pagination{margin: 10px 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
             /* BootStrap starts here */
  /*!
  * Bootstrap v2.3.1

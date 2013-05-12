@@ -1,5 +1,6 @@
-<p>Total results: <%=@results.total_entries%><%= will_paginate @results %></p>
+<h4>Total hits: <%=@results.total_entries%> for "<%= @params[:query] %>" around "<%= @params[:place] %>"</h4>
 
+<div><span class="right"><%= will_paginate @results %></span></div>
 <table class='table'>
 		<tr>
 			<th>
@@ -30,4 +31,4 @@
 	
 <% end %>
 </table>
-Total results: <%=@results.total_entries%><%= will_paginate @results %>
+<div><span class="right"><%= will_paginate @results %></span></div>
