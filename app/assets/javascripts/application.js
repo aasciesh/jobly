@@ -81,11 +81,15 @@ function hideAjaxForm()
     $('#company').click(function(){            
         $('#job_seeker_signup').hide();
         $('#company_signup').fadeIn();  
+        $("#company").addClass("active");
+         $("#job_seeker").removeClass("active");
     });
 
     $('#job_seeker').click(function(){
         $('#job_seeker_signup').fadeIn();
         $('#company_signup').hide();
+        $("#job_seeker").addClass("active");
+         $("#company").removeClass("active");
     });
 });
 

@@ -106,7 +106,7 @@ input
     border: none;
     background-color: transparent;
     border: 1px solid #4B5D79;
-    padding: 2px;
+    padding: 4px;
 }
 
 textarea, input 
@@ -118,7 +118,7 @@ textarea, input
 
 }
 input[type="text"], input[type="email"], input[type="password"], textarea
-{width: 200px;}
+{width: 250px;}
 
 .right{float:right;}
 .left{float: left;}
@@ -509,6 +509,40 @@ border-radius: 2px;
 }
 
 .search_button:hover{background-color: rgba(255, 255, 255, 0.13);}
+#tabs{height: 33px;}
+#tabs > a{
+  background-color: whiteSmoke;
+z-index: 500;
+color: grey;
+  padding: 5px;
+  cursor: pointer;
+border: 1px solid rgba(24, 13, 13, 0.67);
+}
+#tabs > a.active{font-size: 25px;
+border-bottom: none;
+color: #184885;}
+
+#job_seeker_signup, #company_signup{
+  border-top: 1px solid grey;
+padding-top: 30px;}
+
+.current {
+background-color: #489BDB;
+padding: 5px 9px;
+border-radius: 25px;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+color: white;
+font-weight: bold;
+}
+.pagination{margin: 10px 20px;}
+
+
+
+
+
+
+
 
 
 
@@ -1510,7 +1544,7 @@ table th[class*="span"],
   *zoom: 1;
   padding: 3px 5px;
   margin-bottom: 0;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 20px;
   text-align: center;
