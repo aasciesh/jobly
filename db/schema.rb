@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510113711) do
+ActiveRecord::Schema.define(:version => 20130511183800) do
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130510113711) do
     t.datetime "updated_at",                         :null => false
     t.integer  "user_profile_id"
     t.boolean  "bookmark",        :default => false
+    t.string   "cover_letter"
   end
 
   add_index "applications", ["user_profile_id"], :name => "index_applications_on_user_profile_id"
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130510113711) do
 
   create_table "company_profiles", :force => true do |t|
     t.string   "name"
+    t.string   "company_type"
     t.text     "description"
     t.string   "street"
     t.string   "city"
@@ -45,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20130510113711) do
     t.datetime "logo_updated_at"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.string   "company_type"
     t.string   "slug"
   end
 

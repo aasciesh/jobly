@@ -13,24 +13,23 @@ load_and_authorize_resource
 		@vacancy=Vacancy.new(params[:vacancy])
 		@vacancy.company_profile=current_profile
 		if @vacancy.save
+			flash[:success]= @vacancy.title+", has been created." 
 			respond_to do |format|
-		        format.html {redirect_to vacancy_path(@vacancy),
-		        flash[:success]= "#{@vacancy.title}, has been created."}
-		        format.js   {render json: {status: 'success', message: 'Successfully created vacancy.'}}
+		        format.html {redirect_to vacancy_path(@vacancy)}		        
+		        format.js 
       		end
 		else
+			@error= @vacancy.errors
 			respond_to do |format|
-		        format.html {
-		                      @error= @vacancy.errors
-		                      render 'new'
-		                  	}
-		        format.js 	{ render json: {status: 'failed', message: 'Could not create vacancy.'} }
+		        format.html { render 'new' }
+		        format.js {render 'shared/error'}
 		    end
 		end	
 	end
 
 	def show
-		@vacancy=Vacancy.find(params[:id])		
+		@vacancy=Vacancy.find(params[:id])
+		session[:current_vacancy]=@vacancy.id		
 	end
 
 	def edit		
@@ -46,6 +45,23 @@ load_and_authorize_resource
 	      	render :edit
 	      	flash.now[:error] = "vacancy couldnot be updated!"
     	end			
+	end
+
+
+	def destroy
+		if @vacancy.destroy
+			respond_to do |format|
+				format.html{flash[:success] = "vacancy deleted succesfully!"	
+				redirect_to vacancies_path
+				}
+				format.js 
+			end
+		else
+			format.html{flash[:error] = "Could not delete"	
+				redirect_to vacancy_path(@vacancy)
+				}
+				format.js {render 'shared/error'}
+		end
 	end
 
 end

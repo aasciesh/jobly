@@ -1,5 +1,5 @@
 <%= form_for @vacancy, :html => { :multipart => true } do |f| %>
-	<h2>Register new vacancy</h2>
+	<h4>Register new vacancy</h4>
 	<%= render 'form', :f => f %>
-	<%= f.submit "Register ", class: 'btn btn-primary'%> 
+	<p><%= f.submit "Register ", class: 'btn btn-primary'%> </p>
 <% end %>

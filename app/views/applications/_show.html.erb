@@ -1,0 +1,35 @@
+
+<div class="qualification qualification-<%= qualification.id%>">
+<table class="cv_tables">
+	<tr>
+		<td>Institute Name</td><td><%=qualification.institute_name%></td>
+	</tr>
+	<tr>
+		<td>Degree Type</td><td><%=qualification.degree_type%></td>
+	</tr>
+	<tr>
+		<td>Start Date</td><td><%=qualification.start%></td>
+	</tr>
+	<tr>
+		<td>End Date</td><td><%=qualification.end%></td>
+	</tr>
+	<tr>
+		<td>Address</td><td><%=qualification.address%></td>
+	</tr>
+	<tr>
+		<td>Website</td><td><%=qualification.website%></td>
+	</tr>
+</table>
+<div class="hidden-options">
+	<% if can? :update , qualification %>
+	<%= link_to edit_qualification_path(qualification), remote: true do %>
+		<i class="icon-edit"></i>
+	<%end%>
+	<% end%>
+	<% if can? :destroy , qualification %>
+	<%= link_to qualification, :method => :delete,remote: true, :confirm => "You sure?"  do%>
+	<i class=" icon-trash"></i>
+	<% end %>
+	<% end %>
+</div>
+</div>

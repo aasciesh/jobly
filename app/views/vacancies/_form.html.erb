@@ -1,50 +1,51 @@
+ <div class="span4">
+  <div>
+    <%= f.label :title %> <br/>
+    <%= f.text_field :title %>
+  </div>
 
-<h3>Vacancy information</h3>
-<div>
-  <%= f.label :title %> <br/>
-  <%= f.text_field :title %>
+  <div>
+    <%= f.label :job_type %> <br/>
+    <%= f.select :job_type, Vacancy::JOB_TYPES, {:prompt => true}  %>
+  </div>
+  <div>
+    <%= f.label :job_duration %> <br/>
+    <%= f.select :job_duration, Vacancy::JOB_DURATION, {:prompt => true}  %>
+  </div>
+  <div>
+    <%= f.label :min_salary %> <br/>
+    <%= f.text_field :min_salary %>
+  </div>
+  <div>
+    <%= f.label :max_salary %> <br/>
+    <%= f.text_field :max_salary %>
+  </div>
+  <div>
+    <%= f.label :street %> <br/>
+    <%= f.text_field :street %>
+  </div>
+  <div>
+    <%= f.label :city %> <br/>
+    <%= f.text_field :city %>
+  </div>
+  <div>
+    <%= f.label :zip %> <br/>
+    <%= f.text_field :zip %>
+  </div>
+  <div>
+    <%= f.label :country %> <br/>
+    <%= f.text_field :country %>
+  </div>
+  <div>
+    <%= f.label :deadline %> <br/>
+    <%= f.date_select :deadline %>
+  </div>
+  <div>
+    <%= f.label :job_address %> <br/>
+    <%= f.text_field :job_address %>
+  </div>
 </div>
-<div>
+<div class="span8">
   <%= f.label :description %> <br/>
   <%= f.cktext_area :description,:rows=>6 %>
 </div> 
-<div>
-  <%= f.label :job_type %> <br/>
-  <%= f.select :job_type, Vacancy::JOB_TYPES, {:prompt => true}  %>
-</div>
-<div>
-  <%= f.label :job_duration %> <br/>
-  <%= f.select :job_duration, Vacancy::JOB_DURATION, {:prompt => true}  %>
-</div>
-<div>
-  <%= f.label :min_salary %> <br/>
-  <%= f.text_field :min_salary %>
-</div>
-<div>
-  <%= f.label :max_salary %> <br/>
-  <%= f.text_field :max_salary %>
-</div>
-<div>
-  <%= f.label :street %> <br/>
-  <%= f.text_field :street %>
-</div>
-<div>
-  <%= f.label :city %> <br/>
-  <%= f.text_field :city %>
-</div>
-<div>
-  <%= f.label :zip %> <br/>
-  <%= f.text_field :zip %>
-</div>
-<div>
-  <%= f.label :country %> <br/>
-  <%= f.text_field :country %>
-</div>
-<div>
-  <%= f.label :deadline %> <br/>
-  <%= f.date_select :deadline %>
-</div>
-<div>
-  <%= f.label :job_address %> <br/>
-  <%= f.text_field :job_address %>
-</div>

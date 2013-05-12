@@ -1,0 +1,4 @@
+$('#successDiv').html('Updated qualification successfully.');
+$('.qualification-<%=@qualification.id%>').replaceWith("<%=j render(partial: 'show', locals: {qualification: @qualification})%>");
+displaySuccess();
+hideAjaxForm();

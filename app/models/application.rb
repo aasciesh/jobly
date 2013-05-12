@@ -1,5 +1,5 @@
 class Application < ActiveRecord::Base
-  attr_accessible :user_id, :vacancy_id, :bookmark
+  attr_accessible :user_id, :vacancy_id, :bookmark, :cover_letter
 
   belongs_to :user_profile, foreign_key: :user_id
   belongs_to :vacancy

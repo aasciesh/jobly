@@ -1,0 +1,18 @@
+<%= form_for @application , remote: true do |f|%>
+	<table class="cv_tables form_table">
+		<tr><td>
+			<%= f.hidden_field :vacancy_id, value: session[:current_vacancy] %>
+			<h25>Cover Letter</h25>
+			</td>			
+		</tr>
+		<tr>
+			<td>
+				<%= f.cktext_area :cover_letter %></td>
+		</tr>
+		
+		<tr><td colspan="2"></td></tr>
+	</table>
+
+	<%=f.submit 'Apply', class: "btn btn-primary right"%>
+<% end %>
+

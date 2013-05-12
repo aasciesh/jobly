@@ -1,5 +1,6 @@
 
 <% if !current_user.nil? %>	
+<%= link_to "Vacancies", vacancies_path %>
 	<%= render '/shared/user_menu' %>
 <% else %>
 <div class="right user-options">

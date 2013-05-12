@@ -1,7 +1,18 @@
 <div class="span4"><p>
 	<%= image_tag @vacancy.company_profile.logo.url(:profile_pic) if @vacancy.company_profile.logo? %> <br><p>
 	<%= link_to "Edit", edit_vacancy_path(@vacancy) , class: "button button-primary" if  can? :update, @vacancy %>
-	<%= link_to "Apply",new_application_path, class: "button button-primary"  %></p>
+
+
+
+	<%= link_to "Delete", @vacancy, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary right" %> 
+
+	<%= link_to new_application_path, remote: true, class: "vacancy" do %>	
+				 		<span class= "btn btn-primary right">
+				 		 Apply
+					 	</span>
+					 <% end%>
+
+
 
 	Address:		<%= @vacancy.street %> <%= @vacancy.city %><%= @vacancy.zip %><%= @vacancy.city %>	<%= @vacancy.country %></p><p> 
 	Job Duration:	<%= @vacancy.job_duration %> </p><p>
@@ -33,4 +44,3 @@
 	  	<% end %>
 	</table>
 </div>
-
