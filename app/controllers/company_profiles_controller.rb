@@ -18,19 +18,17 @@ class CompanyProfilesController < ApplicationController
 
 	def create
 		@company_profile=CompanyProfile.new(params[:company_profile])
-		if @company_profile.save					
+		if @company_profile.save
+		flash[:success]= "#{@company_profile.name} has been registered."					
 	      	respond_to do |format|
-	        format.html {
-	        	redirect_to company_profile_path(:company_profile)
-	        	flash[:success]= "#{@company_profile.name} has been registered."}
-	        	format.js   {render json: {status: 'success', message: 'Successfully registered company.'}}
+	        	format.html { redirect_to company_profile_path(@company_profile)	}        	
+	        	format.js 
 	        end
 		else
+			@error= @company_profile.errors
 			respond_to do |format|
-	        	format.html {
-	                      @error= @company_profile.errors
-	                      render :new }
-	        	format.js   {render json: {status: 'failed', message: 'Could not register company.'}}
+	        	format.html {render :new }
+	        	format.js 
 	        end
 		end	
 	end

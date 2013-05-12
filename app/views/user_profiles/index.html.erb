@@ -1,2 +1,20 @@
-<h1>UserProfiles#index</h1>
-<p>Find me in app/views/user_profiles/index.html.erb</p>
+
+<div class="span8">
+<h4>User Profiles </h4>
+	<div class="filter_form"></div>
+	<table class="table">
+	  <tr>   
+	  	<th></th>    
+	    <th>Name</th>
+	    <th>City</th> 
+	    <th>Age</th>       
+	  </tr>
+		<% @user_profiles.each do |profile| %> 	
+			<div class="profiles">		
+		  		<%= render '/shared/user_profile_item',  :profile=> profile %>
+		  	</div>
+	  	<% end %>
+	</table>
+
+	
+</div>

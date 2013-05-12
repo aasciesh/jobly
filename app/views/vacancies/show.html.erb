@@ -32,7 +32,7 @@
 	  </tr>
 		<% @vacancy.applications.each do |applicant| %> 	
 			<div class="applicants">		
-		  		<%= render '/applications/applicant',  :applicant=> applicant %>
+		  		<%= render '/shared/user_profile_item',  :profile=> applicant.user_profile %>
 		  	</div>
 	  	<% end %>
 	</table>

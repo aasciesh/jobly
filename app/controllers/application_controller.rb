@@ -8,12 +8,10 @@ class ApplicationController < ActionController::Base
 		# redirect_to root_path
 		# flash[:error] = "Access denied."
 
-		respond_to do |format|
-        format.html {
-                      redirect_to root_path
-                      @error= exception.message
-                      }
-        format.js   {render json: {status: 'failed', message: 'Access Denied !'}}
-      end
-	end
+	flash[:alert]= "Access Denied !! "+exception.message
+    respond_to do |format|
+            format.html {redirect_to root_path }
+            format.js   {render 'shared/error'}
+          end
+  end
 end

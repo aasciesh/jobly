@@ -1,0 +1,10 @@
+<tr>  
+	<td>
+		<a href="<%= user_profile_path(profile) %>" >	
+			<%= image_tag profile.avatar.url(:thumb) if profile.avatar? %> 
+		</a>		
+	</td>
+	<td><%=  profile.firstname %></td>
+	<td><%=  profile.city %></td>    
+	<td><%=  Time.now.year-profile.birth_date.year %></td> 
+</tr> 	

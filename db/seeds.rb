@@ -44,6 +44,21 @@ categories= Category.create(
 		{name: 'Project Management'},{name: 'R&D'}, {name: 'Sales'}])
 
 
+10.times do |num|
+	rand = Random.rand(0..4)
+	c=CompanyProfile.new(name: "company profile "+num.to_s, 
+		                      description:  title_descriptions+ num.to_s,
+		                      street: "annankatu 12"+ num.to_s,
+		                      city: "helsinki"+ num.to_s,
+		                      country: "finland"+ num.to_s,
+		                      zip: "10201",
+		                      website: "website.com",
+		                      contact: "contact person" )
+	c.save
+end
+
+
+
 50.times do |num|
 	rand = Random.rand(0..4)
 	v=CompanyProfile.last.vacancies.build({  title: title_descriptions[rand][0],
