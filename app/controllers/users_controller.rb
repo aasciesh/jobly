@@ -7,7 +7,25 @@ class UsersController < ApplicationController
   def create
 
   end
+  def edit
+    @user= current_user
+  end
   def update
+    @user= current_user
+    if @user.update_attributes(params[:user])
+      flash[:notice] = 'successfully updated credentials'
+      respond_to do |format|
+        format.html{redirect_to @user.profile
+          sign_in(@user)}
+        format.js{}
+      end
+    else
+      @error= @user.errors
+      respond_to do |format|
+        format.html{render 'edit'}
+        format.js{render 'shared/error'}
+      end
+    end
   end
   #OPTIMIZE: This block of code is too unRubyish
   def activate

@@ -75,7 +75,11 @@ class Vacancy < ActiveRecord::Base
     tire.search(page: params[:page]|| 1, per_page: 10) do
       query do
         boolean do
-          must { string params[:query]} if params[:query].present?
+           if params[:query].present?
+              must { string params[:query]}
+            else
+              must { string '*'}
+            end
         end
       end
       filter 'geo_distance', distance: distance_filter, location: location if location.present?
