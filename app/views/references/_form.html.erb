@@ -1,0 +1,23 @@
+<%= form_for @reference , remote: true do |f|%>
+	<table class="cv_tables form_table">
+		<tr>
+			<td><span>Contact Person Name</span></td>
+			<td><%= f.text_field :referee_name %></td>
+		</tr>
+		<tr>
+			<td><span>Email</span></td>
+			<td><%= f.text_field :email %></td>
+		</tr>
+		<tr>
+			<td><span> Phone No. </span></td>
+			<td><%= f.text_field :phone %></td>
+		</tr>		
+		<tr>
+			<td><span>Other Information</span></td>
+			<td><%= f.text_area :referee_info %></td>
+		</tr>	
+		
+		<tr><td colspan="2"></td></tr>
+	</table>
+	<%=f.submit 'Save', class: "btn btn-primary right"%>
+	<% end %>

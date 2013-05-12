@@ -1,0 +1,30 @@
+
+<div class="reference reference-<%= reference.id%>">
+<table class="cv_tables">
+	<tr>
+		<td> Contact Person Name</td><td><%=reference.referee_name%></td>
+	</tr>
+	<tr>
+		<td>Start Date</td><td><%=reference.phone%></td>
+	</tr>
+	<tr>
+		<td>End Date</td><td><%=reference.email%></td>
+	</tr>
+	<tr>
+		<td>Address</td><td><%=reference.referee_info%></td>
+	</tr>
+	
+</table>
+<div class="hidden-options">
+	<% if can? :update , reference %>
+	<%= link_to edit_reference_path(reference), remote: true do %>
+		<i class="icon-edit"></i>
+	<%end%>
+	<% end%>
+	<% if can? :destroy , reference %>
+	<%= link_to reference, :method => :delete,remote: true, :confirm => "You sure?"  do%>
+	<i class=" icon-trash"></i>
+	<% end %>
+	<% end %>
+</div>
+</div>

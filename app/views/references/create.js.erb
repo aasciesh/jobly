@@ -1,0 +1,5 @@
+$('#successDiv').html('Successfully added reference.');
+displaySuccess();
+$('div.references').append("<%= j render(partial: 'show', locals: {reference: @reference})%>");
+hideAjaxForm();
+// $('reference-<%=@reference.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});
