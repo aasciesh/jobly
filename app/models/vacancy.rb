@@ -68,8 +68,8 @@ class Vacancy < ActiveRecord::Base
 
   def self.search(params)
     
-    location = (Geocoder.search(params[:place])[0].coordinates if params[:place] )
-    location.reverse!
+    location = (Geocoder.search(params[:place])[0].coordinates.reverse if params[:place].present? )
+  
     distance_filter = params[:distance] || '50km' 
 
     tire.search(page: params[:page]|| 1, per_page: 10) do
