@@ -8,6 +8,8 @@ class UserProfile < ActiveRecord::Base
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
 
+  geocoded_by :full_address
+  before_validation :geocode
  
   has_many :applications
   has_many :experiences
@@ -15,7 +17,6 @@ class UserProfile < ActiveRecord::Base
   has_many :language_skills
   has_many :references
 
-  accepts_nested_attributes_for :user, :qualifications, :references
   USER_GENDER_TYPE= ['Male','Female']
 
   validates :firstname, presence: true, length: {minimum: 2, maximum: 50}

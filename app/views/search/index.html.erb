@@ -1,0 +1,33 @@
+<p>Total results: <%=@results.total_entries%><%= will_paginate @results %></p>
+
+<table class='table'>
+		<tr>
+			<th>
+				Announcer
+			</th>
+			<th>
+				Vacancy
+			</th>
+			<th>
+				Address
+			</th>
+		</tr>	
+<% @results.each do |item| %>
+	
+		<tr>
+			<td>
+				<%=item.company_name%><br>
+				<%= image_tag CompanyProfile.find(item.company_id).logo(:thumb)%>
+			</td>
+			<td>
+				<%=link_to ((item.highlight.title[0].html_safe unless (item.highlight.nil?|| item.highlight.title.nil? ))|| item.title) , vacancy_path(id: item.id)%><br>
+				<%=(item.highlight.description[0].html_safe unless (item.highlight.nil? || item.highlight.description.nil? ))|| truncate(item.description, length: 150)%>
+			</td>
+			<td>
+				<%=item.job_address%>
+			</td>
+		</tr>
+	
+<% end %>
+</table>
+Total results: <%=@results.total_entries%><%= will_paginate @results %>

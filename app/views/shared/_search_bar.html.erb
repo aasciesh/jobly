@@ -1,8 +1,8 @@
 <div id="search_bar">
 <%= form_tag("/search", :method => "get", class: 'navbar-search', autocomplete: 'off') do %>
-  <%= text_field_tag :query, "", class: 'search search-box', placeholder: 'Search Jobs' %>
+  <%= text_field_tag :query, "", class: 'search search-box', placeholder: 'Search Jobs', value: (@params[:query] if @params ) %>
   <span style="color: #B9B9B9"> around </span>
-  <%= text_field_tag :place, "", class: 'place search-box', placeholder: 'Helsinki, Finland' %>
-  <%= image_submit_tag "" , :class => "icon-search icon-white" %>
+  <%= text_field_tag :place, "", class: 'place search-box', placeholder: 'place name', value: ((@params[:place] if @params) || default_place) %>
+  <%= image_submit_tag "search_ico.png" , :class => "search_button" %>
 <% end %>
 </div>
