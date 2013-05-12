@@ -20,7 +20,7 @@
 </div> 
 
 <div class="span8">
-	<h4><%= @vacancy.title %> </h4>
+<h4><%= @vacancy.title %> </h4>
 	<%= raw @vacancy.description %> 
 	<div class="filter_form"></div>
 	<table class="table">
@@ -30,17 +30,12 @@
 	    <th>City</th> 
 	    <th>Age</th>       
 	  </tr>
-		<% @vacancy.applications.each do |applicant| %> 			
-		  	<tr>  
-			  	<td>
-			  		<a href="<%= user_profile_path(applicant.user_profile) %>" >	
-			  			<%= image_tag applicant.user_profile.avatar.url(:thumb) if applicant.user_profile.avatar? %> 
-			  		</a>		
-			  	</td>
-			    <td><%=  applicant.user_profile.firstname %></td>
-			    <td><%=  applicant.user_profile.city %></td>    
-			    <td><%=  Time.now.year-applicant.user_profile.birth_date.year %></td> 
-		  	</tr> 	  		
+		<% @vacancy.applications.each do |applicant| %> 	
+			<div class="applicants">		
+		  		<%= render '/applications/applicant',  :applicant=> applicant %>
+		  	</div>
 	  	<% end %>
 	</table>
+
+	
 </div>

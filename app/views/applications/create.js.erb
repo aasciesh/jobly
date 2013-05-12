@@ -1,3 +1,4 @@
 $('#successDiv').html('Successfully applied to vacancy.');
-displaySuccess();
+ displaySuccess();
 hideAjaxForm();
+ window.location.href ="<%= vacancy_path(@application.vacancy_id)%>";
