@@ -14,7 +14,7 @@ class Ability
                 application.try(:vacancy).try(:company_profile) ==user.profile  
             end 
 
-            can [:update,:destroy], CompanyProfile do |company_profile|
+            can [:update,:destroy, :edit_banner], CompanyProfile do |company_profile|
                 company_profile.try(:user) ==user       
             end
             
@@ -26,7 +26,6 @@ class Ability
             can [:read, :update,:destroy], User do |owner|
                 owner ==user       
             end
-             
 
             can [:read, :show_cv], UserProfile
 

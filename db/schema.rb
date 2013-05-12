@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20130512083205) do
+ActiveRecord::Schema.define(:version => 20130512193218) do
 
   create_table "application_references", :force => true do |t|
     t.integer  "application_id"
@@ -20,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20130512083205) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
-
 
   create_table "applications", :force => true do |t|
     t.integer  "user_id"
@@ -54,9 +52,13 @@ ActiveRecord::Schema.define(:version => 20130512083205) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.string   "slug"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
   end
 
   add_index "company_profiles", ["slug"], :name => "index_company_profiles_on_slug", :unique => true
