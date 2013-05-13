@@ -6,8 +6,9 @@
 	<%end%>
 
 </div>
+<% if can?(:update), @company_profile %>
 <div class="banner-cover"><%= link_to 'Change Banner', edit_banner_path(id: @company_profile.id), remote: true, class: 'buttonify banner-link' %></div>
-	
+<% end %>	
 
 <div class="span4">
 	<%= image_tag @company_profile.logo(:profile_pic), class: "decorate" %> <br>
