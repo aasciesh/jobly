@@ -60,8 +60,8 @@ function forceCloseMsgDiv()
 	clearTimeout(successThread);
 	clearTimeout(errorThread);
 	$('#servermsg').hide();
-	$('#successDiv').empty();
-	$('#errorDiv').empty();
+	$('#successDiv').hide().empty();
+	$('#errorDiv').hide().empty();
 }
 
 function displayAjaxForm()
