@@ -2,3 +2,4 @@ $('#successDiv').html('Updated qualification successfully.');
 $('.qualification-<%=@qualification.id%>').replaceWith("<%=j render(partial: 'show', locals: {qualification: @qualification})%>");
 displaySuccess();
 hideAjaxForm();
+$('.qualification-<%=@qualification.id%> > .cv_tables').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);

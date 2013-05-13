@@ -4,23 +4,17 @@
 			<td><span>Name</span></td>
 			<td><%= f.text_field :name %></td>
 		</tr>
-		<tr>
-			<ul><span>Level</span>
-			<li><%= f.radio_button :level, "0" %>Fail</li>
-			<li><%= f.radio_button :level, "1" %>Basic</li>
-			<li><%= f.radio_button :level, "2" %>Fair</li>
-			<li><%= f.radio_button :level, "3" %>Average</li>
-			<li><%= f.radio_button :level, "4" %>Good</li>
-			<li><%= f.radio_button :level, "5" %>Excellent</li>
-		</ul>
-		</tr>
-		<tr>
-			<ul><span>Skill Type</span>
-			<li><%= f.radio_button :skill_type, "spoken"%>Spoken</li>
-			<li><%= f.radio_button :skill_type, "written"%>Written</li>
-		</ul>
-		</tr>
 		
+		<tr>
+			<td>Skill Type</td>
+			<td><%= f.select(:skill_type, [["spoken", "spoken"], ["written", "written"]]) %></td>
+		</tr>
+		<tr>
+			<td>Level</td>
+			<td>
+				<%= f.select(:level, [['Basic', 1], ['Fair', 2], ['Average', 3],['Good', 4],['Excelent', 5]]) %>
+			</td>
+		</tr>
 		<tr><td colspan="2"></td></tr>
 	</table>
 	<%=f.submit 'Save', class: 'btn btn-primary right'%>

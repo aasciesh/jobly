@@ -2,4 +2,5 @@ $('#successDiv').html('Successfully added language_skill to your CV.');
 displaySuccess();
 $('div.languageSkills').append("<%= j render(partial: 'show', locals: {language_skill: @language_skill})%>");
 hideAjaxForm();
+$('.language_skill-<%=@language_skill.id%> > .language_table').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);
 // $('language_skill-<%=@language_skill.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});

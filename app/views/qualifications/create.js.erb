@@ -2,4 +2,4 @@ $('#successDiv').html('Successfully added qualification to your CV.');
 displaySuccess();
 $('div.qualifications').append("<%= j render(partial: 'show', locals: {qualification: @qualification})%>");
 hideAjaxForm();
-// $('qualification-<%=@qualification.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});
+$('.qualification-<%=@qualification.id%> > .cv_tables').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);

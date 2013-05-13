@@ -16,7 +16,7 @@ class Vacancy < ActiveRecord::Base
     end
   end
   
-  after_validation :geocode,
+  before_validation :geocode,
   :if => lambda{ |obj| obj.job_address_changed? }
 
   belongs_to :category

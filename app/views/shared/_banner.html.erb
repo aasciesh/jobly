@@ -1,0 +1,11 @@
+<div class="banner">
+	<% if @company_profile.banner? %>
+		<%= image_tag @company_profile.banner(:banner) %>
+	<% else %>
+		<span class="banner-text"><%=@company_profile.name[0,15]%></span>
+	<%end%>
+
+</div>
+<% if can? :update, @company_profile %>
+<div class="banner-cover"><%= link_to 'Change Banner', edit_banner_path(id: @company_profile.id), remote: true, class: 'buttonify banner-link' %></div>
+<% end %>	

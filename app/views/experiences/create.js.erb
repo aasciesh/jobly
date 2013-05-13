@@ -2,4 +2,4 @@ $('#successDiv').html('Successfully added experience to your CV.');
 displaySuccess();
 $('div.experiences').append("<%= j render(partial: 'show', locals: {experience: @experience})%>");
 hideAjaxForm();
-// $('experience-<%=@experience.id%>').css('background-color', 'yellow').animate({'background-color': 'whitesmoke'});
+$('.experience-<%=@experience.id%> > cv_tables').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);

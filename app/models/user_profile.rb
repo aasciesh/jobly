@@ -8,8 +8,17 @@ class UserProfile < ActiveRecord::Base
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
 
-  geocoded_by :full_address
-  before_validation :geocode
+  geocoded_by :full_address do |obj,results|
+    if geo = results.first
+      obj.city    = geo.city
+      obj.zip = geo.postal_code
+      obj.country = geo.country
+      obj.latitude = geo.latitude
+      obj.longitude = geo.longitude
+    end
+  end
+ before_validation :geocode,
+  :if => lambda{ |obj| obj.full_address_changed? }
  
   has_many :applications
   has_many :experiences

@@ -1,17 +1,24 @@
 
 <div class="language_skill language_skill-<%= language_skill.id%>">
-<table class="cv_tables">
-	<tr>
-		<td>Name </td><td><%=language_skill.name %></td>
-	</tr>
-	<tr>
-		<td>Level</td><td><%=language_skill.level%></td>
-	</tr>
-	<tr>
-		<td>Skill Type</td><td><%=language_skill.skill_type%></td>
-	</tr>
-	
-</table>
+	<div class="language_table">
+		<table style="width:500px;">
+			<tr>
+				
+				<th><%=language_skill.name %></th>
+				<th><%=language_skill.skill_type%></th>
+				<td>
+		<%language_skill.level.times do |num|%>
+			<i class="level level-green"></i>
+		<% end %>
+		<%(5-language_skill.level).times do |num|%>
+			<i class="level level-grey"></i>
+		<% end %>
+	</td>
+			</tr>
+
+		</table>
+	</div>
+
 
 <div class="hidden-options">
 	<% if can? :update , language_skill %>

@@ -2,3 +2,4 @@ $('#successDiv').html('Updated experience successfully.');
 $('.experience-<%=@experience.id%>').replaceWith("<%=j render(partial: 'show', locals: {experience: @experience})%>");
 displaySuccess();
 hideAjaxForm();
+$('.experience-<%=@experience.id%> > .cv_tables').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);

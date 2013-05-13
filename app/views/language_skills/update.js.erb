@@ -2,3 +2,4 @@ $('#successDiv').html('Updated language skill successfully.');
 $('.language_skill-<%=@language_skill.id%>').replaceWith("<%=j render(partial: 'show', locals: {language_skill: @language_skill})%>");
 displaySuccess();
 hideAjaxForm();
+$('.language_skill-<%=@language_skill.id%> > .language_table').css('background-color', 'rgb(252, 245, 89)').animate({backgroundColor: '#F5F5F5'}, 3000);
