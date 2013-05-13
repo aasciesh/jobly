@@ -1,6 +1,6 @@
 <div class="span4">
     <div style="width:200px">
-      <%= image_tag @company_profile.logo if @company_profile.logo?%> 
+      <%= image_tag @company_profile.logo(:profile_pic) if @company_profile.logo?%> 
       <%= f.file_field :logo, :as => :file %>
     </div> 
 
