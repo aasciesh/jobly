@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130512193218) do
 
-
   create_table "application_references", :force => true do |t|
     t.integer  "application_id"
     t.integer  "reference_id"
