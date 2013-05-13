@@ -19,7 +19,9 @@ class CompanyProfilesController < ApplicationController
 	def create
 		@company_profile=CompanyProfile.new(params[:company_profile])
 		if @company_profile.save
-		flash[:success]= "#{@company_profile.name} has been registered."					
+		flash[:success]= "#{@company_profile.name} has been registered."	
+		sign_in
+		EmailConfirmation.confirm_email(@company_profile.user).deliver				
 	      	respond_to do |format|
 	        	format.html { redirect_to company_profile_path(@company_profile)	}        	
 	        	format.js 
