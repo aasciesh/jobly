@@ -6,7 +6,12 @@ load_and_authorize_resource
 	end
 
 	def index
-		@vacancies=Vacancy.all
+		if params[:company_id].present?
+			@company_profile= CompanyProfile.find(params[:company_id])
+			@vacancies=Vacancy.where(company_profile_id: params[:company_id]).order('updated_at DESC').paginate(:page => params[:page], :per_page => 10)
+		else
+			@vacancies=Vacancy.all
+		end
 	end
 
 	def create

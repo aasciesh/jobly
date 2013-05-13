@@ -14,7 +14,7 @@ class CompanyProfile < ActiveRecord::Base
  
  # Changed imagemagick geometry parameter, because company logo's cannot be cropped, only it is being resized. Only for thumb it is cropped.
   has_attached_file :logo, styles: { profile_pic: "x210", medium: "x110", thumb: "40x40#" }, default_url: "/assets/default_pics/co-:style.png"
-  has_attached_file :banner, styles: {banner: "940x200#"}
+  has_attached_file :banner, styles: {banner: "960x200#"}
   has_one :user, as: :profile
   accepts_nested_attributes_for :user
   has_many :vacancies

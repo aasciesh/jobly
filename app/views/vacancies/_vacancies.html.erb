@@ -1,16 +1,17 @@
-<table class="table">
+<table class="table table-bordered">
   <tr>  
   	<th>Title</th>    
     <th>Dead line</th>
+    <% if current_profile == @company_profile %>  
     <th></th>    
     <th></th>    
+   <% end %>
   </tr>
 
 
   <% if get_vacancies(company).count >0 %>
-    
   
-  <% for item in @vacancies %>
+  <% for item in Vacancy.where(company_profile_id: company.id).order('updated_at DESC').limit(5) %>
     <tr>  
     	<td>
      <%= link_to vacancy_path(item) do %>
@@ -18,9 +19,12 @@
   		  <% end %>
     	</td>  
       <td> <%= item.deadline%> </td>  
-       <td> <%= item.applications.count %> </td> 
-      <td> <%= link_to "Edit", edit_vacancy_path(item)%> </td> 
+      <%if can? :update, item %>
+         <td> <%= item.applications.count %> </td> 
+        <td> <%= link_to "Edit", edit_vacancy_path(item)%> </td> 
+      <% end %>
     </tr>
   <% end %>
   <% end %>
+  <tr><td  colspan="2"><%=link_to 'All vacancies by this employer>>>', vacancies_path(company_id: company.id),  class: 'right' %></td></tr>
 </table>

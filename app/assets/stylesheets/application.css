@@ -413,6 +413,11 @@ width: 16px;
 background-image: url(/assets/black16x16/ic_plus.png);
 background-repeat: no-repeat;
 display: inline-block;}
+i.edit_icon{height: 16px;
+width: 16px;
+background-image: url(/assets/black16x16/ic_edit.png);
+background-repeat: no-repeat;
+display: inline-block;}
 
 .cv_attr{min-height: 50px !important;
 overflow: auto;
@@ -495,6 +500,7 @@ padding-top: 10px;}
 .experience > .hidden-options:hover{display: block;}
 
 .pad-10{padding: 10px;}
+.margin-5{margin: 5px 25px;}
 .search_button{border: 1px solid rgba(122, 113, 113, 0.15);
 padding: 7px 5px 6px 5px;
 position: relative;
@@ -538,7 +544,7 @@ font-weight: bold;
 .pagination{margin: 10px 20px;}
 
 .banner {
-  width: 940px; height: 200px; background-color: blue; position: relative;
+  width: 960px; height: 200px; background-color: blue; position: relative;
   top:-14px;
   overflow: hidden;
   margin: auto;
@@ -553,7 +559,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#446b7e', end
 }
 
 .banner-text {margin-left:20px;font-size: 150px; color: white;}
-.banner-cover{width: 940px; margin:auto; height: 25px;}
+.banner-cover{width: 960px; margin:auto; height: 25px;}
 .banner-link{border: 1px solid rgba(0, 0, 0, 0.59);
 padding: 3px;
 position: relative;
@@ -562,8 +568,27 @@ color: black;
 top: -35px;
 border-radius: 0 5px 0 0;}
 
-
-
+.contact tr {
+border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.contact tr td {
+min-height: 30px;
+}
+.contact tr td:last-child {
+min-width: 200px;
+}
+.contact {
+border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.contact tr td:first-child {
+background-color: rgba(46, 115, 190, 0.18);
+color: black;
+}
+.focus{
+background-color: #F1F1F1;
+border: 1px solid #D5D5D5;
+padding: 10px;
+margin-bottom: 30px;}
 
 
 
