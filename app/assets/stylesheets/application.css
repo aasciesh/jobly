@@ -418,6 +418,11 @@ width: 16px;
 background-image: url(/assets/black16x16/ic_edit.png);
 background-repeat: no-repeat;
 display: inline-block;}
+i.rotate_icon{height: 16px;
+width: 16px;
+background-image: url(/assets/white16x16/ic_fullscreen.png);
+background-repeat: no-repeat;
+display: inline-block;}
 
 .cv_attr{min-height: 50px !important;
 overflow: auto;
@@ -603,6 +608,38 @@ background-color: #1A9BC4}
 .level-grey{
     background-color: #C4C4C4;
 }
+#extra-menu{position: absolute;}
+#relative_float{position: relative;
+top: 55px;
+width: 960px;
+overflow: hidden;
+height: 38px;}
+#rotating{
+    height: 16px;
+width: 16px;
+float: right;
+border-radius: 3px;
+border: 1px solid rgba(0, 0, 0, 0.53);
+-webkit-box-shadow: 0 1px 8px black;
+cursor: pointer;
+vertical-align: middle;
+padding: 6px 6px;
+z-index: 1000}
+.hidable{position: relative;
+float: right;
+left: 5px;
+padding: 5px 10px;
+background-color: #556081;
+height: 20px;
+border-radius: 5px 0px 0px 5px;}
+.hidable >span, .hidable > a {
+background-color: rgba(0, 0, 0, 0.44);
+font-weight: bold;
+font-size: 12px;
+padding: 3px 5px;
+cursor: pointer;
+}
+#hidable-holder{float:right; width: 910px; height: 30px;  overflow: hidden;}
 
 
 
@@ -2826,18 +2863,19 @@ input[type="submit"].btn.btn-mini {
   border-radius: 6px 0 6px 6px;
 }
 .navbar-inverse .navbar-inner {
-background-color: #1E2752;
+
+-webkit-box-shadow: 1px 0 15px #201F1F;
+border-color: #252525;
+border-bottom: 3px solid #A52B2B;
+}
+.navbar-inverse .navbar-inner, #rotating{background-color: #1E2752;
 background-image: -moz-linear-gradient(top, #2F4D64, #1E2752);
 background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2F4D64), to( #1E2752));
 background-image: -webkit-linear-gradient(top, #2F4D64, #1E2752);
 background-image: -o-linear-gradient(top, #2F4D64, #1E2752);
 background-image: linear-gradient(to bottom, #2F4D64, #1E2752);
 background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F4D64', endColorstr='#1E2752', GradientType=0);
--webkit-box-shadow: 1px 0 15px #201F1F;
-border-color: #252525;
-border-bottom: 3px solid #A52B2B;
-}
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2F4D64', endColorstr='#1E2752', GradientType=0);}
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
 	color: #999999;
