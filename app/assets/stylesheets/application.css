@@ -608,7 +608,8 @@ background-color: #1A9BC4}
 .level-grey{
     background-color: #C4C4C4;
 }
-#extra-menu{position: absolute;}
+#extra-menu{position: absolute;width: 0px;
+height: 0px;}
 #relative_float{position: relative;
 top: 55px;
 width: 960px;
@@ -625,6 +626,7 @@ cursor: pointer;
 vertical-align: middle;
 padding: 6px 6px;
 z-index: 1000}
+#rotating:hover{opacity: 1 !important;}
 .hidable{position: relative;
 float: right;
 left: 5px;

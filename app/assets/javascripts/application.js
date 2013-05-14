@@ -31,6 +31,7 @@ $(document).ready( function(){
    			
    			$('.hidable').animate({ left: hidableWidth+'px'}, 1000);
    			$('.rotate_icon').rotate({ animateTo: 225});
+   			setTimeout(function(){ $('#rotating').css('opacity', 0.5);},1500);
 	}, 6000);
 	$('.rotate_icon').click(function(){
 		
@@ -48,11 +49,13 @@ function toggle_extra_menu(hidableWidth)
 		if (parseFloat($('.hidable').css('left'))==hidableWidth){
 			$('.rotate_icon').rotate({ animateTo: 0});
 			$('.hidable').animate({ left: '5px'}, 1000);
+			$('#rotating').css('opacity', 1);
 		}
 		else if (parseFloat($('.hidable').css('left'))== 5)
 		{
 			$('.hidable').animate({ left: hidableWidth+'px'}, 1000);
 			$('.rotate_icon').rotate({ animateTo: 225});
+			setTimeout(function(){ $('#rotating').css('opacity', 0.5);},1500);
 		}
 	}
 
