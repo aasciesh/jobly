@@ -28,11 +28,3 @@ If we become Supermen then...
 
 11) User's online graph (A graph which summarises, suppose, User's social connections(via Facebook, Twitter API), Opensource activities(example: via Github's API, Stackoverflow API),  etc ... 
 
-There are plenty of Job sites, market is quite saturated to bring it into production and expect it to be a success. But, Our main purpose in first place is to learn Rails and make nice application which works. If we make fantastic enough industrial standard web application, we would probably bring it into production somewhere where there is room to grow. If...
-
-###Project Report on 19.04.2013
-
-![Work in progress Gantt](https://dl.dropboxusercontent.com/u/55415978/reports/jobly_gantt_19_04_13.png?raw=true)
-
-
-![Project Tasks List](https://dl.dropboxusercontent.com/u/55415978/reports/jobly_issues_status_19_04.13.png?raw=true)
